@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boardify Gallery</title>
+  <title>Boardify Gallery | Premium Custom Posters & Wall Boards Bangladesh</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="A premium, responsive static gallery showcasing 1524 photo frames across multiple staggered visual grids with clean, minimalist aesthetics.">
+  <!-- SEO & Social Preview Meta Tags -->
+  <meta name="description" content="Explore the ultimate collection of premium custom posters, anime wall boards, quotes, and custom frames at Boardify BD. High-quality prints delivered across Bangladesh.">
+  <meta property="og:title" content="Boardify Gallery | Premium Custom Posters & Wall Boards Bangladesh" />
+  <meta property="og:description" content="Explore the ultimate collection of premium custom posters, anime wall boards, quotes, and custom frames at Boardify BD. High-quality prints delivered across Bangladesh." />
+  <meta property="og:image" content="https://boardify-bd.pages.dev/assets/logo.png" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Boardify Gallery | Premium Custom Posters & Wall Boards Bangladesh" />
+  <meta name="twitter:description" content="Explore the ultimate collection of premium custom posters, anime wall boards, quotes, and custom frames at Boardify BD. High-quality prints delivered across Bangladesh." />
+  <meta name="twitter:image" content="https://boardify-bd.pages.dev/assets/logo.png" />
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +58,7 @@
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       min-height: 100vh;
       overflow-x: hidden;
       display: flex;
@@ -79,14 +90,19 @@
       user-select: none;
     }
     
-    /* Header & Logo */
-    .header-container {
+    /* Header Space Offset for Sticky Navbar */
+    main.main-content {
+      padding-top: 155px; /* Mobile header spacer */
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 24px 0 24px;
-      text-align: center;
-      width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      main.main-content {
+        padding-top: 110px; /* Desktop header spacer */
+      }
     }
     
     .logo-link {
@@ -99,44 +115,13 @@
       transform: scale(1.03);
     }
     
-    .logo-image {
-      height: 80px;
-      width: auto;
-      display: block;
+    /* Social Media Icons Styling */
+    .social-icon {
+      transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-    
-    .subtitle {
-      font-family: 'Syne', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--text-color);
-      letter-spacing: 0.15em;
-      margin-top: 14px;
-      opacity: 0.8;
-    }
-    
-    /* Category Navigation Bar */
-    .sticky-nav {
-      background-color: rgba(245, 239, 235, 0.9);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      border-bottom: 1px solid rgba(11, 19, 43, 0.08);
-      padding: 16px 24px;
-      margin-top: 24px;
-      margin-bottom: 20px;
-    }
-    
-    .nav-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 8px;
-      width: 100%;
-      max-width: 1320px;
+    .social-icon:hover {
+      color: #FF3B30 !important;
+      transform: scale(1.18);
     }
     
     #extra-cats-container {
@@ -189,8 +174,8 @@
     }
     
     .collection-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 32px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 26px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: -0.02em;
@@ -198,8 +183,8 @@
     }
     
     .collection-count {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -321,7 +306,7 @@
     }
     
     .card-category {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -332,8 +317,8 @@
     }
     
     .card-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
       font-weight: 700;
       color: var(--white);
       margin: 0 0 10px 0;
@@ -369,7 +354,7 @@
     }
     
     .folder-number {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.05em;
@@ -443,7 +428,7 @@
     }
     
     .lightbox-category {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -454,7 +439,7 @@
     }
     
     .lightbox-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 22px;
       font-weight: 700;
       margin: 0;
@@ -556,20 +541,11 @@
         margin-top: 10px;
       }
       
-      /* Mobile Category Head Navigation Bar Optimization */
-      .sticky-nav {
-        padding: 10px 16px !important;
-        margin-top: 16px !important;
-        margin-bottom: 12px !important;
-      }
-      
-      .nav-container {
-        gap: 8px 6px !important;
-      }
-      
-      .sticky-nav .category-btn {
-        padding: 6px 12px !important;
-        font-size: 10px !important;
+      /* Mobile category navigation buttons style adjustments */
+      .nav-container .category-btn {
+        padding: 5px 10px !important;
+        font-size: 9px !important;
+        border-width: 1.5px !important;
       }
       
       /* Mobile Major Section Category Headers Optimization */
@@ -581,11 +557,11 @@
       }
       
       .collection-title {
-        font-size: 20px !important;
+        font-size: 18px !important;
       }
       
       .collection-count {
-        font-size: 11px !important;
+        font-size: 10px !important;
         margin-top: 4px !important;
       }
       
@@ -629,27 +605,53 @@
     }
   </style>
 </head>
-<body>
-
-  <!-- Header Section -->
-  <header class="header-container w-full">
-    <a href="#" class="logo-link" aria-label="Home">
-      <img src="Logo.png" alt="Logo" class="logo-image">
-    </a>
-  </header>
-  
-  <!-- Sticky Category Navigation Bar (Fully wrapped for single frame viewing) -->
-  <div class="sticky-nav">
-    <div class="nav-container">
-      <button class="category-btn active px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="all">All designs</button>
+  <!-- Semantic Header with Sticky Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-[1500] bg-[#F5EFEB]/90 backdrop-blur-md border-b border-[#0B132B]/10 transition-all duration-300">
+    <div class="max-w-[1320px] mx-auto px-4 py-3 md:py-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-6">
       
-      <!-- More Categories Toggle Button -->
-      <button id="more-cats-btn" class="px-6 py-2 border-2 border-[#0B132B] bg-[#0B132B] text-white hover:bg-transparent hover:text-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-1 cursor-pointer">
-        More Categories <span class="arrow ml-1">▼</span>
-      </button>
+      <!-- Logo and Mobile Header Row -->
+      <div class="flex items-center justify-between w-full md:w-auto">
+        <a href="#" class="logo-link" aria-label="Home">
+          <img src="Logo.png" alt="Boardify Logo" class="h-9 md:h-12 w-auto">
+        </a>
+        
+        <!-- Social Icons (Mobile only) -->
+        <div class="flex items-center gap-3 text-lg md:hidden">
+          <a href="https://www.facebook.com/boardify" target="_blank" rel="noopener noreferrer" class="social-icon text-[#0B132B] hover:text-[#FF3B30] transition-colors duration-200" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/boardifybd" target="_blank" rel="noopener noreferrer" class="social-icon text-[#0B132B] hover:text-[#FF3B30] transition-colors duration-200" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
       
-      <!-- Hidden Extra Categories Container -->
-      <div id="extra-cats-container" class="hidden">
+      <!-- Center: Category Navigation controls -->
+      <div class="flex flex-col items-center w-full md:w-auto">
+        <div class="nav-container flex flex-wrap justify-center gap-1.5 md:gap-2">
+          <button class="category-btn active px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="all">All designs</button>
+          
+          <button id="more-cats-btn" class="category-btn px-4 py-1.5 md:px-6 md:py-2 border-2 border-[#0B132B] bg-[#0B132B] text-white hover:bg-transparent hover:text-[#0B132B] font-bold text-[10px] md:text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-1 cursor-pointer">
+            More Categories <span class="arrow ml-1">▼</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Right: Social Icons (Desktop only) -->
+      <div class="hidden md:flex items-center gap-4 text-xl">
+        <a href="https://www.facebook.com/boardify" target="_blank" rel="noopener noreferrer" class="social-icon text-[#0B132B] hover:text-[#FF3B30] transition-all duration-300" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/boardifybd" target="_blank" rel="noopener noreferrer" class="social-icon text-[#0B132B] hover:text-[#FF3B30] transition-all duration-300" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      
+    </div>
+    
+    <!-- Hidden Extra Categories Dropdown (Toggled dynamically) -->
+    <div id="extra-cats-container" class="w-full bg-[#F5EFEB]/95 border-t border-[#0B132B]/5 hidden transition-all duration-300">
+      <div class="max-w-[1320px] mx-auto px-4 py-3 flex flex-wrap justify-center gap-1.5 md:gap-2">
         <button class="category-btn px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="car">Supercars & Automotive</button>
         <button class="category-btn px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="bohemian">Bohemian & Abstract Art</button>
         <button class="category-btn px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="islamic">Islamic Art & Calligraphy</button>
@@ -673,26 +675,27 @@
         <button class="category-btn px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="others">Other Creative Themes</button>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- Gallery Wrapper for Stacked Sets -->
-  <div class="gallery-wrapper w-full">
-    
-    <!-- Empty state for categories with no layouts yet -->
-    <div id="no-layouts-message" class="hidden flex-col items-center justify-center py-24 text-center w-full">
-      <span class="text-4xl mb-4">🛸</span>
-      <h3 class="font-bold text-lg text-[#0B132B] font-['Syne']">No collections in this category yet</h3>
-      <p class="text-sm text-[#0B132B]/60 mt-1">We are adding new series one after another. Check back soon!</p>
-    </div>
+  <!-- Semantic Main Content Wrapper -->
+  <main class="main-content">
+    <section id="gallery" class="w-full flex flex-col items-center px-4 md:px-6 pb-20">
+      
+      <!-- Empty state for categories with no layouts yet -->
+      <div id="no-layouts-message" class="hidden flex-col items-center justify-center py-24 text-center w-full">
+        <span class="text-4xl mb-4">🛸</span>
+        <h3 class="font-bold text-lg text-[#0B132B] font-['Poppins']">No collections in this category yet</h3>
+        <p class="text-sm text-[#0B132B]/60 mt-1">We are adding new series one after another. Check back soon!</p>
+      </div>
     
     <!-- Active Category Title -->
-    <h2 id="active-category-title" class="text-xl md:text-3xl font-extrabold tracking-tight text-[#0B132B] font-['Syne'] uppercase mb-8 md:mb-12 text-center transition-opacity duration-300">All Collections</h2>
+    <h2 id="active-category-title" class="text-xl md:text-3xl font-extrabold tracking-tight text-[#0B132B] font-['Poppins'] uppercase mb-8 md:mb-12 text-center transition-opacity duration-300">All Collections</h2>
     
     <!-- COLLECTION SET 124: #270124 -->
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Blush Pink Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Blush Pink Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Blush Pink Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -851,7 +854,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Inspire Daily Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Inspire Daily Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Inspire Daily Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1010,7 +1013,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Motivational Word Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Motivational Word Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Motivational Word Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1169,7 +1172,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Lined Boho Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Lined Boho Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Lined Boho Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1328,7 +1331,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Monstera Leaf Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Monstera Leaf Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Monstera Leaf Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1487,7 +1490,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Mandalas of Faith Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Mandalas of Faith Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Mandalas of Faith Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1646,7 +1649,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Devotional Art Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Devotional Art Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Devotional Art Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1805,7 +1808,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Vanguard Hero Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Vanguard Hero Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Vanguard Hero Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -1964,7 +1967,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Success Mindset Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Success Mindset Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Success Mindset Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -2123,7 +2126,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Monolithic Automotive Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Monolithic Automotive Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Monolithic Automotive Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -2282,7 +2285,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Retro Racing Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Retro Racing Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Retro Racing Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -2441,7 +2444,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Minimalist Speed Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Minimalist Speed Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Minimalist Speed Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -2600,7 +2603,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Neon Nights Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Neon Nights Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Neon Nights Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -2759,7 +2762,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Aesthetic Capture Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Aesthetic Capture Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Aesthetic Capture Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -2918,7 +2921,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Neon Highway">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Neon Highway - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Neon Highway</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -3077,7 +3080,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Structured Path Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Structured Path Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Structured Path Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -3236,7 +3239,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Boho Automotive Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Boho Automotive Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Boho Automotive Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -3395,7 +3398,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Bohemian Abstract Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bohemian Abstract Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Bohemian Abstract Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -3554,7 +3557,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Set Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Set Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Set Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -3713,7 +3716,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Boho Geometry Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Boho Geometry Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Boho Geometry Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -3872,7 +3875,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Sacred Geometry Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sacred Geometry Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Sacred Geometry Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4031,7 +4034,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Islamic Calligraphy Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Islamic Calligraphy Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Islamic Calligraphy Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4190,7 +4193,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Arabesque Pattern Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Arabesque Pattern Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Arabesque Pattern Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4349,7 +4352,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Sacred Ornaments Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sacred Ornaments Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Sacred Ornaments Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4508,7 +4511,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Divine Light Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Divine Light Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Divine Light Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4667,7 +4670,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Symmetric Grace Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Symmetric Grace Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Symmetric Grace Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4826,7 +4829,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Spiritual Geometry Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Spiritual Geometry Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Spiritual Geometry Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -4985,7 +4988,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Classic Arabesque Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Classic Arabesque Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Classic Arabesque Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -5144,7 +5147,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Vanguard Hero Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Vanguard Hero Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Vanguard Hero Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -5303,7 +5306,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Dreamer Spirit Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Dreamer Spirit Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Dreamer Spirit Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -5462,7 +5465,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Infinite Path Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Infinite Path Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Infinite Path Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -5621,7 +5624,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Daily Wisdom Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Daily Wisdom Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Daily Wisdom Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -5780,7 +5783,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Echoes of Truth Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Echoes of Truth Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Echoes of Truth Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -5939,7 +5942,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Mindset Shift Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Mindset Shift Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Mindset Shift Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -6098,7 +6101,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Rise & Grind Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Rise & Grind Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Rise & Grind Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -6257,7 +6260,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Legacy Builders Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Legacy Builders Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Legacy Builders Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -6416,7 +6419,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Creative Spark Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Creative Spark Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Creative Spark Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -6575,7 +6578,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Bengali Typography Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bengali Typography Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Bengali Typography Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -6734,7 +6737,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Bangla Lettering Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bangla Lettering Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Bangla Lettering Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -6893,7 +6896,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Kotha O Kobita Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Kotha O Kobita Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Kotha O Kobita Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -7052,7 +7055,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Bhashar Tan Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bhashar Tan Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Bhashar Tan Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -7211,7 +7214,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Inspire Daily Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Inspire Daily Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Inspire Daily Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -7370,7 +7373,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Motivational Word Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Motivational Word Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Motivational Word Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -7529,7 +7532,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Sacred Ornaments">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sacred Ornaments - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Sacred Ornaments</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -7688,7 +7691,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Mandalas of Faith">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Mandalas of Faith - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Mandalas of Faith</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -7847,7 +7850,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Band Rhythm Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Band Rhythm Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Band Rhythm Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8006,7 +8009,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Ganer Srot Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Ganer Srot Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Ganer Srot Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8165,7 +8168,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Botanical Grace Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Botanical Grace Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Botanical Grace Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8324,7 +8327,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Cosmic Night Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cosmic Night Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Cosmic Night Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8483,7 +8486,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Celestial Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Celestial Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Celestial Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8642,7 +8645,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8801,7 +8804,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -8960,7 +8963,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -9119,7 +9122,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Modern Gallery Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Modern Gallery Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Modern Gallery Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -9278,7 +9281,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Verdant Sanctuary Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Verdant Sanctuary Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Verdant Sanctuary Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -9437,7 +9440,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Ethereal Greens Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Ethereal Greens Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Ethereal Greens Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -9596,7 +9599,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Majestic Vistas Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Majestic Vistas Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Majestic Vistas Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -9755,7 +9758,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Serene Horizons Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Serene Horizons Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Serene Horizons Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -9914,7 +9917,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bike" data-collection-name="Cafe Racer Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cafe Racer Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Cafe Racer Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -10073,7 +10076,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bike" data-collection-name="Superbike Speed Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Superbike Speed Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Superbike Speed Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -10232,7 +10235,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Dreamy Pastel Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Dreamy Pastel Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Dreamy Pastel Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -10391,7 +10394,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Blush Pink Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Blush Pink Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Blush Pink Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -10550,7 +10553,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Eclectic Visuals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eclectic Visuals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Eclectic Visuals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -10709,7 +10712,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Abstract Fusion Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Abstract Fusion Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Abstract Fusion Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -10868,7 +10871,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Caped Crusaders Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Caped Crusaders Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Caped Crusaders Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11027,7 +11030,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Console Legends Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Console Legends Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Console Legends Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11186,7 +11189,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Epic Quest Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Epic Quest Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Epic Quest Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11345,7 +11348,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Retro Pixel Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Retro Pixel Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Retro Pixel Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11504,7 +11507,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="football" data-collection-name="Pitch Masters Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Pitch Masters Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Pitch Masters Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11663,7 +11666,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="football" data-collection-name="Golden Boot Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Golden Boot Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Golden Boot Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11822,7 +11825,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Shonen Spirit Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Shonen Spirit Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Shonen Spirit Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -11981,7 +11984,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Classic Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Classic Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Classic Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -12140,7 +12143,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Panoramic Vistas Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Panoramic Vistas Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Panoramic Vistas Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -12299,7 +12302,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Nature Echoes Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Nature Echoes Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Nature Echoes Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -12458,7 +12461,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Success Mindset Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Success Mindset Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Success Mindset Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -12617,7 +12620,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Starry Pathway Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Starry Pathway Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Starry Pathway Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -12776,7 +12779,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Glow in Dark Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Glow in Dark Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Glow in Dark Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -12935,7 +12938,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Girlish Aesthetic Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Girlish Aesthetic Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Girlish Aesthetic Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -13094,7 +13097,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Kawaii Essence Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Kawaii Essence Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Kawaii Essence Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -13253,7 +13256,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="got" data-collection-name="Seven Kingdoms Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Seven Kingdoms Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Seven Kingdoms Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -13412,7 +13415,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="got" data-collection-name="Winter Is Coming Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Winter Is Coming Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Winter Is Coming Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -13571,7 +13574,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Curated Selection Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Curated Selection Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Curated Selection Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -13730,7 +13733,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -13889,7 +13892,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -14048,7 +14051,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="movie-poster" data-collection-name="Silver Screen Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Silver Screen Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Silver Screen Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -14207,7 +14210,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -14366,7 +14369,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Modern Gallery Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Modern Gallery Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Modern Gallery Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -14525,7 +14528,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Botanical Herbarium Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Botanical Herbarium Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Botanical Herbarium Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -14684,7 +14687,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Jungle Vibes Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Jungle Vibes Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Jungle Vibes Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -14843,7 +14846,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Eclectic Visuals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eclectic Visuals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Eclectic Visuals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15002,7 +15005,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Wildflower Bloom Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Wildflower Bloom Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Wildflower Bloom Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15161,7 +15164,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Silent Petals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Silent Petals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Silent Petals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15320,7 +15323,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Manga Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Manga Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Manga Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15479,7 +15482,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Chibi Cute Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Chibi Cute Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Chibi Cute Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15638,7 +15641,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Abstract Fusion Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Abstract Fusion Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Abstract Fusion Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15797,7 +15800,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Curated Selection Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Curated Selection Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Curated Selection Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -15956,7 +15959,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Barbie Glow Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Barbie Glow Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Barbie Glow Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -16115,7 +16118,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Dreamy Pastel Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Dreamy Pastel Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Dreamy Pastel Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -16274,7 +16277,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -16433,7 +16436,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="taylor-swift" data-collection-name="Eras Tour Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eras Tour Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Eras Tour Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -16592,7 +16595,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Tropical Leaves Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Tropical Leaves Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Tropical Leaves Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -16751,7 +16754,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -16910,7 +16913,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -17069,7 +17072,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Modern Gallery Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Modern Gallery Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Modern Gallery Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -17228,7 +17231,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Verdant Oasis Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Verdant Oasis Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Verdant Oasis Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -17387,7 +17390,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Cyberpunk Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cyberpunk Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Cyberpunk Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -17546,7 +17549,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Shonen Spirit Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Shonen Spirit Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Shonen Spirit Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -17705,7 +17708,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Classic Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Classic Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Classic Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -17864,7 +17867,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Manga Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Manga Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Manga Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18023,7 +18026,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Eclectic Visuals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eclectic Visuals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Eclectic Visuals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18182,7 +18185,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Abstract Fusion Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Abstract Fusion Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Abstract Fusion Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18341,7 +18344,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Chibi Cute Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Chibi Cute Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Chibi Cute Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18500,7 +18503,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Cyberpunk Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cyberpunk Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Cyberpunk Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18659,7 +18662,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Culinary Delight Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Culinary Delight Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Culinary Delight Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18818,7 +18821,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Chef's Kitchen Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Chef's Kitchen Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Chef's Kitchen Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -18977,7 +18980,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Sweet Cravings Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sweet Cravings Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Sweet Cravings Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -19136,7 +19139,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Gourmet Table Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Gourmet Table Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Gourmet Table Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -19295,7 +19298,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Shur O Taal Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Shur O Taal Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Shur O Taal Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -19454,7 +19457,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Bengali Rock Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bengali Rock Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Bengali Rock Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -19613,7 +19616,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Melodic Echoes Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Melodic Echoes Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Melodic Echoes Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -19772,7 +19775,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Musical Legacy Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Musical Legacy Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Musical Legacy Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -19931,7 +19934,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Curated Selection Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Curated Selection Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Curated Selection Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -20090,7 +20093,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="love" data-collection-name="Amour Eternal Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Amour Eternal Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Amour Eternal Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -20249,7 +20252,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -20408,7 +20411,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -20567,7 +20570,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Girlish Aesthetic Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Girlish Aesthetic Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Girlish Aesthetic Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -20726,7 +20729,7 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Kawaii Essence Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Kawaii Essence Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] uppercase">Kawaii Essence Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
@@ -20882,7 +20885,13 @@
     </div>
     
 
-  </div>
+    </section>
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer class="w-full py-8 border-t border-[#0B132B]/10 flex flex-col items-center justify-center text-center bg-[#0B132B] text-white">
+    <p class="text-xs uppercase tracking-widest font-semibold opacity-75">© 2026 Boardify BD. All Rights Reserved.</p>
+  </footer>
 
   <!-- Checkout/Shipping Details Modal -->
   <div id="checkout-modal" class="fixed inset-0 z-[2000] hidden bg-[#0B132B]/80 backdrop-blur-sm p-4 overflow-y-auto justify-center items-start md:items-center">
@@ -20892,7 +20901,7 @@
       
       <!-- Modal Header -->
       <div class="border-b border-[#0B132B]/10 pb-4">
-        <h2 class="text-xl font-bold font-['Syne'] text-[#0B132B]">Confirm Your Order</h2>
+        <h2 class="text-xl font-bold font-['Poppins'] text-[#0B132B]">Confirm Your Order</h2>
         <p id="modal-collection-name" class="text-sm font-semibold text-[#FF3B30] mt-1"></p>
       </div>
       
@@ -21002,7 +21011,7 @@
       <!-- Success Icon -->
       <div class="w-16 h-16 bg-[#FF3B30] text-white flex items-center justify-center text-3xl font-bold mb-2" style="border-radius: 0px !important;">✓</div>
       
-      <h2 class="text-2xl font-bold font-['Syne'] text-[#0B132B] uppercase tracking-tight">Order Placed!</h2>
+      <h2 class="text-2xl font-bold font-['Poppins'] text-[#0B132B] uppercase tracking-tight">Order Placed!</h2>
       <p class="text-sm text-[#0B132B]/75 leading-relaxed">
         Thank you for your order. We have received your details in our Google Sheet and will call you shortly to confirm the delivery!
       </p>
