@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boardify Gallery</title>
+  <title>Boardify Gallery | Premium Custom Wall Boards In Bangladesh</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="A premium, responsive static gallery showcasing 1524 photo frames across multiple staggered visual grids with clean, minimalist aesthetics.">
+  <meta name="description" content="Explore the ultimate collection of premium custom wallboards at Boardify BD. High-quality wallboards delivered across Bangladesh.">
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +48,7 @@
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       min-height: 100vh;
       overflow-x: hidden;
       display: flex;
@@ -106,7 +107,7 @@
     }
     
     .subtitle {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
@@ -189,7 +190,7 @@
     }
     
     .collection-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 32px;
       font-weight: 800;
       text-transform: uppercase;
@@ -198,7 +199,7 @@
     }
     
     .collection-count {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 13px;
       font-weight: 500;
       text-transform: uppercase;
@@ -321,7 +322,7 @@
     }
     
     .card-category {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -332,7 +333,7 @@
     }
     
     .card-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 18px;
       font-weight: 700;
       color: var(--white);
@@ -369,7 +370,7 @@
     }
     
     .folder-number {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.05em;
@@ -443,7 +444,7 @@
     }
     
     .lightbox-category {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -454,7 +455,7 @@
     }
     
     .lightbox-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 22px;
       font-weight: 700;
       margin: 0;
@@ -620,17 +621,29 @@
       }
       
       .lightbox-category {
-        font-size: 10px;
+        font-  <!-- Open Graph & Twitter Social Previews -->
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:title" content="Boardify Gallery | Premium Custom Wall Boards In Bangladesh" />
+  <meta property="og:description" content="Explore the ultimate collection of premium custom wallboards at Boardify BD. High-quality wallboards delivered across Bangladesh." />
+  <meta property="og:image" content="https://boardify-bd.pages.dev/assets/logo.png" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Boardify Gallery | Premium Custom Wall Boards In Bangladesh" />
+  <meta name="twitter:description" content="Explore the ultimate collection of premium custom wallboards at Boardify BD. High-quality wallboards delivered across Bangladesh." />
+  <meta name="twitter:image" content="https://boardify-bd.pages.dev/assets/logo.png" />
+size: 10px;
       }
       
       .folder-reference {
         margin: 0;
       }
     }
-  </style>
+  
+    
+</style>
 </head>
 <body>
-
   <!-- Header Section -->
   <header class="header-container w-full">
     <a href="#" class="logo-link" aria-label="Home">
@@ -638,7 +651,7 @@
     </a>
   </header>
   
-  <!-- Sticky Category Navigation Bar (Fully wrapped for single frame viewing) -->
+  <!-- Sticky Category Navigation Bar -->
   <div class="sticky-nav">
     <div class="nav-container">
       <button class="category-btn active px-6 py-2 border-2 border-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200" data-category="all">All designs</button>
@@ -675,29 +688,29 @@
     </div>
   </div>
 
-  <!-- Gallery Wrapper for Stacked Sets -->
-  <div class="gallery-wrapper w-full">
-    
-    <!-- Empty state for categories with no layouts yet -->
-    <div id="no-layouts-message" class="hidden flex-col items-center justify-center py-24 text-center w-full">
-      <span class="text-4xl mb-4">🛸</span>
-      <h3 class="font-bold text-lg text-[#0B132B] font-['Syne']">No collections in this category yet</h3>
-      <p class="text-sm text-[#0B132B]/60 mt-1">We are adding new series one after another. Check back soon!</p>
-    </div>
-    
-    <!-- Active Category Title -->
-    <h2 id="active-category-title" class="text-xl md:text-3xl font-extrabold tracking-tight text-[#0B132B] font-['Syne'] uppercase mb-8 md:mb-12 text-center transition-opacity duration-300">All Collections</h2>
-    
-    <!-- COLLECTION SET 124: #270124 -->
+  <!-- Main content wrapper -->
+  <main class="main-content flex flex-col items-center w-full">
+    <!-- Gallery section -->
+    <section id="gallery" class="gallery-wrapper w-full">
+      <!-- Empty state for categories with no layouts yet -->
+      <div id="no-layouts-message" class="hidden flex-col items-center justify-center py-24 text-center w-full">
+        <span class="text-4xl mb-4">🛸</span>
+        <h3 class="font-bold text-lg text-[#0B132B] font-['Poppins']">No collections in this category yet</h3>
+        <p class="text-sm text-[#0B132B]/60 mt-1">We are adding new series one after another. Check back soon!</p>
+      </div>
+      
+      <!-- Active Category Title -->
+      <h2 id="active-category-title" class="text-xl md:text-3xl font-extrabold tracking-tight text-[#0B132B] font-['Poppins'] uppercase mb-8 md:mb-12 text-center transition-opacity duration-300">All Collections</h2>
+<!-- COLLECTION SET 124: #270124 -->
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Blush Pink Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Blush Pink Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Blush Pink Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="0" data-category="Pink & Girlish" data-photo-id="270124#1">
@@ -833,7 +846,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -851,12 +864,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Inspire Daily Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Inspire Daily Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Inspire Daily Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="12" data-category="English Quotes" data-photo-id="270023#1">
@@ -992,7 +1005,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1010,12 +1023,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Motivational Word Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Motivational Word Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Motivational Word Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="24" data-category="English Quotes" data-photo-id="270024#1">
@@ -1151,7 +1164,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1169,12 +1182,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Lined Boho Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Lined Boho Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Lined Boho Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="36" data-category="Bohemian" data-photo-id="270010#1">
@@ -1310,7 +1323,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1328,12 +1341,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Monstera Leaf Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Monstera Leaf Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Monstera Leaf Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="48" data-category="Flower" data-photo-id="270046#1">
@@ -1469,7 +1482,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1487,12 +1500,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Mandalas of Faith Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Mandalas of Faith Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Mandalas of Faith Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="60" data-category="Islamic Art" data-photo-id="270017#1">
@@ -1628,7 +1641,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1646,12 +1659,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Devotional Art Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Devotional Art Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Devotional Art Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="72" data-category="Islamic Art" data-photo-id="270016#1">
@@ -1787,7 +1800,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1805,12 +1818,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Vanguard Hero Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Vanguard Hero Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Vanguard Hero Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="84" data-category="English Quotes" data-photo-id="270073#1">
@@ -1946,7 +1959,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -1964,12 +1977,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Success Mindset Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Success Mindset Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Success Mindset Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="96" data-category="English Quotes" data-photo-id="270026#1">
@@ -2105,7 +2118,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -2123,12 +2136,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Monolithic Automotive Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Monolithic Automotive Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Monolithic Automotive Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="108" data-category="Automotive" data-photo-id="270001#1">
@@ -2264,7 +2277,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -2282,12 +2295,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Retro Racing Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Retro Racing Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Retro Racing Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="120" data-category="Automotive" data-photo-id="270002#1">
@@ -2423,7 +2436,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -2441,12 +2454,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Minimalist Speed Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Minimalist Speed Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Minimalist Speed Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="132" data-category="Automotive" data-photo-id="270003#1">
@@ -2582,7 +2595,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -2600,12 +2613,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Neon Nights Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Neon Nights Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Neon Nights Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="144" data-category="Automotive" data-photo-id="270004#1">
@@ -2741,7 +2754,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -2759,12 +2772,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Aesthetic Capture Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Aesthetic Capture Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Aesthetic Capture Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="156" data-category="Automotive" data-photo-id="270005#1">
@@ -2900,7 +2913,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -2918,12 +2931,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Neon Highway">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Neon Highway - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Neon Highway</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="168" data-category="Automotive" data-photo-id="270006#1">
@@ -3059,7 +3072,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -3077,12 +3090,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Structured Path Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Structured Path Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Structured Path Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="180" data-category="Automotive" data-photo-id="270007#1">
@@ -3218,7 +3231,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -3236,12 +3249,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="car" data-collection-name="Boho Automotive Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Boho Automotive Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Boho Automotive Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="192" data-category="Automotive" data-photo-id="270008#1">
@@ -3377,7 +3390,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -3395,12 +3408,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Bohemian Abstract Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bohemian Abstract Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Bohemian Abstract Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="204" data-category="Bohemian" data-photo-id="270009#1">
@@ -3536,7 +3549,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -3554,12 +3567,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Set Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Set Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Set Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="216" data-category="Bohemian" data-photo-id="270011#1">
@@ -3695,7 +3708,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -3713,12 +3726,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bohemian" data-collection-name="Boho Geometry Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Boho Geometry Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Boho Geometry Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="228" data-category="Bohemian" data-photo-id="270012#1">
@@ -3854,7 +3867,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -3872,12 +3885,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Sacred Geometry Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sacred Geometry Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Sacred Geometry Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="240" data-category="Islamic Art" data-photo-id="270013#1">
@@ -4013,7 +4026,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4031,12 +4044,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Islamic Calligraphy Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Islamic Calligraphy Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Islamic Calligraphy Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="252" data-category="Islamic Art" data-photo-id="270014#1">
@@ -4172,7 +4185,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4190,12 +4203,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Arabesque Pattern Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Arabesque Pattern Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Arabesque Pattern Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="264" data-category="Islamic Art" data-photo-id="270015#1">
@@ -4331,7 +4344,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4349,12 +4362,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Sacred Ornaments Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sacred Ornaments Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Sacred Ornaments Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="276" data-category="Islamic Art" data-photo-id="270018#1">
@@ -4490,7 +4503,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4508,12 +4521,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Divine Light Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Divine Light Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Divine Light Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="288" data-category="Islamic Art" data-photo-id="270019#1">
@@ -4649,7 +4662,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4667,12 +4680,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Symmetric Grace Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Symmetric Grace Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Symmetric Grace Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="300" data-category="Islamic Art" data-photo-id="270020#1">
@@ -4808,7 +4821,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4826,12 +4839,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Spiritual Geometry Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Spiritual Geometry Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Spiritual Geometry Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="312" data-category="Islamic Art" data-photo-id="270021#1">
@@ -4967,7 +4980,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -4985,12 +4998,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Classic Arabesque Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Classic Arabesque Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Classic Arabesque Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="324" data-category="Islamic Art" data-photo-id="270022#1">
@@ -5126,7 +5139,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -5144,12 +5157,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Vanguard Hero Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Vanguard Hero Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Vanguard Hero Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="336" data-category="English Quotes" data-photo-id="270025#1">
@@ -5285,7 +5298,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -5303,12 +5316,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Dreamer Spirit Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Dreamer Spirit Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Dreamer Spirit Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="348" data-category="English Quotes" data-photo-id="270027#1">
@@ -5444,7 +5457,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -5462,12 +5475,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Infinite Path Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Infinite Path Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Infinite Path Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="360" data-category="English Quotes" data-photo-id="270028#1">
@@ -5603,7 +5616,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -5621,12 +5634,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Daily Wisdom Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Daily Wisdom Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Daily Wisdom Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="372" data-category="English Quotes" data-photo-id="270029#1">
@@ -5762,7 +5775,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -5780,12 +5793,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Echoes of Truth Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Echoes of Truth Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Echoes of Truth Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="384" data-category="English Quotes" data-photo-id="270030#1">
@@ -5921,7 +5934,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -5939,12 +5952,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Mindset Shift Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Mindset Shift Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Mindset Shift Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="396" data-category="English Quotes" data-photo-id="270031#1">
@@ -6080,7 +6093,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -6098,12 +6111,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Rise & Grind Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Rise & Grind Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Rise & Grind Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="408" data-category="English Quotes" data-photo-id="270032#1">
@@ -6239,7 +6252,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -6257,12 +6270,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Legacy Builders Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Legacy Builders Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Legacy Builders Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="420" data-category="English Quotes" data-photo-id="270033#1">
@@ -6398,7 +6411,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -6416,12 +6429,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Creative Spark Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Creative Spark Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Creative Spark Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="432" data-category="English Quotes" data-photo-id="270034#1">
@@ -6557,7 +6570,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -6575,12 +6588,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Bengali Typography Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bengali Typography Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Bengali Typography Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="444" data-category="Bengali Quotes" data-photo-id="270035#1">
@@ -6716,7 +6729,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -6734,12 +6747,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Bangla Lettering Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bangla Lettering Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Bangla Lettering Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="456" data-category="Bengali Quotes" data-photo-id="270036#1">
@@ -6875,7 +6888,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -6893,12 +6906,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Kotha O Kobita Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Kotha O Kobita Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Kotha O Kobita Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="468" data-category="Bengali Quotes" data-photo-id="270037#1">
@@ -7034,7 +7047,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -7052,12 +7065,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-quotes" data-collection-name="Bhashar Tan Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bhashar Tan Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Bhashar Tan Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="480" data-category="Bengali Quotes" data-photo-id="270038#1">
@@ -7193,7 +7206,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -7211,12 +7224,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Inspire Daily Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Inspire Daily Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Inspire Daily Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="492" data-category="English Quotes" data-photo-id="270039#1">
@@ -7352,7 +7365,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -7370,12 +7383,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Motivational Word Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Motivational Word Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Motivational Word Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="504" data-category="English Quotes" data-photo-id="270040#1">
@@ -7511,7 +7524,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -7529,12 +7542,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Sacred Ornaments">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sacred Ornaments - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Sacred Ornaments</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="516" data-category="Islamic Art" data-photo-id="270041#1">
@@ -7670,7 +7683,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -7688,12 +7701,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="islamic" data-collection-name="Mandalas of Faith">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Mandalas of Faith - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Mandalas of Faith</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="528" data-category="Islamic Art" data-photo-id="270042#1">
@@ -7829,7 +7842,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -7847,12 +7860,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Band Rhythm Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Band Rhythm Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Band Rhythm Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="540" data-category="Bengali Band" data-photo-id="270043#1">
@@ -7988,7 +8001,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8006,12 +8019,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Ganer Srot Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Ganer Srot Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Ganer Srot Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="552" data-category="Bengali Band" data-photo-id="270044#1">
@@ -8147,7 +8160,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8165,12 +8178,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Botanical Grace Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Botanical Grace Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Botanical Grace Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="564" data-category="Flower" data-photo-id="270045#1">
@@ -8306,7 +8319,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8324,12 +8337,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Cosmic Night Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cosmic Night Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Cosmic Night Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="576" data-category="Starry Nights" data-photo-id="270047#1">
@@ -8465,7 +8478,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8483,12 +8496,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Celestial Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Celestial Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Celestial Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="588" data-category="Starry Nights" data-photo-id="270048#1">
@@ -8624,7 +8637,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8642,12 +8655,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="600" data-category="Artistic Frame" data-photo-id="270049#1">
@@ -8783,7 +8796,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8801,12 +8814,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="612" data-category="Artistic Frame" data-photo-id="270050#1">
@@ -8942,7 +8955,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -8960,12 +8973,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="624" data-category="Artistic Frame" data-photo-id="270051#1">
@@ -9101,7 +9114,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -9119,12 +9132,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Modern Gallery Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Modern Gallery Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Modern Gallery Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="636" data-category="Artistic Frame" data-photo-id="270052#1">
@@ -9260,7 +9273,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -9278,12 +9291,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Verdant Sanctuary Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Verdant Sanctuary Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Verdant Sanctuary Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="648" data-category="Greenery" data-photo-id="270053#1">
@@ -9419,7 +9432,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -9437,12 +9450,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Ethereal Greens Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Ethereal Greens Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Ethereal Greens Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="660" data-category="Greenery" data-photo-id="270054#1">
@@ -9578,7 +9591,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -9596,12 +9609,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Majestic Vistas Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Majestic Vistas Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Majestic Vistas Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="672" data-category="Scenery" data-photo-id="270055#1">
@@ -9737,7 +9750,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -9755,12 +9768,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Serene Horizons Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Serene Horizons Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Serene Horizons Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="684" data-category="Scenery" data-photo-id="270056#1">
@@ -9896,7 +9909,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -9914,12 +9927,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bike" data-collection-name="Cafe Racer Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cafe Racer Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Cafe Racer Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="696" data-category="Motorcycle" data-photo-id="270057#1">
@@ -10055,7 +10068,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -10073,12 +10086,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bike" data-collection-name="Superbike Speed Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Superbike Speed Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Superbike Speed Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="708" data-category="Motorcycle" data-photo-id="270058#1">
@@ -10214,7 +10227,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -10232,12 +10245,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Dreamy Pastel Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Dreamy Pastel Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Dreamy Pastel Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="720" data-category="Pink & Girlish" data-photo-id="270059#1">
@@ -10373,7 +10386,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -10391,12 +10404,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Blush Pink Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Blush Pink Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Blush Pink Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="732" data-category="Pink & Girlish" data-photo-id="270060#1">
@@ -10532,7 +10545,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -10550,12 +10563,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Eclectic Visuals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eclectic Visuals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Eclectic Visuals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="744" data-category="Artistic Frame" data-photo-id="270061#1">
@@ -10691,7 +10704,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -10709,12 +10722,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Abstract Fusion Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Abstract Fusion Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Abstract Fusion Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="756" data-category="Artistic Frame" data-photo-id="270062#1">
@@ -10850,7 +10863,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -10868,12 +10881,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Caped Crusaders Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Caped Crusaders Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Caped Crusaders Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="768" data-category="Superhero & Games" data-photo-id="270063#1">
@@ -11009,7 +11022,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11027,12 +11040,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Console Legends Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Console Legends Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Console Legends Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="780" data-category="Superhero & Games" data-photo-id="270064#1">
@@ -11168,7 +11181,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11186,12 +11199,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Epic Quest Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Epic Quest Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Epic Quest Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="792" data-category="Superhero & Games" data-photo-id="270065#1">
@@ -11327,7 +11340,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11345,12 +11358,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="superhero-game" data-collection-name="Retro Pixel Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Retro Pixel Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Retro Pixel Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="804" data-category="Superhero & Games" data-photo-id="270066#1">
@@ -11486,7 +11499,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11504,12 +11517,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="football" data-collection-name="Pitch Masters Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Pitch Masters Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Pitch Masters Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="816" data-category="Football" data-photo-id="270067#1">
@@ -11645,7 +11658,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11663,12 +11676,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="football" data-collection-name="Golden Boot Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Golden Boot Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Golden Boot Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="828" data-category="Football" data-photo-id="270068#1">
@@ -11804,7 +11817,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11822,12 +11835,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Shonen Spirit Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Shonen Spirit Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Shonen Spirit Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="840" data-category="Anime" data-photo-id="270069#1">
@@ -11963,7 +11976,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -11981,12 +11994,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Classic Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Classic Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Classic Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="852" data-category="Anime" data-photo-id="270070#1">
@@ -12122,7 +12135,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -12140,12 +12153,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Panoramic Vistas Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Panoramic Vistas Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Panoramic Vistas Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="864" data-category="Scenery" data-photo-id="270071#1">
@@ -12281,7 +12294,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -12299,12 +12312,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="sceneries" data-collection-name="Nature Echoes Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Nature Echoes Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Nature Echoes Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="876" data-category="Scenery" data-photo-id="270072#1">
@@ -12440,7 +12453,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -12458,12 +12471,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="english-quotes" data-collection-name="Success Mindset Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Success Mindset Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Success Mindset Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="888" data-category="English Quotes" data-photo-id="270074#1">
@@ -12599,7 +12612,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -12617,12 +12630,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Starry Pathway Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Starry Pathway Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Starry Pathway Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="900" data-category="Starry Nights" data-photo-id="270075#1">
@@ -12758,7 +12771,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -12776,12 +12789,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="starry-nights" data-collection-name="Glow in Dark Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Glow in Dark Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Glow in Dark Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="912" data-category="Starry Nights" data-photo-id="270076#1">
@@ -12917,7 +12930,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -12935,12 +12948,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Girlish Aesthetic Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Girlish Aesthetic Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Girlish Aesthetic Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="924" data-category="Pink & Girlish" data-photo-id="270077#1">
@@ -13076,7 +13089,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -13094,12 +13107,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Kawaii Essence Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Kawaii Essence Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Kawaii Essence Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="936" data-category="Pink & Girlish" data-photo-id="270078#1">
@@ -13235,7 +13248,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -13253,12 +13266,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="got" data-collection-name="Seven Kingdoms Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Seven Kingdoms Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Seven Kingdoms Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="948" data-category="Game of Thrones" data-photo-id="270079#1">
@@ -13394,7 +13407,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -13412,12 +13425,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="got" data-collection-name="Winter Is Coming Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Winter Is Coming Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Winter Is Coming Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="960" data-category="Game of Thrones" data-photo-id="270080#1">
@@ -13553,7 +13566,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -13571,12 +13584,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Curated Selection Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Curated Selection Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Curated Selection Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="972" data-category="Artistic Frame" data-photo-id="270081#1">
@@ -13712,7 +13725,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -13730,12 +13743,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="984" data-category="Artistic Frame" data-photo-id="270082#1">
@@ -13871,7 +13884,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -13889,12 +13902,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="996" data-category="Artistic Frame" data-photo-id="270083#1">
@@ -14030,7 +14043,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -14048,12 +14061,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="movie-poster" data-collection-name="Silver Screen Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Silver Screen Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Silver Screen Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1008" data-category="Movie Poster" data-photo-id="270084#1">
@@ -14189,7 +14202,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -14207,12 +14220,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1020" data-category="Artistic Frame" data-photo-id="270085#1">
@@ -14348,7 +14361,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -14366,12 +14379,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Modern Gallery Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Modern Gallery Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Modern Gallery Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1032" data-category="Artistic Frame" data-photo-id="270086#1">
@@ -14507,7 +14520,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -14525,12 +14538,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Botanical Herbarium Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Botanical Herbarium Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Botanical Herbarium Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1044" data-category="Greenery" data-photo-id="270087#1">
@@ -14666,7 +14679,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -14684,12 +14697,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Jungle Vibes Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Jungle Vibes Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Jungle Vibes Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1056" data-category="Greenery" data-photo-id="270088#1">
@@ -14825,7 +14838,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -14843,12 +14856,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Eclectic Visuals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eclectic Visuals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Eclectic Visuals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1068" data-category="Artistic Frame" data-photo-id="270089#1">
@@ -14984,7 +14997,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15002,12 +15015,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Wildflower Bloom Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Wildflower Bloom Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Wildflower Bloom Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1080" data-category="Flower" data-photo-id="270090#1">
@@ -15143,7 +15156,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15161,12 +15174,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Silent Petals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Silent Petals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Silent Petals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1092" data-category="Flower" data-photo-id="270091#1">
@@ -15302,7 +15315,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15320,12 +15333,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Manga Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Manga Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Manga Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1104" data-category="Anime" data-photo-id="270092#1">
@@ -15461,7 +15474,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15479,12 +15492,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Chibi Cute Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Chibi Cute Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Chibi Cute Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1116" data-category="Anime" data-photo-id="270093#1">
@@ -15620,7 +15633,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15638,12 +15651,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Abstract Fusion Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Abstract Fusion Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Abstract Fusion Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1128" data-category="Artistic Frame" data-photo-id="270094#1">
@@ -15779,7 +15792,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15797,12 +15810,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Curated Selection Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Curated Selection Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Curated Selection Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1140" data-category="Artistic Frame" data-photo-id="270095#1">
@@ -15938,7 +15951,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -15956,12 +15969,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Barbie Glow Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Barbie Glow Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Barbie Glow Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1152" data-category="Pink & Girlish" data-photo-id="270096#1">
@@ -16097,7 +16110,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -16115,12 +16128,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Dreamy Pastel Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Dreamy Pastel Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Dreamy Pastel Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1164" data-category="Pink & Girlish" data-photo-id="270097#1">
@@ -16256,7 +16269,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -16274,12 +16287,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1176" data-category="Artistic Frame" data-photo-id="270098#1">
@@ -16415,7 +16428,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -16433,12 +16446,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="taylor-swift" data-collection-name="Eras Tour Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eras Tour Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Eras Tour Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1188" data-category="Taylor Swift" data-photo-id="270099#1">
@@ -16574,7 +16587,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -16592,12 +16605,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="greenery" data-collection-name="Tropical Leaves Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Tropical Leaves Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Tropical Leaves Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1200" data-category="Greenery" data-photo-id="270100#1">
@@ -16733,7 +16746,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -16751,12 +16764,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1212" data-category="Artistic Frame" data-photo-id="270101#1">
@@ -16892,7 +16905,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -16910,12 +16923,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Harmony Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Harmony Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Harmony Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1224" data-category="Artistic Frame" data-photo-id="270102#1">
@@ -17051,7 +17064,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -17069,12 +17082,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Modern Gallery Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Modern Gallery Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Modern Gallery Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1236" data-category="Artistic Frame" data-photo-id="270103#1">
@@ -17210,7 +17223,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -17228,12 +17241,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="flower" data-collection-name="Verdant Oasis Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Verdant Oasis Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Verdant Oasis Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1248" data-category="Flower" data-photo-id="270104#1">
@@ -17369,7 +17382,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -17387,12 +17400,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Cyberpunk Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cyberpunk Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Cyberpunk Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1260" data-category="Anime" data-photo-id="270105#1">
@@ -17528,7 +17541,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -17546,12 +17559,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Shonen Spirit Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Shonen Spirit Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Shonen Spirit Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1272" data-category="Anime" data-photo-id="270106#1">
@@ -17687,7 +17700,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -17705,12 +17718,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Classic Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Classic Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Classic Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1284" data-category="Anime" data-photo-id="270107#1">
@@ -17846,7 +17859,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -17864,12 +17877,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Manga Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Manga Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Manga Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1296" data-category="Anime" data-photo-id="270108#1">
@@ -18005,7 +18018,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18023,12 +18036,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Eclectic Visuals Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Eclectic Visuals Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Eclectic Visuals Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1308" data-category="Artistic Frame" data-photo-id="270109#1">
@@ -18164,7 +18177,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18182,12 +18195,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Abstract Fusion Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Abstract Fusion Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Abstract Fusion Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1320" data-category="Artistic Frame" data-photo-id="270110#1">
@@ -18323,7 +18336,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18341,12 +18354,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Chibi Cute Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Chibi Cute Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Chibi Cute Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1332" data-category="Anime" data-photo-id="270111#1">
@@ -18482,7 +18495,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18500,12 +18513,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="anime" data-collection-name="Cyberpunk Anime Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Cyberpunk Anime Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Cyberpunk Anime Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1344" data-category="Anime" data-photo-id="270112#1">
@@ -18641,7 +18654,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18659,12 +18672,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Culinary Delight Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Culinary Delight Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Culinary Delight Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1356" data-category="Food" data-photo-id="270113#1">
@@ -18800,7 +18813,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18818,12 +18831,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Chef's Kitchen Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Chef's Kitchen Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Chef's Kitchen Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1368" data-category="Food" data-photo-id="270114#1">
@@ -18959,7 +18972,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -18977,12 +18990,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Sweet Cravings Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Sweet Cravings Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Sweet Cravings Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1380" data-category="Food" data-photo-id="270115#1">
@@ -19118,7 +19131,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -19136,12 +19149,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="food" data-collection-name="Gourmet Table Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Gourmet Table Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Gourmet Table Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1392" data-category="Food" data-photo-id="270116#1">
@@ -19277,7 +19290,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -19295,12 +19308,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Shur O Taal Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Shur O Taal Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Shur O Taal Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1404" data-category="Bengali Band" data-photo-id="270117#1">
@@ -19436,7 +19449,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -19454,12 +19467,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Bengali Rock Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Bengali Rock Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Bengali Rock Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1416" data-category="Bengali Band" data-photo-id="270118#1">
@@ -19595,7 +19608,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -19613,12 +19626,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Melodic Echoes Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Melodic Echoes Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Melodic Echoes Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1428" data-category="Bengali Band" data-photo-id="270119#1">
@@ -19754,7 +19767,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -19772,12 +19785,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="bengali-band" data-collection-name="Musical Legacy Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Musical Legacy Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Musical Legacy Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1440" data-category="Bengali Band" data-photo-id="270120#1">
@@ -19913,7 +19926,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -19931,12 +19944,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Curated Selection Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Curated Selection Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Curated Selection Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1452" data-category="Artistic Frame" data-photo-id="270121#1">
@@ -20072,7 +20085,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -20090,12 +20103,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="love" data-collection-name="Amour Eternal Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Amour Eternal Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Amour Eternal Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1464" data-category="Love" data-photo-id="270122#1">
@@ -20231,7 +20244,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -20249,12 +20262,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Diverse Composition Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Diverse Composition Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Diverse Composition Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1476" data-category="Artistic Frame" data-photo-id="270123#1">
@@ -20390,7 +20403,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -20408,12 +20421,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="others" data-collection-name="Visual Balance Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Visual Balance Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Visual Balance Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1488" data-category="Artistic Frame" data-photo-id="270125#1">
@@ -20549,7 +20562,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -20567,12 +20580,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Girlish Aesthetic Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Girlish Aesthetic Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Girlish Aesthetic Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1500" data-category="Pink & Girlish" data-photo-id="270126#1">
@@ -20708,7 +20721,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -20726,12 +20739,12 @@
     <div class="collection-container py-10 md:py-20 flex flex-col items-center w-full border-b border-[#0B132B]/10" data-category="pink-girlish" data-collection-name="Kawaii Essence Series">
       <!-- Section Header -->
       <div class="w-full max-w-[1320px] mb-6 md:mb-8">
-        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Syne']">⚡ Kawaii Essence Series - 12 Psc Pack</h3>
+        <h3 class="text-lg md:text-2xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">Kawaii Essence Series</h3>
         <hr class="border-[#0B132B]/10 mt-2 md:mt-3">
       </div>
       
       <!-- Staggered grid -->
-      <main class="gallery-grid">
+      <div class="gallery-grid">
         <!-- Column 1 -->
         <div class="gallery-col col-1">
           <div class="frame-card" data-index="1512" data-category="Pink & Girlish" data-photo-id="270127#1">
@@ -20867,7 +20880,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </div>
       
       <!-- Footer reference badge and order button -->
       <div class="flex flex-row items-center justify-between w-full max-w-[1320px] mt-8 gap-2 border-t border-[#0B132B]/5 pt-6">
@@ -20885,14 +20898,33 @@
   </div>
 
   <!-- Checkout/Shipping Details Modal -->
-  <div id="checkout-modal" class="fixed inset-0 z-[2000] hidden bg-[#0B132B]/80 backdrop-blur-sm p-4 overflow-y-auto justify-center items-start md:items-center">
+      <!-- Semantic Footer -->
+    </section>
+  </div>
+  
+  <footer class="w-full bg-[#0B132B] text-[#F5EFEB] py-12 px-6 mt-16 text-center border-t border-[#F5EFEB]/10">
+    <div class="max-w-[1200px] mx-auto flex flex-col items-center gap-4">
+      <div class="flex items-center gap-3">
+        <a href="https://www.facebook.com/boardify" target="_blank" class="text-[#F5EFEB] hover:text-[#FF3B30] transition-colors" aria-label="Facebook">
+          <i class="fab fa-facebook-f text-lg"></i>
+        </a>
+        <a href="https://www.instagram.com/boardifybd" target="_blank" class="text-[#F5EFEB] hover:text-[#FF3B30] transition-colors" aria-label="Instagram">
+          <i class="fab fa-instagram text-lg"></i>
+        </a>
+      </div>
+      <p class="text-xs tracking-widest uppercase opacity-60 font-['Poppins']">&copy; 2026 Boardify BD. All Rights Reserved.</p>
+      <p class="text-[10px] tracking-wider opacity-40 font-['Poppins']">Premium Custom Wall Boards Bangladesh</p>
+    </div>
+  </footer>
+  
+<div id="checkout-modal" class="fixed inset-0 z-[2000] hidden bg-[#0B132B]/80 backdrop-blur-sm p-4 overflow-y-auto justify-center items-start md:items-center">
     <div class="bg-[#F5EFEB] border-3 border-[#0B132B] w-full max-w-lg p-6 relative flex flex-col gap-6 my-auto" style="border-radius: 0px !important;">
       <!-- Close button -->
       <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-[#0B132B] hover:text-[#FF3B30] text-3xl font-bold transition-colors">&times;</button>
       
       <!-- Modal Header -->
       <div class="border-b border-[#0B132B]/10 pb-4">
-        <h2 class="text-xl font-bold font-['Syne'] text-[#0B132B]">Confirm Your Order</h2>
+        <h2 class="text-xl font-bold font-['Poppins'] text-[#0B132B]">Confirm Your Order</h2>
         <p id="modal-collection-name" class="text-sm font-semibold text-[#FF3B30] mt-1"></p>
       </div>
       
@@ -21002,7 +21034,7 @@
       <!-- Success Icon -->
       <div class="w-16 h-16 bg-[#FF3B30] text-white flex items-center justify-center text-3xl font-bold mb-2" style="border-radius: 0px !important;">✓</div>
       
-      <h2 class="text-2xl font-bold font-['Syne'] text-[#0B132B] uppercase tracking-tight">Order Placed!</h2>
+      <h2 class="text-2xl font-bold font-['Poppins'] text-[#0B132B] uppercase tracking-tight">Order Placed!</h2>
       <p class="text-sm text-[#0B132B]/75 leading-relaxed">
         Thank you for your order. We have received your details in our Google Sheet and will call you shortly to confirm the delivery!
       </p>
