@@ -26087,10 +26087,7 @@
     }
 
     function serializeCartCollections() {
-      const parts = boardifyMasterCart.map(item => {
-        return getCollectionStringForBundle(item.photoArray, item.configuredSize);
-      });
-      return parts.join(' + ') + ' ';
+      return serializeCartPhotoIds();
     }
 
     function serializeCartPhotoIds() {
