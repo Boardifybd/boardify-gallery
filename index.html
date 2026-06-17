@@ -467,7 +467,8 @@
       display: none;
     }
     .lightbox-content.shopping-active {
-      padding-bottom: 120px;
+      justify-content: flex-start;
+      padding-bottom: 180px;
     }
     
     .lightbox-viewframe {
@@ -647,34 +648,18 @@
         margin-top: 6px;
       }
       
-      /* Swipeable Horizontal Board Size Selector on Mobile */
+      /* Vertical List Type Board Size Selector on Mobile */
       .sizing-card-stack {
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        padding-bottom: 8px !important;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
+        flex-direction: column !important;
+        overflow-x: visible !important;
         gap: 10px !important;
         width: 100%;
       }
-      
-      .sizing-card-stack::-webkit-scrollbar {
-        height: 4px;
-      }
-      .sizing-card-stack::-webkit-scrollbar-track {
-        background: rgba(11, 19, 43, 0.05);
-      }
-      .sizing-card-stack::-webkit-scrollbar-thumb {
-        background: var(--text-color);
-        border-radius: 2px;
-      }
-      
       .sizing-card-stack .radio-size-card {
+        width: 100% !important;
         flex-shrink: 0 !important;
-        width: 250px !important;
-        scroll-snap-align: start;
         box-sizing: border-box;
+        padding: 12px 16px !important;
       }
       
       /* Mobile Category Head Navigation Bar Optimization */
@@ -1041,6 +1026,22 @@
       animation: pulse-glow 2s infinite;
     }
     @keyframes pulse-glow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 8px rgba(255, 59, 48, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
+      }
+    }
+    .drawer-action-btn.remove-excess-active {
+      background-color: #FF3B30;
+      color: #fff;
+      animation: pulse-remove-glow 2s infinite;
+    }
+    @keyframes pulse-remove-glow {
       0% {
         box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
       }
@@ -1628,6 +1629,26 @@
       border-radius: 0 !important;
     }
     
+    .lightbox-progress-box {
+      background-color: rgba(99, 179, 237, 0.15); /* Soft blue */
+      border: 1.5px dashed #63B3ED;
+      padding: 10px 16px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #90CDF4;
+      text-align: center;
+      width: 100%;
+      max-width: 440px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-transform: uppercase;
+      border-radius: 0 !important;
+    }
+
     .lightbox-success-box {
       background-color: rgba(16, 185, 129, 0.15); /* Soft green */
       border: 1.5px dashed #10B981;
@@ -1677,6 +1698,11 @@
       background-color: var(--accent-color);
       color: #FFFFFF;
       animation: pulse-glow 2s infinite;
+    }
+    .lightbox-action-btn.remove-active {
+      background-color: #FF3B30;
+      color: #FFFFFF;
+      animation: pulse-remove-glow 2s infinite;
     }
 </style>
 </head>
@@ -25532,10 +25558,13 @@
       const lightboxMeta = document.querySelector('.lightbox-meta');
       if (!selectBtn || !progressText || !actionBtn) return;
       
+      const lightboxContent = document.getElementById('lightbox-content');
+      
       const target = activeSelectionSession.targetCapacity;
       
       if (target === null || !isPackageSizeSelected) {
         if (lightboxMeta) lightboxMeta.classList.remove('shopping-active');
+        if (lightboxContent) lightboxContent.classList.remove('shopping-active');
         selectBtn.style.display = 'none';
         actionBtn.style.display = 'none';
         progressText.className = "lightbox-warning-badge";
@@ -25544,21 +25573,30 @@
       }
       
       if (lightboxMeta) lightboxMeta.classList.add('shopping-active');
+      if (lightboxContent) lightboxContent.classList.add('shopping-active');
       selectBtn.style.display = 'inline-flex';
       actionBtn.style.display = 'inline-flex';
       
       const count = activeSelectionSession.selectedPhotoIDs.length;
       
-      if (count !== target) {
-        // Red warning box container for mismatch
-        progressText.className = "lightbox-warning-box";
-        progressText.innerHTML = `⚠️ Slot Mismatch: ${count} of ${target} choices selected`;
+      if (count < target) {
+        // Blue progress box - still selecting
+        progressText.className = "lightbox-progress-box";
+        progressText.innerHTML = `📸 ${count}/${target} Photos Selected — Choose ${target - count} More`;
         
         actionBtn.className = "lightbox-action-btn disabled";
         actionBtn.disabled = true;
-        actionBtn.innerHTML = count > target ? `Remove ${count - target} Excess Photos` : `Select ${target - count} More Photos`;
+        actionBtn.innerHTML = `Select ${target - count} More Photos`;
+      } else if (count > target) {
+        // Red warning box - excess photos
+        progressText.className = "lightbox-warning-box";
+        progressText.innerHTML = `⚠️ ${count}/${target} — Remove ${count - target} Excess Photos`;
+        
+        actionBtn.className = "lightbox-action-btn remove-active";
+        actionBtn.disabled = false;
+        actionBtn.innerHTML = `Remove ${count - target} Excess Photos`;
       } else {
-        // Green success box container for exact match
+        // Green success box - exact match
         progressText.className = "lightbox-success-box";
         progressText.innerHTML = `✓ All ${target} choices completed!`;
         
@@ -25589,61 +25627,150 @@
     let selectedSizeOption = null;
 
     function calculatePrice(size, qty) {
-      if (qty <= 0) return 0;
-      if (size === "8 BY 6 INCH") {
-        const tiers = { 6: 300, 8: 400, 9: 450, 12: 550, 18: 800, 24: 1050 };
-        if (tiers[qty] !== undefined) return tiers[qty];
-        if (qty > 24) return 1050 + (qty - 24) * 44;
-        return interpolatePrice(qty, [{q: 6, p: 300}, {q: 8, p: 400}, {q: 9, p: 450}, {q: 12, p: 550}, {q: 18, p: 800}, {q: 24, p: 1050}]);
-      }
-      if (size === "12 BY 8 INCH") {
-        if (qty === 18 || qty === 24 || (qty > 12 && qty <= 24)) return -1;
-        const tiers = { 6: 550, 8: 750, 9: 800, 12: 1050 };
-        if (tiers[qty] !== undefined) return tiers[qty];
-        if (qty > 24) return 1050 + (qty - 24) * 88;
-        return interpolatePrice(qty, [{q: 6, p: 550}, {q: 8, p: 750}, {q: 9, p: 800}, {q: 12, p: 1050}]);
-      }
-      if (size === "16 BY 12 INCH") {
-        if (qty >= 6 || qty > 3) return -1;
-        const tiers = { 1: 350, 2: 500, 3: 600 };
-        return tiers[qty] || 0;
-      }
-      if (size === "6 BY 4 INCH") {
-        const tiers = { 6: 200, 8: 250, 12: 350, 18: 500, 24: 650 };
-        if (tiers[qty] !== undefined) return tiers[qty];
-        if (qty > 24) return 650 + (qty - 24) * 27;
-        return interpolatePrice(qty, [{q: 6, p: 200}, {q: 8, p: 250}, {q: 12, p: 350}, {q: 18, p: 500}, {q: 24, p: 650}]);
-      }
-      if (size === "24 BY 16 INCH") {
-        if (qty >= 6 || qty > 3) return -1;
-        const tiers = { 1: 500, 2: 950, 3: 1350 };
-        return tiers[qty] || 0;
-      }
-      if (size === "8 BY 8 INCH") {
-        const tiers = { 6: 550, 9: 800, 12: 1050 };
-        if (tiers[qty] !== undefined) return tiers[qty];
-        if (qty > 12) return 1050 + (qty - 12) * 88;
-        return interpolatePrice(qty, [{q: 6, p: 550}, {q: 9, p: 800}, {q: 12, p: 1050}]);
-      }
-      if (size === "6 BY 6 INCH") {
-        const tiers = { 6: 300, 8: 400, 12: 550, 18: 800, 24: 1050 };
-        if (tiers[qty] !== undefined) return tiers[qty];
-        if (qty > 24) return 1050 + (qty - 24) * 44;
-        return interpolatePrice(qty, [{q: 6, p: 300}, {q: 8, p: 400}, {q: 12, p: 550}, {q: 18, p: 800}, {q: 24, p: 1050}]);
-      }
-      return 0;
+      return calculateBundlePrice(size, qty);
     }
-    
-    function interpolatePrice(qty, points) {
-      if (qty < points[0].q) return Math.round(qty * (points[0].p / points[0].q));
-      for (let i = 0; i < points.length - 1; i++) {
-        const p1 = points[i], p2 = points[i+1];
-        if (qty > p1.q && qty < p2.q) {
-          const ratio = (qty - p1.q) / (p2.q - p1.q);
-          return Math.round(p1.p + ratio * (p2.p - p1.p));
+
+    /**
+     * Calculates the exact price based on size and photo quantity
+     * Derived strictly from the red-marked items in edited-image.png
+     * @param {string} size - The selected board size string
+     * @param {number} qty - Total number of selected photos
+     * @returns {number} Calculated price in TK
+     */
+    function calculateBundlePrice(size, qty) {
+      if (!qty || qty <= 0) return 0;
+
+      // Clean the size string to avoid matching bugs
+      const formattedSize = size.toUpperCase().replace(/\s+/g, '');
+
+      switch (formattedSize) {
+        case '8BY6INCH':
+        case '8X6':
+          if (qty <= 6) return 300;
+          if (qty <= 8) return 400;
+          if (qty <= 9) return 420;
+          if (qty <= 12) return 550;
+          if (qty <= 18) return 800;
+          if (qty <= 24) return 1050;
+          // After 24 pieces: 1050tk base + 44tk per extra board
+          return 1050 + ((qty - 24) * 44);
+
+        case '6BY4INCH':
+        case '6X4':
+          if (qty <= 6) return 200;
+          if (qty <= 8) return 250;
+          if (qty <= 12) return 350;
+          if (qty <= 18) return 500;
+          if (qty <= 24) return 650;
+          // After 24 pieces: 650tk base + 27tk per extra board
+          return 650 + ((qty - 24) * 27);
+
+        case '6BY6INCH':
+        case '6X6':
+          if (qty <= 6) return 300;
+          if (qty <= 9) return 420;
+          if (qty <= 12) return 550;
+          if (qty <= 18) return 800;
+          if (qty <= 24) return 1050;
+          // After 24 pieces: 1050tk base + 44tk per extra board
+          return 1050 + ((qty - 24) * 44);
+
+        case '12BY8INCH':
+        case '12X8':
+          if (qty <= 6) return 550;
+          if (qty <= 8) return 710;
+          if (qty <= 9) return 800;
+          if (qty <= 10) return 900;
+          if (qty <= 12) return 1050;
+          // Pro-rated custom logic for numbers over 12 (88tk per extra board)
+          return 1050 + ((qty - 12) * 88);
+
+        case '8BY8INCH':
+        case '8X8':
+          if (qty <= 6) return 550;
+          if (qty <= 9) return 800;
+          if (qty <= 12) return 1050;
+          // Pro-rated custom logic for numbers over 12 (88tk per extra board)
+          return 1050 + ((qty - 12) * 88);
+
+        case '16BY12INCH':
+        case '16X12':
+          // Fixed package limits up to 3pcs max
+          if (qty === 1) return 300;
+          if (qty === 2) return 500;
+          if (qty === 3) return 600;
+          return -1;
+
+        case '24BY16INCH':
+        case '24X16':
+          // Fixed package limits up to 3pcs max
+          if (qty === 1) return 450;
+          if (qty === 2) return 850;
+          if (qty === 3) return 1200;
+          return -1;
+
+        default:
+          console.warn("Unknown size entered into engine: " + size);
+          return 0;
+      }
+    }
+
+    /**
+     * ডাইনামিক ডেলিভারি চার্জ এবং সর্বমোট মূল্য হিসাব করার ইঞ্জিন
+     * @param {number} subtotal - কার্টের মোট পণ্যের দাম (Cart Subtotal)
+     * @param {string} deliveryZone - সিলেক্ট করা ডেলিভারি জোন ('inside', 'sub', 'outside')
+     * @returns {Object} deliveryCharge এবং finalTotal এর অবজেক্ট
+     */
+    function calculateDeliveryAndTotal(subtotal, deliveryZone) {
+      let deliveryCharge = 0;
+
+      // ১০০০ টাকার বেশি অর্ডার হলে ডেলিভারি চার্জ সম্পূর্ণ ফ্রি!
+      if (subtotal > 1000) {
+        deliveryCharge = 0;
+        
+        // স্ক্রিনে ফ্রি ডেলিভারি সাকসেস মেসেজ দেখানোর জন্য নোটিশ টগল (যদি এলিমেন্ট থাকে)
+        const freeDeliveryBadge = document.getElementById('free-delivery-badge');
+        if (freeDeliveryBadge) {
+          freeDeliveryBadge.classList.remove('hidden');
+          freeDeliveryBadge.innerHTML = "🎉 অভিনন্দন! ১০০০ টাকার বেশি অর্ডারে ডেলিভারি চার্জ সম্পূর্ণ ফ্রি!";
+        }
+      } else {
+        // ১০০০ টাকার নিচে হলে এরিয়া অনুযায়ী চার্জ হিসাব হবে
+        switch (deliveryZone) {
+          case 'inside':  // ঢাকা সিটির ভিতরে
+            deliveryCharge = 80;
+            break;
+          case 'sub':     // ঢাকা সাব-এরিয়া (গাজীপুর, নারায়ণগঞ্জ, সাভার, কেরানীগঞ্জ)
+          case 'subarea': // Map subarea to sub for compatibility
+            deliveryCharge = 120;
+            break;
+          case 'outside': // ঢাকা সিটির বাইরে সম্পূর্ণ অন্য জেলা
+            deliveryCharge = 140;
+            break;
+          default:
+            deliveryCharge = 140; // ফলব্যাক সেফটি চার্জ
+        }
+        
+        // ফ্রি ডেলিভারি নোটিশ হাইড করা
+        const freeDeliveryBadge = document.getElementById('free-delivery-badge');
+        if (freeDeliveryBadge) {
+          freeDeliveryBadge.classList.add('hidden');
         }
       }
-      return points[points.length - 1].p;
+
+      // ফ্রি ডেলিভারি নোটিফিকেশন বার এর জন্য নোটিশ টগল (free-delivery-banner)
+      const freeDeliveryBanner = document.getElementById('free-delivery-banner');
+      if (freeDeliveryBanner) {
+        freeDeliveryBanner.style.display = subtotal > 1000 ? 'block' : 'none';
+      }
+
+      // সর্বমোট বিল হিসাব
+      let finalTotal = subtotal + deliveryCharge;
+
+      return {
+        charge: deliveryCharge,
+        total: finalTotal
+      };
     }
 
     function togglePhotoSelection(photoId) {
@@ -25758,10 +25885,14 @@
         actionBtn.disabled = false;
         actionBtn.className = "drawer-action-btn active";
         actionBtn.innerHTML = `Proceed to Sizing ➔`;
+      } else if (count > target) {
+        actionBtn.disabled = false;
+        actionBtn.className = "drawer-action-btn remove-excess-active";
+        actionBtn.innerHTML = `Remove ${count - target} Photos`;
       } else {
         actionBtn.disabled = true;
         actionBtn.className = "drawer-action-btn disabled";
-        actionBtn.innerHTML = count > target ? `Remove ${count - target} Photos` : `Choose More`;
+        actionBtn.innerHTML = `Choose More`;
       }
       
       const slotsContainer = document.getElementById('drawer-slots-container');
@@ -25929,7 +26060,15 @@
 
     function handleDrawerAction(e) {
       e.stopPropagation();
-      if (activeSelectionSession.selectedPhotoIDs.length === activeSelectionSession.targetCapacity) openSizingPanel();
+      const count = activeSelectionSession.selectedPhotoIDs.length;
+      const target = activeSelectionSession.targetCapacity;
+      if (count === target) {
+        openSizingPanel();
+      } else if (count > target) {
+        activeSelectionSession.selectedPhotoIDs.splice(target);
+        renderSelections();
+        updateDrawer();
+      }
     }
 
     function openSizingPanel() {
@@ -26064,17 +26203,11 @@
     function updateCheckoutTotal() {
       let subtotal = boardifyMasterCart.reduce((sum, item) => sum + item.calculatedPrice, 0);
       let area = document.querySelector('input[name="master-delivery-area"]:checked')?.value || 'inside';
-      let deliveryCharge = area === 'subarea' ? 120 : (area === 'outside' ? 140 : 80);
-      if (subtotal > 1000) deliveryCharge = 0;
-      
-      const freeDeliveryBanner = document.getElementById('free-delivery-banner');
-      if (freeDeliveryBanner) {
-        freeDeliveryBanner.style.display = subtotal > 1000 ? 'block' : 'none';
-      }
+      let calc = calculateDeliveryAndTotal(subtotal, area);
       
       document.getElementById('master-summary-subtotal').textContent = `${subtotal} TK`;
-      document.getElementById('master-summary-delivery').textContent = `${deliveryCharge} TK`;
-      document.getElementById('master-summary-total').textContent = `${subtotal + deliveryCharge} TK`;
+      document.getElementById('master-summary-delivery').textContent = `${calc.charge} TK`;
+      document.getElementById('master-summary-total').textContent = `${calc.total} TK`;
     }
 
     function updateTotalPrice() {
@@ -26132,9 +26265,7 @@
       
       const subtotal = boardifyMasterCart.reduce((sum, item) => sum + item.calculatedPrice, 0);
       const area = document.querySelector('input[name="master-delivery-area"]:checked')?.value || 'inside';
-      let deliveryCharge = area === 'subarea' ? 120 : (area === 'outside' ? 140 : 80);
-      if (subtotal > 1000) deliveryCharge = 0;
-      const totalPayable = subtotal + deliveryCharge;
+      let calc = calculateDeliveryAndTotal(subtotal, area);
 
       const orderData = {
         collection: serializeCartCollections(),
@@ -26146,8 +26277,8 @@
         city: document.getElementById('master-city').value,
         texture: document.querySelector('input[name="master-print-texture"]:checked')?.value || 'matte',
         deliveryArea: area,
-        deliveryCharge: deliveryCharge,
-        total: totalPayable
+        deliveryCharge: calc.charge,
+        total: calc.total
       };
       
       fetch(googleSheetUrl, { 
@@ -26180,13 +26311,50 @@
       const seriesItems = galleryItems.filter(item => item.photoId.startsWith(seriesId + '#'));
       if (seriesItems.length === 0) return;
       
-      setTargetCapacity(seriesItems.length);
-      activeSelectionSession.selectedPhotoIDs = seriesItems.map(item => item.photoId);
-      
-      renderSelections();
-      updateDrawer();
-      openDrawer();
-      showToastAlert(`Selected all ${seriesItems.length} photos from ${collectionName}!`);
+      const target = activeSelectionSession.targetCapacity;
+      if (target !== null && target > 0) {
+        let addedCount = 0;
+        let skippedCount = 0;
+        let alreadySelectedCount = 0;
+
+        for (const item of seriesItems) {
+          if (activeSelectionSession.selectedPhotoIDs.includes(item.photoId)) {
+            alreadySelectedCount++;
+            continue;
+          }
+          if (activeSelectionSession.selectedPhotoIDs.length < target) {
+            activeSelectionSession.selectedPhotoIDs.push(item.photoId);
+            addedCount++;
+          } else {
+            skippedCount++;
+          }
+        }
+
+        renderSelections();
+        updateDrawer();
+        openDrawer();
+
+        if (addedCount > 0) {
+          let msg = `Added ${addedCount} photo${addedCount > 1 ? 's' : ''} from ${collectionName}!`;
+          if (alreadySelectedCount > 0) msg += ` (${alreadySelectedCount} already selected)`;
+          if (skippedCount > 0) msg += ` (${skippedCount} skipped as pack is full)`;
+          showToastAlert(msg);
+        } else {
+          if (skippedCount > 0) {
+            showToastAlert("Your pack is full! Cannot add more photos.");
+          } else {
+            showToastAlert("All photos from this collection are already in your pack!");
+          }
+        }
+      } else {
+        setTargetCapacity(seriesItems.length);
+        activeSelectionSession.selectedPhotoIDs = seriesItems.map(item => item.photoId);
+        
+        renderSelections();
+        updateDrawer();
+        openDrawer();
+        showToastAlert(`Selected all ${seriesItems.length} photos from ${collectionName}!`);
+      }
     }
 
     const categoryButtons = document.querySelectorAll('.category-btn');
@@ -26257,9 +26425,18 @@
     });
 
     document.getElementById('lightbox-action-btn').addEventListener('click', () => {
-      if (activeSelectionSession.selectedPhotoIDs.length === activeSelectionSession.targetCapacity) {
+      const count = activeSelectionSession.selectedPhotoIDs.length;
+      const target = activeSelectionSession.targetCapacity;
+      if (count === target) {
         closeLightbox();
         openSizingPanel();
+      } else if (count > target) {
+        activeSelectionSession.selectedPhotoIDs.splice(target);
+        renderSelections();
+        updateDrawer();
+        if (currentIndex !== -1 && visibleItems.length > 0) {
+          updateLightboxSelector(visibleItems[currentIndex].photoId);
+        }
       }
     });
 
