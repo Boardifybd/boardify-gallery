@@ -602,7 +602,7 @@
       }
       
       body {
-        padding: 0;
+        padding: 0 0 70px 0 !important;
       }
       
       .gallery-col {
@@ -960,7 +960,7 @@
     /* Floating Bottom Drawer Sheet */
     .bottom-preview-drawer {
       position: fixed;
-      bottom: env(safe-area-inset-bottom, 16px);
+      bottom: 0;
       left: 0;
       right: 0;
       background-color: var(--text-color);
@@ -970,38 +970,43 @@
       box-shadow: 0 -8px 32px rgba(11, 19, 43, 0.3);
       display: flex;
       flex-direction: column;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
     }
     .bottom-preview-drawer.collapsed {
-      transform: translateY(calc(100% - 64px));
+      transform: translateY(calc(100% - 50px));
     }
     .drawer-header-bar {
-      height: 64px;
-      padding: 0 16px;
+      height: 50px;
+      padding: 0 12px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       user-select: none;
+      position: relative;
     }
     .drawer-header-left {
       display: flex;
-      flex-direction: column;
-      gap: 2px;
+      align-items: center;
     }
     .drawer-progress-text {
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
       font-size: 13px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
     }
     .drawer-progress-bg {
-      width: 120px;
-      height: 4px;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-top: 0 !important;
+      border-radius: 0 !important;
       overflow: hidden;
-      margin-top: 4px;
     }
     .drawer-progress-fill {
       height: 100%;
@@ -1012,17 +1017,18 @@
     .drawer-action-btn {
       font-family: 'Poppins', sans-serif;
       font-weight: 800;
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 10px 18px;
+      letter-spacing: 0.03em;
+      padding: 8px 14px;
       border: none;
       cursor: pointer;
       transition: all 0.25s ease;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       border-radius: 0 !important;
+      white-space: nowrap;
     }
     .drawer-action-btn.disabled {
       background-color: #4A5568;
@@ -1044,6 +1050,9 @@
       100% {
         box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
       }
+    }
+    #drawer-toggle-icon {
+      display: none;
     }
     .drawer-body-expanded {
       background-color: #070d1e;
@@ -1425,6 +1434,9 @@
     
     /* Responsive tweaks */
     @media (min-width: 768px) {
+      body {
+        padding-bottom: 90px;
+      }
       .bottom-preview-drawer.collapsed {
         transform: translateY(calc(100% - 72px));
       }
@@ -1432,16 +1444,29 @@
         height: 72px;
         padding: 0 24px;
       }
+      .drawer-header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
       .drawer-progress-text {
         font-size: 14px;
       }
       .drawer-progress-bg {
+        position: static;
         width: 200px;
         height: 6px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+        overflow: hidden;
+        margin-top: 4px !important;
       }
       .drawer-action-btn {
         font-size: 13px;
         padding: 12px 24px;
+      }
+      #drawer-toggle-icon {
+        display: inline !important;
       }
       .drawer-body-expanded {
         padding: 20px 24px;
@@ -25714,7 +25739,7 @@
       const actionBtn = document.getElementById('drawer-action-btn');
       
       if (target === null) {
-        if (progressText) progressText.innerHTML = "Please select a package size";
+        if (progressText) progressText.innerHTML = "0/0 Photos Selected";
         if (progressBar) progressBar.style.width = '0%';
         if (actionBtn) {
           actionBtn.disabled = true;
@@ -25724,7 +25749,7 @@
         return;
       }
       
-      progressText.innerHTML = count > target ? `<span style="color:#FF3B30;">Selected: ${count} of ${target} chosen</span>` : `Selected: ${count} of ${target} chosen`;
+      progressText.innerHTML = count > target ? `<span style="color:#FF3B30;">${count}/${target} Photos Selected</span>` : `${count}/${target} Photos Selected`;
       
       progressBar.style.width = Math.min(100, (count / target) * 100) + '%';
       progressBar.style.backgroundColor = count > target ? '#FF3B30' : 'var(--accent-color)';
@@ -25736,7 +25761,7 @@
       } else {
         actionBtn.disabled = true;
         actionBtn.className = "drawer-action-btn disabled";
-        actionBtn.innerHTML = count > target ? `Remove ${count - target} Photos` : `Select ${target - count} More Photos`;
+        actionBtn.innerHTML = count > target ? `Remove ${count - target} Photos` : `Choose More`;
       }
       
       const slotsContainer = document.getElementById('drawer-slots-container');
@@ -25770,7 +25795,6 @@
     }
 
     function cancelActiveBuyPhase() {
-      activeSelectionSession.selectedPhotoIDs = [];
       closeSizingPanel();
       renderSelections();
       if (lightbox.classList.contains('show') && visibleItems[currentIndex]) {
@@ -26032,6 +26056,9 @@
       boardifyMasterCart = boardifyMasterCart.filter(x => x.uniqueBundleGroupId !== id);
       renderCartSummary();
       updateCheckoutTotal();
+      if (boardifyMasterCart.length === 0) {
+        deselectPackageSize();
+      }
     }
 
     function updateCheckoutTotal() {
@@ -26199,6 +26226,7 @@
         updateLightboxSelector(photoId);
         renderSelections();
         updateDrawer();
+        closeLightbox();
       } else {
         if (activeSelectionSession.selectedPhotoIDs.length >= activeSelectionSession.targetCapacity) {
           const selectBtn = document.getElementById('lightbox-select-btn');
