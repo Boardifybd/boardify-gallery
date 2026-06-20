@@ -1262,9 +1262,6 @@
     }
 
     @media (max-width: 1023px) {
-      .quick-add-btn {
-        display: none !important;
-      }
       /* Fix gap above first collection */
       #gallery .collection-container:first-of-type {
         padding-top: 8px !important;
@@ -1310,6 +1307,15 @@
         border: 1px solid #FFFFFF !important;
         cursor: pointer !important;
         z-index: 15 !important;
+      }
+    }
+
+    /* Prevent iOS auto-zoom on input focus */
+    @media (max-width: 767px) {
+      #shipping-details-form input[type="text"],
+      #shipping-details-form input[type="tel"],
+      #shipping-details-form textarea {
+        font-size: 16px !important;
       }
     }
 </style>
@@ -6119,6 +6125,22 @@
         card.classList.toggle('selected-card', isSelected);
       });
       
+      // Update quick add/remove buttons in gallery
+      document.querySelectorAll('.quick-add-btn').forEach(btn => {
+        const colId = btn.getAttribute('data-collection-id');
+        if (!colId) return;
+        const isAdded = activeSelectionSession.selectedPhotoIDs.some(pid => pid.startsWith(colId + '#'));
+        if (isAdded) {
+          btn.textContent = "REMOVE SET";
+          btn.classList.add('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
+          btn.classList.remove('hover:bg-[#0B132B]', 'hover:text-white');
+        } else {
+          btn.textContent = "QUICK ADD SET";
+          btn.classList.remove('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
+          btn.classList.add('hover:bg-[#0B132B]', 'hover:text-white');
+        }
+      });
+      
       saveToLocalStorage();
     }
 
@@ -6439,13 +6461,13 @@
         // Header HTML
         container.innerHTML = `
           <div class="w-full max-w-[1320px] mb-4 lg:mb-6">
-            <div class="flex justify-between items-end">
-              <div>
-                <h3 class="text-base lg:text-xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">${col.name} <span class="text-xs lg:text-sm font-normal text-gray-500 ml-2">#${col.id}</span></h3>
-                <span class="text-[9px] lg:text-[10px] uppercase tracking-widest text-[#FF3B30] font-black">${getCategoryDisplayName(col.cat)}</span>
+            <div class="flex justify-between items-end gap-4 w-full">
+              <div class="min-w-0 flex-1 text-left">
+                <h3 class="text-sm lg:text-xl font-bold tracking-tight text-[#0B132B] font-['Poppins'] truncate">${col.name} <span class="text-[10px] lg:text-sm font-normal text-gray-500 ml-1 whitespace-nowrap">#${col.id}</span></h3>
+                <span class="text-[9px] lg:text-[10px] uppercase tracking-widest text-[#FF3B30] font-black block mt-0.5">${getCategoryDisplayName(col.cat)}</span>
               </div>
-              <button onclick="quickSelectCollection('${col.name.replace(/'/g, "\\'")}', '${col.id}')" class="quick-add-btn px-3 py-1 border border-[#0B132B] text-[10px] font-bold uppercase tracking-widest hover:bg-[#0B132B] hover:text-white transition-colors duration-200">
-                ⚡ Quick Add Set (Optional)
+              <button data-collection-id="${col.id}" onclick="toggleCollectionSet('${col.name.replace(/'/g, "\\'")}', '${col.id}')" class="quick-add-btn flex-shrink-0 ml-auto px-3 py-1.5 border border-[#0B132B] text-[10px] font-bold uppercase tracking-widest hover:bg-[#0B132B] hover:text-white transition-colors duration-200 whitespace-nowrap">
+                QUICK ADD SET
               </button>
             </div>
             <hr class="border-[#0B132B]/10 mt-1 lg:mt-2">
@@ -6532,34 +6554,38 @@
       }
     }
 
-    // Quick Select collection bundle
-    function quickSelectCollection(collectionName, colId) {
+    // Toggle collection set (add all / remove all)
+    function toggleCollectionSet(collectionName, colId) {
       const colItems = galleryItems.filter(x => x.photoId.startsWith(colId + "#"));
       if (colItems.length === 0) return;
 
       const target = activeSelectionSession.targetCapacity;
-      let added = 0;
-      let skipped = 0;
+      const isAnySelected = activeSelectionSession.selectedPhotoIDs.some(pid => pid.startsWith(colId + "#"));
 
-      for (const item of colItems) {
-        if (activeSelectionSession.selectedPhotoIDs.includes(item.photoId)) continue;
-        if (activeSelectionSession.selectedPhotoIDs.length < target) {
-          activeSelectionSession.selectedPhotoIDs.push(item.photoId);
-          added++;
+      if (isAnySelected) {
+        // REMOVE all photos of this collection from the selection
+        activeSelectionSession.selectedPhotoIDs = activeSelectionSession.selectedPhotoIDs.filter(pid => !pid.startsWith(colId + "#"));
+        showToast(`Removed all photos from ${collectionName}!`);
+        closeDrawer(); // Auto collapse mobile drawer on removal
+      } else {
+        // ADD all photos of this collection to the selection (up to target)
+        let added = 0;
+        for (const item of colItems) {
+          if (activeSelectionSession.selectedPhotoIDs.includes(item.photoId)) continue;
+          if (activeSelectionSession.selectedPhotoIDs.length < target) {
+            activeSelectionSession.selectedPhotoIDs.push(item.photoId);
+            added++;
+          }
+        }
+        if (added > 0) {
+          showToast(`Added ${added} photos from ${collectionName}!`);
+          openDrawer(); // Expand mobile drawer on additions
         } else {
-          skipped++;
+          showToast("Your package is already full!");
         }
       }
 
       syncStateUI();
-      if (added > 0) {
-        showToast(`Added ${added} photos from ${collectionName}!`);
-      } else {
-        showToast("Your package is already full or photos already selected.");
-      }
-      
-      // Expand mobile drawer on selection additions
-      openDrawer();
     }
 
     // Lightbox modal functions
@@ -7136,16 +7162,8 @@
     }
 
     function serializeCollections() {
-      // Map photo IDs back to their collection names
       return boardifyMasterCart.map(item => {
-        const collectionNames = [];
-        item.photoArray.forEach(pid => {
-          const gItem = galleryItems.find(x => x.photoId === pid);
-          if (gItem && !collectionNames.includes(gItem.collectionName)) {
-            collectionNames.push(gItem.collectionName);
-          }
-        });
-        return `[Size: ${item.configuredSize}]: ${collectionNames.join(', ')}`;
+        return `[Size: ${item.configuredSize}]: ${item.photoArray.join(', ')}`;
       }).join(' | ');
     }
 
@@ -7215,6 +7233,9 @@
       activeCategory = 'all';
       searchQuery = '';
       currentStep = 'gallery';
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       
       // Update UI elements
       document.querySelectorAll('.category-btn').forEach(btn => {
