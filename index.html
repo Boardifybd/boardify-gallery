@@ -1877,7 +1877,7 @@
   </div>
 
   <!-- ================= ABOUT US SECTION ================= -->
-  <section id="about-us" class="w-full max-w-[1320px] px-6 mt-20 mx-auto font-['Poppins'] text-[#0B132B]">
+  <section id="about-us" class="hidden lg:block w-full max-w-[1320px] px-6 mt-20 mx-auto font-['Poppins'] text-[#0B132B]">
     <!-- Section Header -->
     <div class="border-b-2 border-[#0B132B] pb-4 mb-8">
       <h2 class="text-2xl font-black uppercase tracking-widest text-[#0B132B]">About Boardify</h2>
@@ -6389,7 +6389,7 @@
         noLayouts.style.display = 'none';
       }
 
-      const batchSize = 6;
+      const batchSize = filteredCollections.length;
       const start = renderedIndex;
       const end = Math.min(filteredCollections.length, start + batchSize);
       renderedIndex = end;
