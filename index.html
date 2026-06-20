@@ -139,6 +139,7 @@
       letter-spacing: 0.15em;
       margin-top: 6px;
       opacity: 0.8;
+      white-space: nowrap;
     }
 
     /* Social Info Bar */
@@ -188,7 +189,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      border-bottom: 1px solid rgba(11, 19, 43, 0.08);
+      border-bottom: none !important;
       padding: 8px 16px;
       margin-top: 8px;
       margin-bottom: 6px;
@@ -419,8 +420,10 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       /* Both thin grey lines in Select Package are removed/made transparent */
+      border: none !important;
+      border-top: none !important;
       border-bottom: none !important;
-      padding: 10px 16px;
+      padding: 4px 16px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -432,7 +435,7 @@
       align-items: center;
       width: 100%;
       max-width: 1320px;
-      gap: 12px;
+      gap: 4px;
       padding-left: 8px;
       padding-right: 8px;
     }
@@ -654,6 +657,18 @@
     
     .drawer-body-expanded::-webkit-scrollbar-thumb {
       background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    #desktop-cats-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    #desktop-cats-list::-webkit-scrollbar-thumb {
+      background-color: #0B132B;
+    }
+    
+    #desktop-cats-list::-webkit-scrollbar-track {
+      background-color: rgba(11, 19, 43, 0.05);
     }
     
     .preview-slot {
@@ -1250,6 +1265,10 @@
       .quick-add-btn {
         display: none !important;
       }
+      /* Fix gap above first collection */
+      #gallery .collection-container:first-of-type {
+        padding-top: 8px !important;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -1308,9 +1327,9 @@
       <!-- Center: Nav links -->
       <nav class="flex gap-8 text-xs font-bold uppercase tracking-widest text-[#0B132B]">
         <a href="#" onclick="resetToHome(); return false;" class="hover:text-[#FF3B30] transition-colors">Browse Designs</a>
-        <a href="#" onclick="document.getElementById('info-photo-modal').style.display='flex'; document.body.style.overflow='hidden'; return false;" class="hover:text-[#FF3B30] transition-colors">Custom Photo Wallboard</a>
         <a href="#" onclick="scrollToPricing(); return false;" class="hover:text-[#FF3B30] transition-colors">Pricing &amp; Packages</a>
         <a href="#" onclick="scrollToHowItWorks(); return false;" class="hover:text-[#FF3B30] transition-colors">How It Works</a>
+        <a href="#" onclick="scrollToAboutUs(); return false;" class="hover:text-[#FF3B30] transition-colors">About Us</a>
       </nav>
       
       <!-- Right: Socials, hotline, cart icon -->
@@ -1333,7 +1352,7 @@
     <a href="#" class="logo-link" onclick="resetToHome(); return false;">
       <img src="Logo.png" alt="Logo" class="logo-image">
     </a>
-    <div class="subtitle">Premium Photo Wallboard</div>
+    <div class="subtitle">Custom Wallboard & Photo Wall decor</div>
     <div class="social-bar">
       <a href="https://www.facebook.com/boardify" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -1353,7 +1372,7 @@
   </header>
 
   <!-- ================= MOBILE STICKY NAV ================= -->
-  <div class="sticky-nav lg:hidden">
+  <div class="sticky-nav lg:hidden" style="border-bottom: none !important;">
     <div class="nav-container">
       <button class="category-btn active" data-category="all">All designs</button>
       <button id="more-cats-btn" class="px-6 py-2 border-2 border-[#0B132B] bg-[#0B132B] text-white hover:bg-transparent hover:text-[#0B132B] font-bold text-xs uppercase tracking-wider transition-all duration-200 flex items-center gap-1 cursor-pointer">
@@ -1368,7 +1387,7 @@
   </div>
 
   <!-- ================= MOBILE TARGET SELECTOR ================= -->
-  <div class="target-selector-bar lg:hidden">
+  <div class="target-selector-bar lg:hidden" style="border: none !important; border-top: none !important; border-bottom: none !important; background-color: #F5EFEB !important;">
     <div class="target-selector-inner">
       <div class="selector-group">
         <span class="target-title">Select package:</span>
@@ -1395,16 +1414,16 @@
   </div>
 
   <!-- ================= CUSTOM PHOTO WALLBOARD BANNER ================= -->
-  <div class="w-full flex justify-center px-6 mb-5 mt-4">
-    <button onclick="document.getElementById('info-photo-modal').style.display='flex'; document.body.style.overflow='hidden';"
-       class="flex flex-col items-center justify-center gap-1 w-full max-w-[1320px] px-6 bg-[#0B132B] text-white py-4 border-2 border-[#0B132B] hover:bg-[#FF3B30] hover:border-[#FF3B30] transition-all duration-200">
-      <span class="text-sm font-black uppercase tracking-widest">Customize Photo Wallboard</span>
-      <span class="text-[10px] font-bold tracking-widest uppercase opacity-75 inline-flex items-center gap-1">Click Here <i class="fa fa-arrow-right"></i></span>
-    </button>
+  <div class="w-full flex justify-center px-6 mb-0 lg:mb-5 mt-4">
+    <a href="/custom/"
+       class="flex flex-col items-center justify-center gap-1 w-full max-w-[1320px] px-6 bg-[#0B132B] text-white py-4 border-2 border-[#0B132B] hover:bg-[#FF3B30] hover:border-[#FF3B30] transition-all duration-200 no-underline text-center">
+      <span class="text-sm font-black uppercase tracking-widest text-white">Customize Photo Wallboard</span>
+      <span class="text-[10px] font-bold tracking-widest uppercase opacity-75 inline-flex items-center gap-1 text-white">Click Here <i class="fa fa-arrow-right"></i></span>
+    </a>
   </div>
 
   <!-- ================= MAIN LAYOUT (DESKTOP & MOBILE WRAPPER) ================= -->
-  <main class="desktop-main-wrapper w-full max-w-[1320px] px-6 flex flex-col lg:grid lg:grid-cols-[250px_1fr_320px] gap-8 mt-4">
+  <main class="desktop-main-wrapper w-full max-w-[1320px] px-6 flex flex-col lg:grid lg:grid-cols-[250px_1fr_320px] gap-8 mt-0 lg:mt-4">
     
     <!-- LEFT COLUMN: Categories list (Desktop only) -->
     <aside class="hidden lg:flex flex-col gap-6 sticky top-[95px] h-fit">
@@ -1418,9 +1437,13 @@
       </div>
       
       <!-- Categories List -->
-      <div class="bg-white border-2 border-[#0B132B] p-4">
+      <div class="bg-white border-2 border-[#0B132B] p-4 relative">
         <h4 class="text-[11px] font-bold uppercase tracking-widest text-[#0B132B]/60 mb-3">Categories</h4>
-        <div class="flex flex-col gap-2" id="desktop-cats-list">
+        <button id="desktop-cat-dropdown-btn" class="w-full flex justify-between items-center px-3 py-2.5 text-xs font-bold uppercase tracking-wider border-2 border-[#0B132B] bg-[#0B132B] text-white hover:bg-transparent hover:text-[#0B132B] transition-colors cursor-pointer">
+          <span id="desktop-active-cat-name">All Designs</span>
+          <span class="arrow ml-1">▼</span>
+        </button>
+        <div id="desktop-cats-list" class="hidden absolute left-4 right-4 mt-1 bg-white border-2 border-[#0B132B] z-[1100] max-h-[350px] overflow-y-auto flex flex-col gap-1 p-2">
           <!-- Populated dynamically -->
         </div>
       </div>
@@ -1524,7 +1547,7 @@
       <!-- Info Image -->
       <img src="Info.png" alt="Customize Photo Wallboard Info" style="width:100%; height:auto; display:block; border:2px solid rgba(255,255,255,0.1);">
       <!-- Proceed Button -->
-      <a href="https://boardifybd.netlify.app/" target="_blank" rel="noopener noreferrer"
+      <a href="/custom/" target="_blank" rel="noopener noreferrer"
          style="display:flex; align-items:center; justify-content:center; gap:8px;
                 width:100%; padding:14px 24px; margin-top:0;
                 background-color:#FF3B30; color:#FFFFFF;
@@ -1667,21 +1690,6 @@
               <span class="font-bold text-[#0B132B]">Package Price</span>
               <span class="font-extrabold text-[#0B132B]" id="overview-price">550 TK</span>
             </div>
-            <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-2">
-              <span class="font-bold text-[#0B132B]">Delivery Charge</span>
-              <span class="font-extrabold text-[#0B132B]" id="overview-delivery">80 TK</span>
-            </div>
-            <div class="flex justify-between items-center text-base border-t-2 border-[#0B132B] pt-3 mt-1 font-black text-[#FF3B30]">
-              <span>Total Price</span>
-              <span id="overview-total">630 TK</span>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Bundle Photos</h4>
-          <div class="flex gap-2 border border-[#0B132B]/10 p-2 overflow-x-auto bg-white" id="overview-cluster-thumbnails">
-            <!-- Dynamic thumbnails -->
           </div>
         </div>
 
@@ -1868,6 +1876,113 @@
     </div>
   </div>
 
+  <!-- ================= ABOUT US SECTION ================= -->
+  <section id="about-us" class="w-full max-w-[1320px] px-6 mt-20 mx-auto font-['Poppins'] text-[#0B132B]">
+    <!-- Section Header -->
+    <div class="border-b-2 border-[#0B132B] pb-4 mb-8">
+      <h2 class="text-2xl font-black uppercase tracking-widest text-[#0B132B]">About Boardify</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+      <!-- Left side: Introduction & Delivery -->
+      <div class="flex flex-col gap-6">
+        <div class="bg-white border-2 border-[#0B132B] p-6 flex flex-col gap-4">
+          <p class="text-xs leading-relaxed opacity-95">
+            Welcome to <strong>Boardify</strong>, the premier destination for premium wall decor in Bangladesh. We are redefining how you personalize your living spaces, bedrooms, offices, and studios. At Boardify, we believe that your walls should tell your story, showcase your passions, and hold your dearest memories—all without the hassle of traditional home improvement tools.
+          </p>
+          <p class="text-xs leading-relaxed opacity-95">
+            We design and deliver sleek, modern, ready-made, and custom wallboards that instantly elevate any room. Whether you are a fan of anime, a football enthusiast, a lover of elegant Islamic calligraphy, or someone looking to print a personalized gallery of your favorite family photos, Boardify turns your vision into stunning, durable wall display pieces.
+          </p>
+        </div>
+
+        <div class="bg-white border-2 border-[#0B132B] p-6 flex flex-col gap-3">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-[#FF3B30]">Delivery Across Bangladesh</h3>
+          <p class="text-xs leading-relaxed opacity-95">
+            No matter where you are located, we bring premium wall decor straight to your doorstep. We offer fast, reliable delivery covering all 64 districts across Bangladesh. To give you complete peace of mind, we provide a seamless Cash on Delivery (COD) service—you only pay when the package is safely in your hands.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right side: Ordering Options -->
+      <div class="bg-white border-2 border-[#0B132B] p-6 flex flex-col gap-5">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-[#0B132B]">How to Order from Boardify</h3>
+        <p class="text-xs leading-relaxed opacity-95">
+          We make the buying process incredibly simple and flexible for everyone. You can lock in your favorite designs using one of two easy options:
+        </p>
+
+        <!-- Option 1 -->
+        <div class="border-t border-[#0B132B]/10 pt-4 flex flex-col gap-2">
+          <h4 class="text-xs font-bold text-[#FF3B30] uppercase">Option 1: Website থেকে Select করুন</h4>
+          <span class="text-[10px] uppercase font-semibold text-gray-500 tracking-wider">(Order Directly via Our Storefront)</span>
+          <p class="text-xs leading-relaxed opacity-95">
+            Browse through our active design collections (including our best-selling 12-piece package for just 550 TK) or open our custom uploader. Fill out the quick checkout form with your Name, Phone Number, and Delivery Address. Your order details will be safely logged into our production queue instantly.
+          </p>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="border-t border-[#0B132B]/10 pt-4 flex flex-col gap-2">
+          <h4 class="text-xs font-bold text-[#FF3B30] uppercase">Option 2: Screenshot দিয়ে Order করুন</h4>
+          <span class="text-[10px] uppercase font-semibold text-gray-500 tracking-wider">(Order via Inbox)</span>
+          <p class="text-xs leading-relaxed opacity-95">
+            If you prefer a personal touch, simply take a screenshot of the ready-made design packs or layouts you love from our site or social profiles. Send the screenshot along with your contact details directly to our Facebook Page inbox, Instagram DM, or message our official WhatsApp support lines.
+          </p>
+        </div>
+
+        <div class="border-t border-[#0B132B]/20 pt-4 text-xs italic opacity-80 leading-relaxed">
+          Once your order is logged, our production team handles the precision printing, laminating, and cutting, shipping a flawless package directly to your home!
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Width Feature Comparison: Boardify vs Normal Frame -->
+    <div class="bg-white border-2 border-[#0B132B] p-8 mt-8 flex flex-col gap-6">
+      <h3 class="text-base font-bold uppercase tracking-wider text-center text-[#0B132B]">
+        What Makes a Boardify Wallboard Different From a Normal Photo Frame?
+      </h3>
+      <p class="text-xs text-center leading-relaxed max-w-2xl mx-auto opacity-75">
+        Traditional glass and wooden photo frames belong in the past. They are heavy, fragile, expensive, and require a hammer and nails to hang. Here is exactly why switching to a Boardify wallboard is the ultimate upgrade for your home:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-2">
+        <!-- Feature 1 -->
+        <div class="flex flex-col gap-2 p-4 border border-[#0B132B]/10 bg-[#F5EFEB]/30">
+          <div class="text-[#FF3B30] text-xl font-black">01</div>
+          <h4 class="text-xs font-bold uppercase tracking-wide">Premium Material & Structure</h4>
+          <p class="text-[11px] leading-relaxed opacity-90">
+            Unlike basic paper prints crammed into wooden frames, every Boardify wallboard is crafted using a high-density, 3mm premium PVC board. This gives each piece a lightweight, perfectly flat, and ultra-sleek matte profile that sits flawlessly against your wall.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col gap-2 p-4 border border-[#0B132B]/10 bg-[#F5EFEB]/30">
+          <div class="text-[#FF3B30] text-xl font-black">02</div>
+          <h4 class="text-xs font-bold uppercase tracking-wide">100% Waterproof & Dustproof</h4>
+          <p class="text-[11px] leading-relaxed opacity-90">
+            Normal frames trap moisture, warp over time, and accumulate dust behind the glass. Our boards feature a specialized protective lamination that makes them completely waterproof and dustproof. If they ever get dirty, you can simply wipe them clean with a damp cloth without risking any color fading or water damage. Lifetime color vibrancy is guaranteed.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col gap-2 p-4 border border-[#0B132B]/10 bg-[#F5EFEB]/30">
+          <div class="text-[#FF3B30] text-xl font-black">03</div>
+          <h4 class="text-xs font-bold uppercase tracking-wide">Zero Drilling & Wall Damage</h4>
+          <p class="text-[11px] leading-relaxed opacity-90">
+            To hang a normal frame, you have to damage your wall with a drill or hammer nails into the brick, leaving ugly holes behind. Boardify wallboards are engineered to be entirely drill-free.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex flex-col gap-2 p-4 border border-[#0B132B]/10 bg-[#F5EFEB]/30">
+          <div class="text-[#FF3B30] text-xl font-black">04</div>
+          <h4 class="text-xs font-bold uppercase tracking-wide">Complimentary Mounting Tape</h4>
+          <p class="text-[11px] leading-relaxed opacity-90">
+            Every single board you order comes with pre-applied, industrial-grade foam mounting tape for free. All you have to do is peel the backing off and press the board firmly onto your wall. It takes less than 30 seconds to install, and stays securely in place for years.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer class="w-full bg-white border-t border-[#0B132B]/10 py-10 px-6 mt-20">
     <div class="max-w-[1320px] mx-auto flex flex-col items-center gap-4 text-center">
@@ -1909,6 +2024,686 @@
       "270124%2310.jpg",
       "270124%2311.jpg",
       "270124%2312.jpg"
+    ]
+  },
+  {
+    "id": "270134",
+    "cat": "pink-girlish",
+    "name": "Soft Pink Series",
+    "folder": "Ai layout/270134",
+    "files": [
+      "270134%231.jpg",
+      "270134%232.jpg",
+      "270134%233.jpg",
+      "270134%234.jpg",
+      "270134%235.jpg",
+      "270134%236.jpg",
+      "270134%237.jpg",
+      "270134%238.jpg",
+      "270134%239.jpg",
+      "270134%2310.jpg",
+      "270134%2311.jpg",
+      "270134%2312.jpg"
+    ]
+  },
+  {
+    "id": "270132",
+    "cat": "pink-girlish",
+    "name": "Cute Dreams Series",
+    "folder": "Ai layout/270132",
+    "files": [
+      "270132%231.jpg",
+      "270132%232.jpg",
+      "270132%233.jpg",
+      "270132%234.jpg",
+      "270132%235.jpg",
+      "270132%236.jpg",
+      "270132%237.jpg",
+      "270132%238.jpg",
+      "270132%239.jpg",
+      "270132%2310.jpg",
+      "270132%2311.jpg",
+      "270132%2312.jpg"
+    ]
+  },
+  {
+    "id": "270164",
+    "cat": "pink-girlish",
+    "name": "Lovely Peach Series",
+    "folder": "Ai layout/270164",
+    "files": [
+      "270164%231.jpg",
+      "270164%232.jpg",
+      "270164%233.jpg",
+      "270164%234.jpg",
+      "270164%235.jpg",
+      "270164%236.jpg",
+      "270164%237.jpg",
+      "270164%238.jpg",
+      "270164%239.jpg",
+      "270164%2310.jpg",
+      "270164%2311.jpg",
+      "270164%2312.jpg"
+    ]
+  },
+  {
+    "id": "270165",
+    "cat": "pink-girlish",
+    "name": "Cotton Candy Series",
+    "folder": "Ai layout/270165",
+    "files": [
+      "270165%231.jpg",
+      "270165%232.jpg",
+      "270165%233.jpg",
+      "270165%234.jpg",
+      "270165%235.jpg",
+      "270165%236.jpg",
+      "270165%237.jpg",
+      "270165%238.jpg",
+      "270165%239.jpg",
+      "270165%2310.jpg",
+      "270165%2311.jpg",
+      "270165%2312.jpg"
+    ]
+  },
+  {
+    "id": "270167",
+    "cat": "pink-girlish",
+    "name": "Starry Pastel Series",
+    "folder": "Ai layout/270167",
+    "files": [
+      "270167%231.jpg",
+      "270167%232.jpg",
+      "270167%233.jpg",
+      "270167%234.jpg",
+      "270167%235.jpg",
+      "270167%236.jpg",
+      "270167%237.jpg",
+      "270167%238.jpg",
+      "270167%239.jpg",
+      "270167%2310.jpg",
+      "270167%2311.jpg",
+      "270167%2312.jpg"
+    ]
+  },
+  {
+    "id": "270059",
+    "cat": "pink-girlish",
+    "name": "Dreamy Pastel Series",
+    "folder": "Ai layout/270059",
+    "files": [
+      "2af266bfd4dfffc32e80ecca2eac2afd_093155.jpg",
+      "3393b29009cd43014957d7f446a5007b_054240.jpg",
+      "IMG-20230619-WA0006_065942.jpg",
+      "IMG-20230619-WA0010_065917.jpg",
+      "IMG-20230619-WA0011_065903.jpg",
+      "IMG-20230619-WA0021_065804.jpg",
+      "IMG-20230619-WA0022_070009.jpg",
+      "Polish_20230617_222400529_054748%20-%20Copy.jpg",
+      "Polish_20230617_222602828_054712.jpg",
+      "Polish_20230617_223641008_054533.jpg",
+      "Screenshot_20230528-033404~3_095911.jpg",
+      "Screenshot_20230528-113732~2_095937%20%281%29.jpg"
+    ]
+  },
+  {
+    "id": "270060",
+    "cat": "pink-girlish",
+    "name": "Blush Pink Series",
+    "folder": "Ai layout/270060",
+    "files": [
+      "Screenshot_20230528-114801~2_095900%20%281%29.jpg",
+      "Screenshot_20230528-115435~2_095922.jpg",
+      "ad8e51631df117300e8636f361a78f32_114233.jpg",
+      "b51c104861ca2e891a73ccc41236b00e_012134.jpg",
+      "chocolate-bar-with-hearts-cartoon-vector_095756.jpg",
+      "desktop-wallpaper-princess-crown-pink-crown_095820.jpg",
+      "e269b4d36b7ad0aaae0796f4b31af55e_093229.jpg",
+      "f5d0025879cf581618f9ebc1a8df6b55_093204.jpg",
+      "images%20%289%29_095808.jpg",
+      "pic1%20%282%29.jpg",
+      "received_248684034477565_095801.jpg",
+      "what-order-do-i-apply-makeup.png"
+    ]
+  },
+  {
+    "id": "270077",
+    "cat": "pink-girlish",
+    "name": "Girlish Aesthetic Series",
+    "folder": "Ai layout/270077",
+    "files": [
+      "1.22%20%281%29.jpg",
+      "1.22%20%2810%29.jpg",
+      "1.22%20%2811%29.jpg",
+      "1.22%20%2812%29.jpg",
+      "1.22%20%282%29.jpg",
+      "1.22%20%283%29.jpg",
+      "1.22%20%284%29.jpg",
+      "1.22%20%285%29.jpg",
+      "1.22%20%286%29.jpg",
+      "1.22%20%287%29.jpg",
+      "1.22%20%288%29.jpg",
+      "1.22%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270078",
+    "cat": "pink-girlish",
+    "name": "Kawaii Essence Series",
+    "folder": "Ai layout/270078",
+    "files": [
+      "w%20%281%29.jpg",
+      "w%20%2810%29.jpg",
+      "w%20%2811%29.jpg",
+      "w%20%2812%29.JPG",
+      "w%20%282%29.jpg",
+      "w%20%283%29.jpg",
+      "w%20%284%29.jpg",
+      "w%20%285%29.jpg",
+      "w%20%286%29.jpg",
+      "w%20%287%29.jpg",
+      "w%20%288%29.jpg",
+      "w%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270096",
+    "cat": "pink-girlish",
+    "name": "Barbie Glow Series",
+    "folder": "Ai layout/270096",
+    "files": [
+      "IMG_20231106_014020.jpg",
+      "IMG_20231106_014128.jpg",
+      "IMG_20231106_014217.jpg",
+      "IMG_20231106_014455.jpg",
+      "IMG_20231106_014522.jpg",
+      "IMG_20231106_014817.jpg",
+      "IMG_20231106_015612.jpg",
+      "Pink%20Aesthetic%20Collage%20%20DBC.jpeg",
+      "WhatsApp%20Image%20023-10-28%20at%2011.36.33%20AM_012737.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.26%20AM_012652.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.28%20AM_012636.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.29%20AM%20%281%29_012619.JPG"
+    ]
+  },
+  {
+    "id": "270097",
+    "cat": "pink-girlish",
+    "name": "Dreamy Pastel Series",
+    "folder": "Ai layout/270097",
+    "files": [
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.29%20AM_012559.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.30%20AM%20%281%29_012540.jpeg",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.30%20AM_012522.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.31%20AM_012503.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.32%20AM_012448.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.33%20AM_012432.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%20117.47%20AM_012412.JPG",
+      "WhatsApp%20Image%2023-10-28%20at%2011.47.58%20AM_012711.JPG",
+      "z%20%281%29_034718.jpg",
+      "z%20%281%29_034741.JPG",
+      "z%20%282%29_034701.JPG",
+      "z%20%283%29_034749.JPG"
+    ]
+  },
+  {
+    "id": "270126",
+    "cat": "pink-girlish",
+    "name": "Girlish Aesthetic Series",
+    "folder": "Ai layout/270126",
+    "files": [
+      "1%20%282%29.JPG",
+      "1%20%289%29.JPG",
+      "2163394276145a06abec4f3736177e23.jpg",
+      "6883fe7ca49b0b4f9972d980ab135286_113543.jpg",
+      "6cf4f116acf899f68e32483db63d66ad_113644.jpg",
+      "75c3e62afc0d3a0d470baa1ad0cf2716_113557.jpg",
+      "7b4cba64dd26af32ca3b88f12d818fad_113632.jpg",
+      "7ed9f5268e6f13fe457bcea9f8e1ab38_113616.jpg",
+      "8e0b6cb76927fbce0a8a366d8883005d_113606.jpg",
+      "IMG-5814_055801.JPG",
+      "IMG_20230930_191534_113411.jpg",
+      "WhatsApp%20Image%202023-08-29%20at%202.38.18%20PM%20%281%29%20-%20Copy.jpeg"
+    ]
+  },
+  {
+    "id": "270127",
+    "cat": "pink-girlish",
+    "name": "Kawaii Essence Series",
+    "folder": "Ai layout/270127",
+    "files": [
+      "WhatsApp%20Image%202023-08-29%20at%202.38.18%20PM.jpg",
+      "WhatsApp%20Image%202023-11-01%20at%209.19.43%20PM%20%282%29.jpeg",
+      "b5f6e2274341a0c724f03ef2b888f0a2_113512.jpg",
+      "bcb83d9bafcc258b8343f075ce5a7600_113458.jpg",
+      "d564fd38449d27647b678ab7bb8ac351_113445.jpg",
+      "e8891453c460d4101515c3fea0a2be75_113429.jpg",
+      "z%20%2810%29.jpg",
+      "z%20%2811%29.jpg",
+      "z%20%2812%29.jpg",
+      "z%20%2813%29.jpg",
+      "z%20%2815%29.jpg",
+      "z%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270128",
+    "cat": "pink-girlish",
+    "name": "Pink Chic Series",
+    "folder": "Ai layout/270128",
+    "files": [
+      "270128%231.jpg",
+      "270128%232.jpg",
+      "270128%233.jpg",
+      "270128%234.jpg",
+      "270128%235.jpg",
+      "270128%236.jpg",
+      "270128%237.jpg",
+      "270128%238.jpg",
+      "270128%239.jpg",
+      "270128%2310.jpg",
+      "270128%2311.jpg",
+      "270128%2312.jpg"
+    ]
+  },
+  {
+    "id": "270129",
+    "cat": "pink-girlish",
+    "name": "Pastel Paradise Series",
+    "folder": "Ai layout/270129",
+    "files": [
+      "270129%231.jpg",
+      "270129%232.jpg",
+      "270129%233.jpg",
+      "270129%234.jpg",
+      "270129%235.jpg",
+      "270129%236.jpg",
+      "270129%237.jpg",
+      "270129%238.jpg",
+      "270129%239.jpg",
+      "270129%2310.jpg",
+      "270129%2311.jpg",
+      "270129%2312.jpg"
+    ]
+  },
+  {
+    "id": "270130",
+    "cat": "pink-girlish",
+    "name": "Rose Petal Series",
+    "folder": "Ai layout/270130",
+    "files": [
+      "270130%231.jpg",
+      "270130%232.jpg",
+      "270130%233.jpg",
+      "270130%234.jpg",
+      "270130%235.jpg",
+      "270130%236.jpg",
+      "270130%237.jpg",
+      "270130%238.jpg",
+      "270130%239.jpg",
+      "270130%2310.jpg",
+      "270130%2311.jpg",
+      "270130%2312.jpg"
+    ]
+  },
+  {
+    "id": "270131",
+    "cat": "pink-girlish",
+    "name": "Sweet Blossom Series",
+    "folder": "Ai layout/270131",
+    "files": [
+      "270131%231.jpg",
+      "270131%232.jpg",
+      "270131%233.jpg",
+      "270131%234.jpg",
+      "270131%235.jpg",
+      "270131%236.jpg",
+      "270131%237.jpg",
+      "270131%238.jpg",
+      "270131%239.jpg",
+      "270131%2310.jpg",
+      "270131%2311.jpg",
+      "270131%2312.jpg"
+    ]
+  },
+  {
+    "id": "270135",
+    "cat": "pink-girlish",
+    "name": "Cosmic Pastel Series",
+    "folder": "Ai layout/270135",
+    "files": [
+      "270135%231.jpeg",
+      "270135%232.jpg",
+      "270135%233.jpeg",
+      "270135%234.jpg",
+      "270135%235.jpeg",
+      "270135%236.jpg",
+      "270135%237.jpg",
+      "270135%238.jpg",
+      "270135%239.jpg",
+      "270135%2310.jpg",
+      "270135%2311.jpg",
+      "270135%2312.jpg"
+    ]
+  },
+  {
+    "id": "270136",
+    "cat": "pink-girlish",
+    "name": "Starlight Girlish Series",
+    "folder": "Ai layout/270136",
+    "files": [
+      "270136%231.jpg",
+      "270136%232.jpg",
+      "270136%233.jpg",
+      "270136%234.jpg",
+      "270136%235.jpg",
+      "270136%236.jpg",
+      "270136%237.jpg",
+      "270136%238.jpg",
+      "270136%239.jpg",
+      "270136%2310.jpg",
+      "270136%2311.jpg",
+      "270136%2312.jpg"
+    ]
+  },
+  {
+    "id": "270133",
+    "cat": "pink-girlish",
+    "name": "Girlish Vibe Series",
+    "folder": "Ai layout/270133",
+    "files": [
+      "270133%231.jpg",
+      "270133%232.jpg",
+      "270133%233.jpg",
+      "270133%234.jpg",
+      "270133%235.jpg",
+      "270133%236.jpg",
+      "270133%237.jpg",
+      "270133%238.jpg",
+      "270133%239.jpg",
+      "270133%2310.jpg",
+      "270133%2311.jpg",
+      "270133%2312.jpg"
+    ]
+  },
+  {
+    "id": "270159",
+    "cat": "pink-girlish",
+    "name": "Blush Pink Series",
+    "folder": "Ai layout/270159",
+    "files": [
+      "270159%231.jpg",
+      "270159%232.jpg",
+      "270159%233.jpg",
+      "270159%234.jpg",
+      "270159%235.jpg",
+      "270159%236.jpg",
+      "270159%237.jpg",
+      "270159%238.jpg",
+      "270159%239.jpg",
+      "270159%2310.jpg",
+      "270159%2311.jpg",
+      "270159%2312.jpg"
+    ]
+  },
+  {
+    "id": "270160",
+    "cat": "pink-girlish",
+    "name": "Rose Quartz Series",
+    "folder": "Ai layout/270160",
+    "files": [
+      "270160%231.jpg",
+      "270160%232.jpg",
+      "270160%233.jpg",
+      "270160%234.jpg",
+      "270160%235.jpg",
+      "270160%236.jpg",
+      "270160%237.jpg",
+      "270160%238.jpg",
+      "270160%239.jpg",
+      "270160%2310.jpg",
+      "270160%2311.jpg",
+      "270160%2312.jpg"
+    ]
+  },
+  {
+    "id": "270161",
+    "cat": "pink-girlish",
+    "name": "Pastel Paradise Series",
+    "folder": "Ai layout/270161",
+    "files": [
+      "270161%231.jpg",
+      "270161%232.jpg",
+      "270161%233.jpg",
+      "270161%234.jpg",
+      "270161%235.jpg",
+      "270161%236.jpg",
+      "270161%237.jpg",
+      "270161%238.jpg",
+      "270161%239.jpg",
+      "270161%2310.jpg",
+      "270161%2311.jpg",
+      "270161%2312.jpg"
+    ]
+  },
+  {
+    "id": "270162",
+    "cat": "pink-girlish",
+    "name": "Kawaii Dreams Series",
+    "folder": "Ai layout/270162",
+    "files": [
+      "270162%231.jpg",
+      "270162%232.jpg",
+      "270162%233.jpg",
+      "270162%234.jpg",
+      "270162%235.jpg",
+      "270162%236.jpg",
+      "270162%237.jpg",
+      "270162%238.jpg",
+      "270162%239.jpg",
+      "270162%2310.jpg",
+      "270162%2311.jpg",
+      "270162%2312.jpg"
+    ]
+  },
+  {
+    "id": "270163",
+    "cat": "pink-girlish",
+    "name": "Blossom Petal Series",
+    "folder": "Ai layout/270163",
+    "files": [
+      "270163%231.jpg",
+      "270163%232.jpg",
+      "270163%233.JPG",
+      "270163%234.JPG",
+      "270163%235.JPG",
+      "270163%236.JPG",
+      "270163%237.JPG",
+      "270163%238.JPG",
+      "270163%239.JPG",
+      "270163%2310.JPG",
+      "270163%2311.jpg",
+      "270163%2312.jpg"
+    ]
+  },
+  {
+    "id": "270166",
+    "cat": "pink-girlish",
+    "name": "Sweet Lavender Series",
+    "folder": "Ai layout/270166",
+    "files": [
+      "270166%231.JPG",
+      "270166%232.JPG",
+      "270166%233.JPG",
+      "270166%234.JPG",
+      "270166%235.JPG",
+      "270166%236.JPG",
+      "270166%237.JPG",
+      "270166%238.JPG",
+      "270166%239.JPG",
+      "270166%2310.JPG",
+      "270166%2311.jpg",
+      "270166%2312.jpg"
+    ]
+  },
+  {
+    "id": "270168",
+    "cat": "pink-girlish",
+    "name": "Cute Anime Girl Series",
+    "folder": "Ai layout/270168",
+    "files": [
+      "270168%231.jpg",
+      "270168%232.jpg",
+      "270168%233.jpg",
+      "270168%234.jpg",
+      "270168%235.jpg",
+      "270168%236.jpg",
+      "270168%237.jpg",
+      "270168%238.jpg",
+      "270168%239.jpg",
+      "270168%2310.jpg",
+      "270168%2311.jpg",
+      "270168%2312.jpg"
+    ]
+  },
+  {
+    "id": "270169",
+    "cat": "pink-girlish",
+    "name": "Retro Girlish Series",
+    "folder": "Ai layout/270169",
+    "files": [
+      "270169%231.jpg",
+      "270169%232.jpg",
+      "270169%233.jpg",
+      "270169%234.jpg",
+      "270169%235.jpg",
+      "270169%236.jpg",
+      "270169%237.jpg",
+      "270169%238.jpg",
+      "270169%239.jpg",
+      "270169%2310.jpg",
+      "270169%2311.jpg",
+      "270169%2312.jpg"
+    ]
+  },
+  {
+    "id": "270170",
+    "cat": "pink-girlish",
+    "name": "Aesthetic Girlish Series",
+    "folder": "Ai layout/270170",
+    "files": [
+      "270170%231.jpg",
+      "270170%232.jpg",
+      "270170%233.jpg",
+      "270170%234.jpg",
+      "270170%235.jpg",
+      "270170%236.jpg",
+      "270170%237.jpg",
+      "270170%238.jpg",
+      "270170%239.jpg",
+      "270170%2310.jpg",
+      "270170%2311.jpg",
+      "270170%2312.jpg"
+    ]
+  },
+  {
+    "id": "270171",
+    "cat": "pink-girlish",
+    "name": "Vibrant Girlish Series",
+    "folder": "Ai layout/270171",
+    "files": [
+      "270171%231.jpg",
+      "270171%232.jpg",
+      "270171%233.jpg",
+      "270171%234.jpg",
+      "270171%235.jpg",
+      "270171%236.jpg",
+      "270171%237.jpg",
+      "270171%238.jpg",
+      "270171%239.jpg",
+      "270171%2310.jpg",
+      "270171%2311.jpg",
+      "270171%2312.jpg"
+    ]
+  },
+  {
+    "id": "270172",
+    "cat": "pink-girlish",
+    "name": "Cozy Blossom Series",
+    "folder": "Ai layout/270172",
+    "files": [
+      "270172%231.jpg",
+      "270172%232.jpg",
+      "270172%233.jpg",
+      "270172%234.jpg",
+      "270172%235.jpg",
+      "270172%236.jpg",
+      "270172%237.jpg",
+      "270172%238.jpg",
+      "270172%239.jpg",
+      "270172%2310.jpg",
+      "270172%2311.jpg",
+      "270172%2312.jpg"
+    ]
+  },
+  {
+    "id": "270173",
+    "cat": "pink-girlish",
+    "name": "Girlish Vibes Series",
+    "folder": "Ai layout/270173",
+    "files": [
+      "270173%231.jpg",
+      "270173%232.jpg",
+      "270173%233.jpg",
+      "270173%234.jpg",
+      "270173%235.jpg",
+      "270173%236.jpg",
+      "270173%237.jpg",
+      "270173%238.jpg",
+      "270173%239.jpg",
+      "270173%2310.jpg",
+      "270173%2311.jpg",
+      "270173%2312.jpg"
+    ]
+  },
+  {
+    "id": "270174",
+    "cat": "pink-girlish",
+    "name": "Girlish Charm Series",
+    "folder": "Ai layout/270174",
+    "files": [
+      "270174%231.jpg",
+      "270174%232.jpg",
+      "270174%233.JPG",
+      "270174%234.JPG",
+      "270174%235.JPG",
+      "270174%236.JPG",
+      "270174%237.JPG",
+      "270174%238.JPG",
+      "270174%239.JPG",
+      "270174%2310.jpg",
+      "270174%2311.jpg",
+      "270174%2312.jpg"
+    ]
+  },
+  {
+    "id": "270175",
+    "cat": "pink-girlish",
+    "name": "Dreamy Anime Series",
+    "folder": "Ai layout/270175",
+    "files": [
+      "270175%231.jpg",
+      "270175%232.jpg",
+      "270175%233.jpg",
+      "270175%234.jpg",
+      "270175%235.jpg",
+      "270175%236.jpg",
+      "270175%237.jpg",
+      "270175%238.jpg",
+      "270175%239.jpg",
+      "270175%2310.jpg",
+      "270175%2311.jpg",
+      "270175%2312.jpg"
     ]
   },
   {
@@ -3092,46 +3887,6 @@
     ]
   },
   {
-    "id": "270059",
-    "cat": "pink-girlish",
-    "name": "Dreamy Pastel Series",
-    "folder": "Ai layout/270059",
-    "files": [
-      "2af266bfd4dfffc32e80ecca2eac2afd_093155.jpg",
-      "3393b29009cd43014957d7f446a5007b_054240.jpg",
-      "IMG-20230619-WA0006_065942.jpg",
-      "IMG-20230619-WA0010_065917.jpg",
-      "IMG-20230619-WA0011_065903.jpg",
-      "IMG-20230619-WA0021_065804.jpg",
-      "IMG-20230619-WA0022_070009.jpg",
-      "Polish_20230617_222400529_054748%20-%20Copy.jpg",
-      "Polish_20230617_222602828_054712.jpg",
-      "Polish_20230617_223641008_054533.jpg",
-      "Screenshot_20230528-033404~3_095911.jpg",
-      "Screenshot_20230528-113732~2_095937%20%281%29.jpg"
-    ]
-  },
-  {
-    "id": "270060",
-    "cat": "pink-girlish",
-    "name": "Blush Pink Series",
-    "folder": "Ai layout/270060",
-    "files": [
-      "Screenshot_20230528-114801~2_095900%20%281%29.jpg",
-      "Screenshot_20230528-115435~2_095922.jpg",
-      "ad8e51631df117300e8636f361a78f32_114233.jpg",
-      "b51c104861ca2e891a73ccc41236b00e_012134.jpg",
-      "chocolate-bar-with-hearts-cartoon-vector_095756.jpg",
-      "desktop-wallpaper-princess-crown-pink-crown_095820.jpg",
-      "e269b4d36b7ad0aaae0796f4b31af55e_093229.jpg",
-      "f5d0025879cf581618f9ebc1a8df6b55_093204.jpg",
-      "images%20%289%29_095808.jpg",
-      "pic1%20%282%29.jpg",
-      "received_248684034477565_095801.jpg",
-      "what-order-do-i-apply-makeup.png"
-    ]
-  },
-  {
     "id": "270061",
     "cat": "others",
     "name": "Eclectic Visuals Series",
@@ -3429,46 +4184,6 @@
       "2%20%287%29.jpg",
       "2%20%288%29.jpg",
       "2%20%289%29.jpg"
-    ]
-  },
-  {
-    "id": "270077",
-    "cat": "pink-girlish",
-    "name": "Girlish Aesthetic Series",
-    "folder": "Ai layout/270077",
-    "files": [
-      "1.22%20%281%29.jpg",
-      "1.22%20%2810%29.jpg",
-      "1.22%20%2811%29.jpg",
-      "1.22%20%2812%29.jpg",
-      "1.22%20%282%29.jpg",
-      "1.22%20%283%29.jpg",
-      "1.22%20%284%29.jpg",
-      "1.22%20%285%29.jpg",
-      "1.22%20%286%29.jpg",
-      "1.22%20%287%29.jpg",
-      "1.22%20%288%29.jpg",
-      "1.22%20%289%29.jpg"
-    ]
-  },
-  {
-    "id": "270078",
-    "cat": "pink-girlish",
-    "name": "Kawaii Essence Series",
-    "folder": "Ai layout/270078",
-    "files": [
-      "w%20%281%29.jpg",
-      "w%20%2810%29.jpg",
-      "w%20%2811%29.jpg",
-      "w%20%2812%29.JPG",
-      "w%20%282%29.jpg",
-      "w%20%283%29.jpg",
-      "w%20%284%29.jpg",
-      "w%20%285%29.jpg",
-      "w%20%286%29.jpg",
-      "w%20%287%29.jpg",
-      "w%20%288%29.jpg",
-      "w%20%289%29.jpg"
     ]
   },
   {
@@ -3809,46 +4524,6 @@
       "hh%20%287%29.JPG",
       "hh%20%288%29.JPG",
       "hh%20%289%29.JPG"
-    ]
-  },
-  {
-    "id": "270096",
-    "cat": "pink-girlish",
-    "name": "Barbie Glow Series",
-    "folder": "Ai layout/270096",
-    "files": [
-      "IMG_20231106_014020.jpg",
-      "IMG_20231106_014128.jpg",
-      "IMG_20231106_014217.jpg",
-      "IMG_20231106_014455.jpg",
-      "IMG_20231106_014522.jpg",
-      "IMG_20231106_014817.jpg",
-      "IMG_20231106_015612.jpg",
-      "Pink%20Aesthetic%20Collage%20%20DBC.jpeg",
-      "WhatsApp%20Image%20023-10-28%20at%2011.36.33%20AM_012737.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.26%20AM_012652.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.28%20AM_012636.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.29%20AM%20%281%29_012619.JPG"
-    ]
-  },
-  {
-    "id": "270097",
-    "cat": "pink-girlish",
-    "name": "Dreamy Pastel Series",
-    "folder": "Ai layout/270097",
-    "files": [
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.29%20AM_012559.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.30%20AM%20%281%29_012540.jpeg",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.30%20AM_012522.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.31%20AM_012503.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.32%20AM_012448.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%2011.36.33%20AM_012432.JPG",
-      "WhatsApp%20Image%202023-10-28%20at%20117.47%20AM_012412.JPG",
-      "WhatsApp%20Image%2023-10-28%20at%2011.47.58%20AM_012711.JPG",
-      "z%20%281%29_034718.jpg",
-      "z%20%281%29_034741.JPG",
-      "z%20%282%29_034701.JPG",
-      "z%20%283%29_034749.JPG"
     ]
   },
   {
@@ -4313,7 +4988,7 @@
   },
   {
     "id": "270121",
-    "cat": "others",
+    "cat": "love",
     "name": "Curated Selection Series",
     "folder": "Ai layout/270121",
     "files": [
@@ -4392,169 +5067,9 @@
     ]
   },
   {
-    "id": "270126",
-    "cat": "pink-girlish",
-    "name": "Girlish Aesthetic Series",
-    "folder": "Ai layout/270126",
-    "files": [
-      "1%20%282%29.JPG",
-      "1%20%289%29.JPG",
-      "2163394276145a06abec4f3736177e23.jpg",
-      "6883fe7ca49b0b4f9972d980ab135286_113543.jpg",
-      "6cf4f116acf899f68e32483db63d66ad_113644.jpg",
-      "75c3e62afc0d3a0d470baa1ad0cf2716_113557.jpg",
-      "7b4cba64dd26af32ca3b88f12d818fad_113632.jpg",
-      "7ed9f5268e6f13fe457bcea9f8e1ab38_113616.jpg",
-      "8e0b6cb76927fbce0a8a366d8883005d_113606.jpg",
-      "IMG-5814_055801.JPG",
-      "IMG_20230930_191534_113411.jpg",
-      "WhatsApp%20Image%202023-08-29%20at%202.38.18%20PM%20%281%29%20-%20Copy.jpeg"
-    ]
-  },
-  {
-    "id": "270127",
-    "cat": "pink-girlish",
-    "name": "Kawaii Essence Series",
-    "folder": "Ai layout/270127",
-    "files": [
-      "WhatsApp%20Image%202023-08-29%20at%202.38.18%20PM.jpg",
-      "WhatsApp%20Image%202023-11-01%20at%209.19.43%20PM%20%282%29.jpeg",
-      "b5f6e2274341a0c724f03ef2b888f0a2_113512.jpg",
-      "bcb83d9bafcc258b8343f075ce5a7600_113458.jpg",
-      "d564fd38449d27647b678ab7bb8ac351_113445.jpg",
-      "e8891453c460d4101515c3fea0a2be75_113429.jpg",
-      "z%20%2810%29.jpg",
-      "z%20%2811%29.jpg",
-      "z%20%2812%29.jpg",
-      "z%20%2813%29.jpg",
-      "z%20%2815%29.jpg",
-      "z%20%289%29.jpg"
-    ]
-  },
-  {
-    "id": "270128",
-    "cat": "pink-girlish",
-    "name": "Sweet Rose Series",
-    "folder": "Ai layout/270128",
-    "files": [
-      "270128%231.jpg",
-      "270128%232.jpg",
-      "270128%233.jpg",
-      "270128%234.jpg",
-      "270128%235.jpg",
-      "270128%236.jpg",
-      "270128%237.jpg",
-      "270128%238.jpg",
-      "270128%239.jpg",
-      "270128%2310.jpg",
-      "270128%2311.jpg",
-      "270128%2312.jpg"
-    ]
-  },
-  {
-    "id": "270129",
-    "cat": "pink-girlish",
-    "name": "Pastel Paradise Series",
-    "folder": "Ai layout/270129",
-    "files": [
-      "270129%231.jpg",
-      "270129%232.jpg",
-      "270129%233.jpg",
-      "270129%234.jpg",
-      "270129%235.jpg",
-      "270129%236.jpg",
-      "270129%237.jpg",
-      "270129%238.jpg",
-      "270129%239.jpg",
-      "270129%2310.jpg",
-      "270129%2311.jpg",
-      "270129%2312.jpg"
-    ]
-  },
-  {
-    "id": "270130",
-    "cat": "pink-girlish",
-    "name": "Bubblegum Dream Series",
-    "folder": "Ai layout/270130",
-    "files": [
-      "270130%231.jpg",
-      "270130%232.jpg",
-      "270130%233.jpg",
-      "270130%234.jpg",
-      "270130%235.jpg",
-      "270130%236.jpg",
-      "270130%237.jpg",
-      "270130%238.jpg",
-      "270130%239.jpg",
-      "270130%2310.jpg",
-      "270130%2311.jpg",
-      "270130%2312.jpg"
-    ]
-  },
-  {
-    "id": "270131",
-    "cat": "pink-girlish",
-    "name": "Strawberry Sweet Series",
-    "folder": "Ai layout/270131",
-    "files": [
-      "270131%231.jpg",
-      "270131%232.jpg",
-      "270131%233.jpg",
-      "270131%234.jpg",
-      "270131%235.jpg",
-      "270131%236.jpg",
-      "270131%237.jpg",
-      "270131%238.jpg",
-      "270131%239.jpg",
-      "270131%2310.jpg",
-      "270131%2311.jpg",
-      "270131%2312.jpg"
-    ]
-  },
-  {
-    "id": "270135",
-    "cat": "pink-girlish",
-    "name": "Cosmic Pastel Series",
-    "folder": "Ai layout/270135",
-    "files": [
-      "270135%231.jpeg",
-      "270135%232.jpg",
-      "270135%233.jpeg",
-      "270135%234.jpg",
-      "270135%235.jpeg",
-      "270135%236.jpg",
-      "270135%237.jpg",
-      "270135%238.jpg",
-      "270135%239.jpg",
-      "270135%2310.jpg",
-      "270135%2311.jpg",
-      "270135%2312.jpg"
-    ]
-  },
-  {
-    "id": "270136",
-    "cat": "pink-girlish",
-    "name": "Starlight Girlish Series",
-    "folder": "Ai layout/270136",
-    "files": [
-      "270136%231.jpg",
-      "270136%232.jpg",
-      "270136%233.jpg",
-      "270136%234.jpg",
-      "270136%235.jpg",
-      "270136%236.jpg",
-      "270136%237.jpg",
-      "270136%238.jpg",
-      "270136%239.jpg",
-      "270136%2310.jpg",
-      "270136%2311.jpg",
-      "270136%2312.jpg"
-    ]
-  },
-  {
     "id": "270137",
-    "cat": "others",
-    "name": "Aesthetic 2",
+    "cat": "aesthetic",
+    "name": "Aesthetic Composition Series",
     "folder": "Ai layout/270137",
     "files": [
       "270137%231.jpg",
@@ -4565,16 +5080,16 @@
       "270137%236.jpg",
       "270137%237.jpg",
       "270137%238.jpg",
-      "270137%239.jpg",
-      "270137%2310.jpg",
-      "270137%2311.jpg",
-      "270137%2312.jpg"
+      "270137%239.JPG",
+      "270137%2310.JPG",
+      "270137%2311.JPG",
+      "270137%2312.JPG"
     ]
   },
   {
     "id": "270138",
-    "cat": "car",
-    "name": "Car Series",
+    "cat": "aesthetic",
+    "name": "Aesthetic Balance Series",
     "folder": "Ai layout/270138",
     "files": [
       "270138%231.jpg",
@@ -4593,39 +5108,39 @@
   },
   {
     "id": "270139",
-    "cat": "pink-girlish",
-    "name": "Girl 6 Series",
+    "cat": "aesthetic",
+    "name": "Aesthetic Harmony Series",
     "folder": "Ai layout/270139",
     "files": [
       "270139%231.jpg",
       "270139%232.jpg",
-      "270139%233.jpg",
-      "270139%234.jpg",
-      "270139%235.jpg",
-      "270139%236.jpg",
-      "270139%237.jpg",
-      "270139%238.jpg",
+      "270139%233.JPG",
+      "270139%234.JPG",
+      "270139%235.JPG",
+      "270139%236.JPG",
+      "270139%237.JPG",
+      "270139%238.JPG",
       "270139%239.jpg",
-      "270139%2310.jpg",
-      "270139%2311.jpg",
-      "270139%2312.jpg"
+      "270139%2310.jpeg",
+      "270139%2311.jpeg",
+      "270139%2312.JPG"
     ]
   },
   {
     "id": "270140",
-    "cat": "pink-girlish",
-    "name": "Girl 7 Series",
+    "cat": "aesthetic",
+    "name": "Aesthetic Grace Series",
     "folder": "Ai layout/270140",
     "files": [
-      "270140%231.jpg",
-      "270140%232.jpg",
-      "270140%233.jpg",
-      "270140%234.jpg",
-      "270140%235.jpg",
-      "270140%236.jpg",
+      "270140%231.JPG",
+      "270140%232.JPG",
+      "270140%233.JPG",
+      "270140%234.JPG",
+      "270140%235.JPG",
+      "270140%236.JPG",
       "270140%237.jpg",
       "270140%238.jpg",
-      "270140%239.jpg",
+      "270140%239.JPG",
       "270140%2310.jpg",
       "270140%2311.jpg",
       "270140%2312.jpg"
@@ -4633,48 +5148,48 @@
   },
   {
     "id": "270141",
-    "cat": "pink-girlish",
-    "name": "Girl 10 Series",
+    "cat": "aesthetic",
+    "name": "Aesthetic Elements Series",
     "folder": "Ai layout/270141",
     "files": [
-      "270141%231.jpg",
-      "270141%232.jpg",
-      "270141%233.jpg",
-      "270141%234.jpg",
-      "270141%235.jpg",
-      "270141%236.jpg",
-      "270141%237.jpg",
-      "270141%238.jpg",
-      "270141%239.jpg",
-      "270141%2310.jpg",
-      "270141%2311.jpg",
-      "270141%2312.jpg"
+      "270141%231.JPG",
+      "270141%232.JPG",
+      "270141%233.JPG",
+      "270141%234.JPG",
+      "270141%235.JPG",
+      "270141%236.JPG",
+      "270141%237.JPG",
+      "270141%238.JPG",
+      "270141%239.JPG",
+      "270141%2310.JPG",
+      "270141%2311.JPG",
+      "270141%2312.JPG"
     ]
   },
   {
     "id": "270142",
-    "cat": "pink-girlish",
-    "name": "Girl 8 Series",
+    "cat": "black",
+    "name": "Midnight Onyx Series",
     "folder": "Ai layout/270142",
     "files": [
-      "270142%231.jpg",
-      "270142%232.jpg",
-      "270142%233.jpg",
-      "270142%234.jpg",
-      "270142%235.jpg",
-      "270142%236.jpg",
-      "270142%237.jpg",
-      "270142%238.jpg",
-      "270142%239.jpg",
-      "270142%2310.jpg",
-      "270142%2311.jpg",
-      "270142%2312.jpg"
+      "270142%231.JPG",
+      "270142%232.JPG",
+      "270142%233.JPG",
+      "270142%234.JPG",
+      "270142%235.JPG",
+      "270142%236.JPG",
+      "270142%237.JPG",
+      "270142%238.JPG",
+      "270142%239.JPG",
+      "270142%2310.JPG",
+      "270142%2311.JPG",
+      "270142%2312.JPG"
     ]
   },
   {
     "id": "270143",
-    "cat": "pink-girlish",
-    "name": "Girl 9 Series",
+    "cat": "blue",
+    "name": "Cerulean Essence Series",
     "folder": "Ai layout/270143",
     "files": [
       "270143%231.jpg",
@@ -4693,8 +5208,8 @@
   },
   {
     "id": "270144",
-    "cat": "food",
-    "name": "Kitchen 2 Series",
+    "cat": "bohemian",
+    "name": "Boho Abstract Series",
     "folder": "Ai layout/270144",
     "files": [
       "270144%231.jpg",
@@ -4713,17 +5228,17 @@
   },
   {
     "id": "270145",
-    "cat": "others",
-    "name": "Aesthetic",
+    "cat": "flower",
+    "name": "Creative Expression Series",
     "folder": "Ai layout/270145",
     "files": [
-      "270145%231.jpg",
-      "270145%232.jpg",
-      "270145%233.jpg",
-      "270145%234.jpg",
-      "270145%235.jpg",
-      "270145%236.jpg",
-      "270145%237.jpg",
+      "270145%231.jpeg",
+      "270145%232.jpeg",
+      "270145%233.jpeg",
+      "270145%234.jpeg",
+      "270145%235.jpeg",
+      "270145%236.jpeg",
+      "270145%237.jpeg",
       "270145%238.jpg",
       "270145%239.jpg",
       "270145%2310.jpg",
@@ -4733,28 +5248,28 @@
   },
   {
     "id": "270146",
-    "cat": "others",
-    "name": "Aesthetic 3",
+    "cat": "flower",
+    "name": "Creative Harmony Series",
     "folder": "Ai layout/270146",
     "files": [
-      "270146%231.jpg",
+      "270146%231.jpeg",
       "270146%232.jpg",
-      "270146%233.jpg",
+      "270146%233.jpeg",
       "270146%234.jpg",
-      "270146%235.jpg",
+      "270146%235.jpeg",
       "270146%236.jpg",
-      "270146%237.jpg",
+      "270146%237.jpeg",
       "270146%238.jpg",
-      "270146%239.jpg",
+      "270146%239.jpeg",
       "270146%2310.jpg",
-      "270146%2311.jpg",
+      "270146%2311.jpeg",
       "270146%2312.jpg"
     ]
   },
   {
     "id": "270147",
-    "cat": "others",
-    "name": "Aesthetic 4",
+    "cat": "kitchen",
+    "name": "Culinary Art Series",
     "folder": "Ai layout/270147",
     "files": [
       "270147%231.jpg",
@@ -4773,8 +5288,8 @@
   },
   {
     "id": "270148",
-    "cat": "others",
-    "name": "Aesthetic 3",
+    "cat": "kitchen",
+    "name": "Gourmet Table Series",
     "folder": "Ai layout/270148",
     "files": [
       "270148%231.jpg",
@@ -4785,16 +5300,16 @@
       "270148%236.jpg",
       "270148%237.jpg",
       "270148%238.jpg",
-      "270148%239.jpeg",
-      "270148%2310.jpeg",
+      "270148%239.jpg",
+      "270148%2310.jpg",
       "270148%2311.jpg",
       "270148%2312.jpg"
     ]
   },
   {
     "id": "270149",
-    "cat": "others",
-    "name": "Black Series",
+    "cat": "kitchen",
+    "name": "Chef's Palette Series",
     "folder": "Ai layout/270149",
     "files": [
       "270149%231.jpg",
@@ -4813,28 +5328,20 @@
   },
   {
     "id": "270150",
-    "cat": "bohemian",
-    "name": "Bohemein 1 Series",
+    "cat": "kitchen",
+    "name": "Bistro Vibe Series",
     "folder": "Ai layout/270150",
     "files": [
       "270150%231.jpg",
       "270150%232.jpg",
       "270150%233.jpg",
-      "270150%234.jpg",
-      "270150%235.jpg",
-      "270150%236.jpg",
-      "270150%237.jpg",
-      "270150%238.jpg",
-      "270150%239.jpg",
-      "270150%2310.jpg",
-      "270150%2311.jpg",
-      "270150%2312.jpg"
+      "270150%234.jpg"
     ]
   },
   {
     "id": "270151",
-    "cat": "car",
-    "name": "Car03 Series",
+    "cat": "kitchen",
+    "name": "Sweet Cravings Series",
     "folder": "Ai layout/270151",
     "files": [
       "270151%231.jpg",
@@ -4853,8 +5360,8 @@
   },
   {
     "id": "270152",
-    "cat": "others",
-    "name": "Category Blue Series",
+    "cat": "k-pop",
+    "name": "K-Pop Vibe Series",
     "folder": "Ai layout/270152",
     "files": [
       "270152%231.jpg",
@@ -4873,8 +5380,8 @@
   },
   {
     "id": "270153",
-    "cat": "pink-girlish",
-    "name": "Girl 14 Series",
+    "cat": "k-pop",
+    "name": "K-Pop Legends Series",
     "folder": "Ai layout/270153",
     "files": [
       "270153%231.jpg",
@@ -4893,8 +5400,8 @@
   },
   {
     "id": "270154",
-    "cat": "pink-girlish",
-    "name": "Girl 5 Series",
+    "cat": "movie-poster",
+    "name": "Cinematic Classic Series",
     "folder": "Ai layout/270154",
     "files": [
       "270154%231.jpg",
@@ -4913,8 +5420,8 @@
   },
   {
     "id": "270155",
-    "cat": "pink-girlish",
-    "name": "Girl 11 Series",
+    "cat": "movie-poster",
+    "name": "Silver Screen Series",
     "folder": "Ai layout/270155",
     "files": [
       "270155%231.jpg",
@@ -4933,8 +5440,8 @@
   },
   {
     "id": "270156",
-    "cat": "pink-girlish",
-    "name": "Girl 12 Series",
+    "cat": "movie-poster",
+    "name": "Vintage Cinema Series",
     "folder": "Ai layout/270156",
     "files": [
       "270156%231.jpg",
@@ -4953,8 +5460,8 @@
   },
   {
     "id": "270157",
-    "cat": "pink-girlish",
-    "name": "Girl 13 Series",
+    "cat": "bengali-band",
+    "name": "Melodic Echoes Series",
     "folder": "Ai layout/270157",
     "files": [
       "270157%231.jpg",
@@ -4973,8 +5480,8 @@
   },
   {
     "id": "270158",
-    "cat": "pink-girlish",
-    "name": "Girl 2 Cate Series",
+    "cat": "bengali-band",
+    "name": "Rhythmic Beats Series",
     "folder": "Ai layout/270158",
     "files": [
       "270158%231.jpg",
@@ -4992,460 +5499,129 @@
     ]
   },
   {
-    "id": "270159",
-    "cat": "pink-girlish",
-    "name": "Girl 3 Category Series",
-    "folder": "Ai layout/270159",
-    "files": [
-      "270159%231.jpg",
-      "270159%232.jpg",
-      "270159%233.jpg",
-      "270159%234.jpg",
-      "270159%235.jpg",
-      "270159%236.jpg",
-      "270159%237.jpg",
-      "270159%238.jpg",
-      "270159%239.jpg",
-      "270159%2310.jpg",
-      "270159%2311.jpg",
-      "270159%2312.jpg"
-    ]
-  },
-  {
-    "id": "270160",
-    "cat": "pink-girlish",
-    "name": "Girl 4 Series",
-    "folder": "Ai layout/270160",
-    "files": [
-      "270160%231.jpg",
-      "270160%232.jpg",
-      "270160%233.jpg",
-      "270160%234.jpg",
-      "270160%235.jpg",
-      "270160%236.jpg",
-      "270160%237.jpg",
-      "270160%238.jpg",
-      "270160%239.jpg",
-      "270160%2310.jpg",
-      "270160%2311.jpg",
-      "270160%2312.jpg"
-    ]
-  },
-  {
-    "id": "270161",
-    "cat": "pink-girlish",
-    "name": "Girl Category Series",
-    "folder": "Ai layout/270161",
-    "files": [
-      "270161%231.jpg",
-      "270161%232.jpg",
-      "270161%233.jpg",
-      "270161%234.jpg",
-      "270161%235.jpg",
-      "270161%236.jpg",
-      "270161%237.jpg",
-      "270161%238.jpg",
-      "270161%239.jpg",
-      "270161%2310.jpg",
-      "270161%2311.jpg",
-      "270161%2312.jpg"
-    ]
-  },
-  {
-    "id": "270162",
-    "cat": "pink-girlish",
-    "name": "Girl Category Set 2",
-    "folder": "Ai layout/270162",
-    "files": [
-      "270162%231.jpg",
-      "270162%232.jpg",
-      "270162%233.jpg",
-      "270162%234.jpg",
-      "270162%235.jpg",
-      "270162%236.jpg",
-      "270162%237.jpg",
-      "270162%238.jpg",
-      "270162%239.jpg",
-      "270162%2310.jpg",
-      "270162%2311.jpg",
-      "270162%2312.jpg"
-    ]
-  },
-  {
-    "id": "270163",
-    "cat": "pink-girlish",
-    "name": "Girl14 Series",
-    "folder": "Ai layout/270163",
-    "files": [
-      "270163%231.jpg",
-      "270163%232.jpg",
-      "270163%233.jpg",
-      "270163%234.jpg",
-      "270163%235.jpg",
-      "270163%236.jpg",
-      "270163%237.jpg",
-      "270163%238.jpg",
-      "270163%239.jpg",
-      "270163%2310.jpg",
-      "270163%2311.jpg",
-      "270163%2312.jpg"
-    ]
-  },
-  {
-    "id": "270164",
-    "cat": "greenery",
-    "name": "Green Series",
-    "folder": "Ai layout/270164",
-    "files": [
-      "270164%231.jpg",
-      "270164%232.jpg",
-      "270164%233.jpg",
-      "270164%234.jpg",
-      "270164%235.jpeg",
-      "270164%236.jpeg",
-      "270164%237.jpeg",
-      "270164%238.jpeg",
-      "270164%239.jpeg",
-      "270164%2310.jpeg",
-      "270164%2311.jpeg",
-      "270164%2312.jpg"
-    ]
-  },
-  {
-    "id": "270165",
-    "cat": "food",
-    "name": "Kitchen Series",
-    "folder": "Ai layout/270165",
-    "files": [
-      "270165%231.jpg",
-      "270165%232.jpg",
-      "270165%233.jpg",
-      "270165%234.jpg",
-      "270165%235.jpg",
-      "270165%236.jpg",
-      "270165%237.jpg",
-      "270165%238.jpg",
-      "270165%239.jpg",
-      "270165%2310.jpg",
-      "270165%2311.jpg",
-      "270165%2312.jpg"
-    ]
-  },
-  {
-    "id": "270166",
-    "cat": "food",
-    "name": "Kitchen Set 2",
-    "folder": "Ai layout/270166",
-    "files": [
-      "270166%231.jpg",
-      "270166%232.jpg",
-      "270166%233.jpg",
-      "270166%234.jpg",
-      "270166%235.jpg",
-      "270166%236.jpg",
-      "270166%237.jpg",
-      "270166%238.jpg",
-      "270166%239.jpg",
-      "270166%2310.jpg",
-      "270166%2311.jpg",
-      "270166%2312.jpg"
-    ]
-  },
-  {
-    "id": "270167",
-    "cat": "food",
-    "name": "Kitchen 4 Series",
-    "folder": "Ai layout/270167",
-    "files": [
-      "270167%231.jpg",
-      "270167%232.jpg",
-      "270167%233.jpg",
-      "270167%234.jpg"
-    ]
-  },
-  {
-    "id": "270168",
-    "cat": "others",
-    "name": "Kitthen 3 Series",
-    "folder": "Ai layout/270168",
-    "files": [
-      "270168%231.jpg",
-      "270168%232.jpg",
-      "270168%233.jpg",
-      "270168%234.jpg",
-      "270168%235.jpg",
-      "270168%236.jpg",
-      "270168%237.jpg",
-      "270168%238.jpg",
-      "270168%239.jpg",
-      "270168%2310.jpg",
-      "270168%2311.jpg",
-      "270168%2312.jpg"
-    ]
-  },
-  {
-    "id": "270169",
-    "cat": "anime",
-    "name": "K-Pop 2 Series",
-    "folder": "Ai layout/270169",
-    "files": [
-      "270169%231.jpg",
-      "270169%232.jpg",
-      "270169%233.jpg",
-      "270169%234.jpg",
-      "270169%235.jpg",
-      "270169%236.jpg",
-      "270169%237.jpg",
-      "270169%238.jpg",
-      "270169%239.jpg",
-      "270169%2310.jpg",
-      "270169%2311.jpg",
-      "270169%2312.jpg"
-    ]
-  },
-  {
-    "id": "270170",
-    "cat": "anime",
-    "name": "K-Pop 3 Series",
-    "folder": "Ai layout/270170",
-    "files": [
-      "270170%231.jpg",
-      "270170%232.jpg",
-      "270170%233.jpg",
-      "270170%234.jpg",
-      "270170%235.jpg",
-      "270170%236.jpg",
-      "270170%237.jpg",
-      "270170%238.jpg",
-      "270170%239.jpg",
-      "270170%2310.jpg",
-      "270170%2311.jpg"
-    ]
-  },
-  {
-    "id": "270171",
-    "cat": "movie-poster",
-    "name": "Movie Series",
-    "folder": "Ai layout/270171",
-    "files": [
-      "270171%231.jpg",
-      "270171%232.jpg",
-      "270171%233.jpg",
-      "270171%234.jpg",
-      "270171%235.jpg",
-      "270171%236.jpg",
-      "270171%237.jpg",
-      "270171%238.jpg",
-      "270171%239.jpg",
-      "270171%2310.jpg",
-      "270171%2311.jpg",
-      "270171%2312.jpg"
-    ]
-  },
-  {
-    "id": "270172",
-    "cat": "movie-poster",
-    "name": "Movie Poster 2 Series",
-    "folder": "Ai layout/270172",
-    "files": [
-      "270172%231.jpg",
-      "270172%232.jpg",
-      "270172%233.jpg",
-      "270172%234.jpg",
-      "270172%235.jpg",
-      "270172%236.jpg",
-      "270172%237.jpg",
-      "270172%238.jpg",
-      "270172%239.jpg",
-      "270172%2310.jpg",
-      "270172%2311.jpg",
-      "270172%2312.jpg"
-    ]
-  },
-  {
-    "id": "270173",
-    "cat": "movie-poster",
-    "name": "Movie Poster 3 Series",
-    "folder": "Ai layout/270173",
-    "files": [
-      "270173%231.jpg",
-      "270173%232.jpg",
-      "270173%233.jpg",
-      "270173%234.jpg",
-      "270173%235.jpg",
-      "270173%236.jpg",
-      "270173%237.jpg",
-      "270173%238.jpg",
-      "270173%239.jpg",
-      "270173%2310.jpg",
-      "270173%2311.jpg",
-      "270173%2312.jpg"
-    ]
-  },
-  {
-    "id": "270174",
-    "cat": "bengali-band",
-    "name": "Music Series",
-    "folder": "Ai layout/270174",
-    "files": [
-      "270174%231.jpg",
-      "270174%232.jpg",
-      "270174%233.jpg",
-      "270174%234.jpg",
-      "270174%235.jpg",
-      "270174%236.jpg",
-      "270174%237.jpg",
-      "270174%238.jpg",
-      "270174%239.jpg",
-      "270174%2310.jpg",
-      "270174%2311.jpg",
-      "270174%2312.jpg"
-    ]
-  },
-  {
-    "id": "270175",
-    "cat": "bengali-band",
-    "name": "Music 2 Series",
-    "folder": "Ai layout/270175",
-    "files": [
-      "270175%231.jpg",
-      "270175%232.jpg",
-      "270175%233.jpg",
-      "270175%234.jpg",
-      "270175%235.jpg",
-      "270175%236.jpg",
-      "270175%237.jpg",
-      "270175%238.jpg",
-      "270175%239.jpg",
-      "270175%2310.jpg",
-      "270175%2311.jpg",
-      "270175%2312.jpg"
-    ]
-  },
-  {
     "id": "270176",
-    "cat": "others",
-    "name": "Other Series",
+    "cat": "planet",
+    "name": "Cosmic Horizon Series",
     "folder": "Ai layout/270176",
     "files": [
-      "270176%231.jpeg",
+      "270176%231.jpg",
       "270176%232.jpg",
-      "270176%233.jpeg",
+      "270176%233.jpg",
       "270176%234.jpg",
-      "270176%235.jpeg",
+      "270176%235.jpg",
       "270176%236.jpg",
-      "270176%237.jpeg",
+      "270176%237.jpg",
       "270176%238.jpg",
-      "270176%239.jpeg",
+      "270176%239.jpg",
       "270176%2310.jpg",
-      "270176%2311.jpeg",
+      "270176%2311.jpg",
       "270176%2312.jpg"
     ]
   },
   {
     "id": "270177",
-    "cat": "others",
-    "name": "Other 2 Series",
+    "cat": "greenery",
+    "name": "Botanical Sanctuary Series",
     "folder": "Ai layout/270177",
     "files": [
-      "270177%231.jpg",
-      "270177%232.jpg",
-      "270177%233.jpeg",
-      "270177%234.jpeg",
-      "270177%235.jpeg",
+      "270177%231.JPG",
+      "270177%232.JPG",
+      "270177%233.JPG",
+      "270177%234.JPG",
+      "270177%235.JPG",
       "270177%236.jpeg",
       "270177%237.jpeg",
       "270177%238.jpeg",
       "270177%239.jpeg",
-      "270177%2310.jpg",
-      "270177%2311.jpg",
-      "270177%2312.jpg"
+      "270177%2310.jpeg",
+      "270177%2311.jpeg",
+      "270177%2312.jpeg"
     ]
   },
   {
     "id": "270178",
-    "cat": "others",
-    "name": "Planet Series",
+    "cat": "red",
+    "name": "Crimson Passion Series",
     "folder": "Ai layout/270178",
     "files": [
-      "270178%231.jpg",
-      "270178%232.jpg",
-      "270178%233.jpg",
-      "270178%234.jpg",
-      "270178%235.jpg",
-      "270178%236.jpg",
-      "270178%237.jpg",
-      "270178%238.jpg",
-      "270178%239.jpg",
-      "270178%2310.jpg",
-      "270178%2311.jpg",
-      "270178%2312.jpg"
+      "270178%231.JPG",
+      "270178%232.JPG",
+      "270178%233.JPG",
+      "270178%234.JPG",
+      "270178%235.JPG",
+      "270178%236.JPG",
+      "270178%237.JPG",
+      "270178%238.JPG",
+      "270178%239.JPG",
+      "270178%2310.JPG",
+      "270178%2311.JPG",
+      "270178%2312.JPG"
     ]
   },
   {
     "id": "270179",
-    "cat": "others",
-    "name": "Red Series",
+    "cat": "red",
+    "name": "Scarlet Harmony Series",
     "folder": "Ai layout/270179",
     "files": [
-      "270179%231.jpg",
-      "270179%232.jpg",
-      "270179%233.jpg",
-      "270179%234.jpg",
-      "270179%235.jpg",
-      "270179%236.jpg",
-      "270179%237.jpg",
-      "270179%238.jpg",
-      "270179%239.jpg",
-      "270179%2310.jpg",
-      "270179%2311.jpg",
-      "270179%2312.jpg"
+      "270179%231.JPG",
+      "270179%232.JPG",
+      "270179%233.JPG",
+      "270179%234.JPG",
+      "270179%235.JPG",
+      "270179%236.JPG",
+      "270179%237.JPG",
+      "270179%238.JPG",
+      "270179%239.JPG",
+      "270179%2310.JPG",
+      "270179%2311.JPG",
+      "270179%2312.JPG"
     ]
   },
   {
     "id": "270180",
-    "cat": "others",
-    "name": "Red 2 Series",
+    "cat": "superhero-game",
+    "name": "Vanguard Hero Series",
     "folder": "Ai layout/270180",
     "files": [
       "270180%231.jpg",
       "270180%232.jpg",
-      "270180%233.jpg",
-      "270180%234.jpg",
+      "270180%233.jpeg",
+      "270180%234.jpeg",
       "270180%235.jpg",
-      "270180%236.jpg",
-      "270180%237.jpg",
-      "270180%238.jpg",
-      "270180%239.jpg",
+      "270180%236.jpeg",
+      "270180%237.jpeg",
+      "270180%238.jpeg",
+      "270180%239.jpeg",
       "270180%2310.jpg",
-      "270180%2311.jpg",
-      "270180%2312.jpg"
+      "270180%2311.jpeg",
+      "270180%2312.jpeg"
     ]
   },
   {
     "id": "270181",
     "cat": "superhero-game",
-    "name": "Super Hero Series",
+    "name": "Legacy Protector Series",
     "folder": "Ai layout/270181",
     "files": [
       "270181%231.jpg",
-      "270181%232.jpeg",
-      "270181%233.jpeg",
+      "270181%232.jpg",
+      "270181%233.jpg",
       "270181%234.jpg",
-      "270181%235.jpeg",
-      "270181%236.jpeg",
-      "270181%237.jpeg",
-      "270181%238.jpeg",
+      "270181%235.jpg",
+      "270181%236.jpg",
+      "270181%237.jpg",
+      "270181%238.jpg",
       "270181%239.jpg",
-      "270181%2310.jpeg",
-      "270181%2311.jpeg",
+      "270181%2310.jpg",
+      "270181%2311.jpg",
       "270181%2312.jpg"
     ]
   },
   {
     "id": "270182",
-    "cat": "superhero-game",
-    "name": "Super Hero 2 Series",
+    "cat": "car",
+    "name": "Veloce Speed Series",
     "folder": "Ai layout/270182",
     "files": [
       "270182%231.jpg",
@@ -5464,8 +5640,8 @@
   },
   {
     "id": "270183",
-    "cat": "superhero-game",
-    "name": "Super Hero 3 Series",
+    "cat": "car",
+    "name": "Apex Racing Series",
     "folder": "Ai layout/270183",
     "files": [
       "270183%231.jpg",
@@ -5483,90 +5659,57 @@
     ]
   },
   {
-    "id": "270132",
+    "id": "270184",
     "cat": "car",
-    "name": "Supercar Series",
-    "folder": "Ai layout/270132",
+    "name": "Monolithic Highway Series",
+    "folder": "Ai layout/270184",
     "files": [
-      "270132%231.jpg",
-      "270132%232.jpg",
-      "270132%233.jpg",
-      "270132%234.jpg",
-      "270132%235.jpg",
-      "270132%236.jpg",
-      "270132%237.jpg",
-      "270132%238.jpg",
-      "270132%239.jpg",
-      "270132%2310.jpg",
-      "270132%2311.jpg",
-      "270132%2312.jpg"
-    ]
-  },
-  {
-    "id": "270134",
-    "cat": "anime",
-    "name": "K-Pop Set 1",
-    "folder": "Ai layout/270134",
-    "files": [
-      "270134%231.jpg",
-      "270134%232.jpg",
-      "270134%233.jpg",
-      "270134%234.jpg",
-      "270134%235.jpg",
-      "270134%236.jpg",
-      "270134%237.jpg",
-      "270134%238.jpg",
-      "270134%239.jpg",
-      "270134%2310.jpg",
-      "270134%2311.jpg",
-      "270134%2312.jpg"
-    ]
-  },
-  {
-    "id": "270133",
-    "cat": "anime",
-    "name": "K-Pop Set 2",
-    "folder": "Ai layout/270133",
-    "files": [
-      "270133%231.jpg",
-      "270133%232.jpg",
-      "270133%233.jpg",
-      "270133%234.jpg",
-      "270133%235.jpg",
-      "270133%236.jpg",
-      "270133%237.jpg",
-      "270133%238.jpg",
-      "270133%239.jpg",
-      "270133%2310.jpg",
-      "270133%2311.jpg",
-      "270133%2312.jpg"
+      "270184%231.jpg",
+      "270184%232.jpg",
+      "270184%233.jpg",
+      "270184%234.jpg",
+      "270184%235.jpg",
+      "270184%236.jpg",
+      "270184%237.jpg",
+      "270184%238.jpg",
+      "270184%239.jpg",
+      "270184%2310.jpg",
+      "270184%2311.jpg",
+      "270184%2312.jpg"
     ]
   }
-];
+  ];
 
     const categories = [
       { id: "all", name: "All Designs" },
-      { id: "car", name: "Supercars" },
-      { id: "bohemian", name: "Bohemein Art" },
-      { id: "islamic", name: "Islamic Art" },
-      { id: "english-quotes", name: "English Quotes" },
-      { id: "bengali-quotes", name: "Bangla Quotes" },
+      { id: "aesthetic", name: "Aesthetic" },
+      { id: "anime", name: "Anime" },
       { id: "bengali-band", name: "Band Music" },
-      { id: "flower", name: "Floral Art" },
-      { id: "starry-nights", name: "Van Gogh" },
-      { id: "greenery", name: "Plants" },
-      { id: "sceneries", name: "Landscapes" },
+      { id: "bengali-quotes", name: "Bangla Quotes" },
       { id: "bike", name: "Bike & Moto" },
-      { id: "pink-girlish", name: "Pink Aesthetic" },
-      { id: "superhero-game", name: "Superhero & Gaming" },
-      { id: "football", name: "Football" },
-      { id: "anime", name: "Anime & Pop" },
-      { id: "got", name: "Game of Thrones" },
-      { id: "movie-poster", name: "Movie Posters" },
-      { id: "taylor-swift", name: "Taylor Swift" },
+      { id: "black", name: "Black" },
+      { id: "blue", name: "Blue" },
+      { id: "bohemian", name: "Bohemein Art" },
+      { id: "others", name: "Creative Themes" },
+      { id: "english-quotes", name: "English Quotes" },
+      { id: "flower", name: "Floral Art" },
       { id: "food", name: "Food & Culinary" },
+      { id: "football", name: "Football" },
+      { id: "got", name: "Game of Thrones" },
+      { id: "islamic", name: "Islamic Art" },
+      { id: "k-pop", name: "K-Pop" },
+      { id: "kitchen", name: "Kitchen" },
+      { id: "sceneries", name: "Landscapes" },
       { id: "love", name: "Love & Romance" },
-      { id: "others", name: "Creative Themes" }
+      { id: "movie-poster", name: "Movie Posters" },
+      { id: "pink-girlish", name: "Pink Aesthetic (Best Seller)" },
+      { id: "planet", name: "Planet" },
+      { id: "greenery", name: "Plants" },
+      { id: "red", name: "Red" },
+      { id: "car", name: "Supercars" },
+      { id: "superhero-game", name: "Superhero & Gaming" },
+      { id: "taylor-swift", name: "Taylor Swift" },
+      { id: "starry-nights", name: "Van Gogh" }
     ];
 
     function getCategoryDisplayName(catId) {
@@ -6005,14 +6148,12 @@
       const idx = activeSelectionSession.selectedPhotoIDs.indexOf(photoId);
       if (idx > -1) {
         activeSelectionSession.selectedPhotoIDs.splice(idx, 1);
-        showToast("Photo removed from selection.");
       } else {
         if (count >= target) {
           showToast(`Your ${target}-piece package is full. Remove a design or change the package.`);
           return;
         }
         activeSelectionSession.selectedPhotoIDs.push(photoId);
-        showToast("Photo added to selection.");
       }
       
       syncStateUI();
@@ -6025,7 +6166,6 @@
       const idx = activeSelectionSession.selectedPhotoIDs.indexOf(photoId);
       if (idx > -1) {
         activeSelectionSession.selectedPhotoIDs.splice(idx, 1);
-        showToast("Photo removed from selection.");
         syncStateUI();
         
         // If in lightbox, sync the button
@@ -6067,19 +6207,62 @@
     // Category Buttons Event listeners & Search bar
     function filterByCategory(catId) {
       activeCategory = catId;
+      
+      // Update active category name and arrow in desktop dropdown
+      const activeCatObj = categories.find(c => c.id === catId);
+      const activeNameLabel = document.getElementById('desktop-active-cat-name');
+      if (activeNameLabel && activeCatObj) {
+        activeNameLabel.textContent = activeCatObj.name;
+      }
+      
+      const dropdownBtn = document.getElementById('desktop-cat-dropdown-btn');
+      if (dropdownBtn) {
+        const arrow = dropdownBtn.querySelector('.arrow');
+        if (arrow) arrow.textContent = '▼';
+      }
+      
+      const desktopCatsList = document.getElementById('desktop-cats-list');
+      if (desktopCatsList) {
+        desktopCatsList.classList.add('hidden');
+      }
+
       document.querySelectorAll('.category-btn').forEach(btn => {
-        if (btn.getAttribute('data-category') === catId) btn.classList.add('active');
-        else btn.classList.remove('active');
+        if (btn.getAttribute('data-category') === catId) {
+          btn.classList.add('active');
+          btn.classList.remove('bg-[#FFEBF0]', 'text-[#E63956]', 'border-[#E63956]');
+        } else {
+          btn.classList.remove('active');
+          if (btn.getAttribute('data-category') === 'pink-girlish') {
+            btn.classList.add('bg-[#FFEBF0]', 'text-[#E63956]', 'border-[#E63956]');
+          }
+        }
       });
       
       // Update desktop category stack highlight
       document.querySelectorAll('.desktop-cat-stack-btn').forEach(btn => {
-        if (btn.getAttribute('data-category') === catId) btn.classList.add('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
-        else btn.classList.remove('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
+        if (btn.getAttribute('data-category') === catId) {
+          btn.classList.add('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
+          btn.classList.remove('bg-[#FFEBF0]', 'text-[#E63956]', 'border-[#E63956]');
+        } else {
+          btn.classList.remove('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
+          if (btn.getAttribute('data-category') === 'pink-girlish') {
+            btn.classList.add('bg-[#FFEBF0]', 'text-[#E63956]', 'border-[#E63956]');
+          }
+        }
       });
       
       updateFilteredCollections();
       renderGallery();
+      closeMobileCategories();
+    }
+
+    function closeMobileCategories() {
+      const moreCatsBtn = document.getElementById('more-cats-btn');
+      const extraCatsContainer = document.getElementById('extra-cats-container');
+      if (moreCatsBtn && extraCatsContainer) {
+        extraCatsContainer.classList.add('hidden');
+        moreCatsBtn.innerHTML = `More Categories <span class="arrow ml-1">▼</span>`;
+      }
     }
 
     function handleSearch(query) {
@@ -6115,6 +6298,16 @@
 
       updateFilteredCollections();
       renderGallery();
+      closeMobileCategories();
+    }
+
+    function closeMobileCategories() {
+      const moreCatsBtn = document.getElementById('more-cats-btn');
+      const extraCatsContainer = document.getElementById('extra-cats-container');
+      if (moreCatsBtn && extraCatsContainer) {
+        extraCatsContainer.classList.add('hidden');
+        moreCatsBtn.innerHTML = `More Categories <span class="arrow ml-1">▼</span>`;
+      }
     }
 
     function clearSearch() {
@@ -6126,6 +6319,29 @@
       ...originalCollections.map(c => ({ ...c, isNew: false })),
       ...newCollections.map(c => ({ ...c, isNew: true }))
     ];
+
+    // Sort to place specific IDs first in the requested serial order
+    const desiredOrder = [
+      "270124", // 270124
+      "270134", // 134
+      "270133", // 133
+      "270163", // 270163
+      "270142", // 270142
+      "270132", // 132
+      "270160", // 270160
+      "270131", // 131
+      "270128", // 128
+      "270135", // 135
+      "270170"  // 270170
+    ];
+    allCollections.sort((a, b) => {
+      const idxA = desiredOrder.indexOf(a.id);
+      const idxB = desiredOrder.indexOf(b.id);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return 0;
+    });
 
     let renderedIndex = 0;
     const galleryContainer = document.getElementById('gallery');
@@ -6225,7 +6441,7 @@
           <div class="w-full max-w-[1320px] mb-4 lg:mb-6">
             <div class="flex justify-between items-end">
               <div>
-                <h3 class="text-base lg:text-xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">${col.name}</h3>
+                <h3 class="text-base lg:text-xl font-bold tracking-tight text-[#0B132B] font-['Poppins']">${col.name} <span class="text-xs lg:text-sm font-normal text-gray-500 ml-2">#${col.id}</span></h3>
                 <span class="text-[9px] lg:text-[10px] uppercase tracking-widest text-[#FF3B30] font-black">${getCategoryDisplayName(col.cat)}</span>
               </div>
               <button onclick="quickSelectCollection('${col.name.replace(/'/g, "\\'")}', '${col.id}')" class="quick-add-btn px-3 py-1 border border-[#0B132B] text-[10px] font-bold uppercase tracking-widest hover:bg-[#0B132B] hover:text-white transition-colors duration-200">
@@ -6461,6 +6677,13 @@
       alert("Boardify Process:\\n1. Choose package size (default 12pcs best seller)\\n2. Browse designs and select your favorites\\n3. Review your bundle and choose print sizes\\n4. Fill checkout details and submit order!\\nNo drilling required, heavy duty mounting tape included!");
     }
 
+    function scrollToAboutUs() {
+      const section = document.getElementById('about-us');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
     // Sizing & Checkout sliding panel step transitions
     function openSizingPanel() {
       const panel = document.getElementById('sizing-checkout-panel');
@@ -6629,6 +6852,9 @@
           card.addEventListener('click', () => {
             selectedSizeOption = opt.name;
             renderSizingOptions();
+            setTimeout(() => {
+              goToStep('overview');
+            }, 150);
           });
         } else {
           card.className = "radio-size-card disabled";
@@ -6663,24 +6889,6 @@
       document.getElementById('overview-qty').textContent = `${qty} Pieces`;
       document.getElementById('overview-size').textContent = size;
       document.getElementById('overview-price').textContent = `${price} TK`;
-      
-      // Calculate delivery zone inside Dhaka by default
-      const calc = calculateDeliveryAndTotal(price, 'inside');
-      document.getElementById('overview-delivery').textContent = `${calc.charge} TK`;
-      document.getElementById('overview-total').textContent = `${calc.total} TK`;
-      
-      // Populate cluster thumbnails in overview
-      const cluster = document.getElementById('overview-cluster-thumbnails');
-      cluster.innerHTML = '';
-      activeSelectionSession.selectedPhotoIDs.forEach(pid => {
-        const item = galleryItems.find(x => x.photoId === pid);
-        if (item) {
-          const img = document.createElement('img');
-          img.src = item.src;
-          img.className = "w-10 h-10 object-cover border border-[#0B132B]/10";
-          cluster.appendChild(img);
-        }
-      });
     }
 
     // STEP 5: Render Cart Screen
@@ -7065,6 +7273,8 @@
         
         if (cat.id === activeCategory) {
           btn.classList.add('bg-[#FF3B30]', 'text-white', 'border-[#FF3B30]');
+        } else if (cat.id === 'pink-girlish') {
+          btn.classList.add('bg-[#FFEBF0]', 'text-[#E63956]', 'border-[#E63956]');
         }
         
         btn.addEventListener('click', () => {
@@ -7087,6 +7297,12 @@
         btn.setAttribute('data-category', cat.id);
         btn.textContent = cat.name;
         
+        if (cat.id === activeCategory) {
+          btn.classList.add('active');
+        } else if (cat.id === 'pink-girlish') {
+          btn.classList.add('bg-[#FFEBF0]', 'text-[#E63956]', 'border-[#E63956]');
+        }
+        
         btn.addEventListener('click', () => {
           filterByCategory(cat.id);
         });
@@ -7101,6 +7317,38 @@
       // Setup elements
       buildDesktopCategories();
       buildMobileExtraCategories();
+      
+      // Setup Desktop Category Dropdown toggle
+      const dropdownBtn = document.getElementById('desktop-cat-dropdown-btn');
+      const desktopCatsList = document.getElementById('desktop-cats-list');
+      if (dropdownBtn && desktopCatsList) {
+        // Sync active category on initial load
+        const activeCatObj = categories.find(c => c.id === activeCategory);
+        const activeNameLabel = document.getElementById('desktop-active-cat-name');
+        if (activeNameLabel && activeCatObj) {
+          activeNameLabel.textContent = activeCatObj.name;
+        }
+
+        dropdownBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = desktopCatsList.classList.contains('hidden');
+          const arrow = dropdownBtn.querySelector('.arrow');
+          if (isHidden) {
+            desktopCatsList.classList.remove('hidden');
+            if (arrow) arrow.textContent = '▲';
+          } else {
+            desktopCatsList.classList.add('hidden');
+            if (arrow) arrow.textContent = '▼';
+          }
+        });
+        
+        // Click outside to close dropdown
+        document.addEventListener('click', () => {
+          desktopCatsList.classList.add('hidden');
+          const arrow = dropdownBtn.querySelector('.arrow');
+          if (arrow) arrow.textContent = '▼';
+        });
+      }
       
       updateFilteredCollections();
       renderGallery();
@@ -7194,6 +7442,7 @@
         if (currentIndex === -1 || visibleItems.length === 0) return;
         const item = visibleItems[currentIndex];
         togglePhotoSelection(item.photoId);
+        closeLightbox();
       });
 
       // Lightbox proceed action
