@@ -1,0 +1,200 @@
+| Code   | Name                         |
+| ------ | ---------------------------- |
+| 270001 | Monolithic Automotive Series |
+| 270002 | Retro Racing Series          |
+| 270003 | Minimalist Speed Series      |
+| 270004 | Neon Nights Series           |
+| 270005 | Aesthetic Capture Series     |
+| 270006 | Neon Highway                 |
+| 270007 | Structured Path Series       |
+| 270008 | Boho Automotive Series       |
+| 270009 | Bohemian Abstract Series     |
+| 270010 | Lined Boho Series            |
+| 270011 | Set Composition Series       |
+| 270012 | Boho Geometry Series         |
+| 270013 | Sacred Geometry Series       |
+| 270014 | Islamic Calligraphy Series   |
+| 270015 | Arabesque Pattern Series     |
+| 270016 | Devotional Art Series        |
+| 270017 | Mandalas of Faith Series     |
+| 270018 | Sacred Ornaments Series      |
+| 270019 | Divine Light Series          |
+| 270020 | Symmetric Grace Series       |
+| 270021 | Spiritual Geometry Series    |
+| 270022 | Classic Arabesque Series     |
+| 270023 | Inspire Daily Series         |
+| 270024 | Motivational Word Series     |
+| 270025 | Vanguard Hero Series         |
+| 270026 | Success Mindset Series       |
+| 270027 | Dreamer Spirit Series        |
+| 270028 | Infinite Path Series         |
+| 270029 | Daily Wisdom Series          |
+| 270030 | Echoes of Truth Series       |
+| 270031 | Mindset Shift Series         |
+| 270032 | Rise & Grind Series          |
+| 270033 | Legacy Builders Series       |
+| 270034 | Creative Spark Series        |
+| 270035 | Bengali Typography Series    |
+| 270036 | Bangla Lettering Series      |
+| 270037 | Kotha O Kobita Series        |
+| 270038 | Bhashar Tan Series           |
+| 270039 | Inspire Daily Series         |
+| 270040 | Motivational Word Series     |
+| 270041 | Sacred Ornaments             |
+| 270042 | Mandalas of Faith            |
+| 270043 | Band Rhythm Series           |
+| 270044 | Ganer Srot Series            |
+| 270045 | Botanical Grace Series       |
+| 270046 | Monstera Leaf Series         |
+| 270047 | Cosmic Night Series          |
+| 270048 | Celestial Harmony Series     |
+| 270049 | Diverse Composition Series   |
+| 270050 | Visual Balance Series        |
+| 270051 | Visual Harmony Series        |
+| 270052 | Modern Gallery Series        |
+| 270053 | Verdant Sanctuary Series     |
+| 270054 | Ethereal Greens Series       |
+| 270055 | Majestic Vistas Series       |
+| 270056 | Serene Horizons Series       |
+| 270057 | Cafe Racer Series            |
+| 270058 | Superbike Speed Series       |
+| 270059 | Dreamy Pastel Series         |
+| 270060 | Blush Pink Series            |
+| 270061 | Eclectic Visuals Series      |
+| 270062 | Abstract Fusion Series       |
+| 270063 | Caped Crusaders Series       |
+| 270064 | Console Legends Series       |
+| 270065 | Epic Quest Series            |
+| 270066 | Retro Pixel Series           |
+| 270067 | Pitch Masters Series         |
+| 270068 | Golden Boot Series           |
+| 270069 | Shonen Spirit Series         |
+| 270070 | Classic Anime Series         |
+| 270071 | Panoramic Vistas Series      |
+| 270072 | Nature Echoes Series         |
+| 270073 | Vanguard Hero Series         |
+| 270074 | Success Mindset Series       |
+| 270075 | Starry Pathway Series        |
+| 270076 | Glow in Dark Series          |
+| 270077 | Girlish Aesthetic Series     |
+| 270078 | Kawaii Essence Series        |
+| 270079 | Seven Kingdoms Series        |
+| 270080 | Winter Is Coming Series      |
+| 270081 | Curated Selection Series     |
+| 270082 | Diverse Composition Series   |
+| 270083 | Visual Balance Series        |
+| 270084 | Silver Screen Series         |
+| 270085 | Visual Harmony Series        |
+| 270086 | Modern Gallery Series        |
+| 270087 | Botanical Herbarium Series   |
+| 270088 | Jungle Vibes Series          |
+| 270089 | Eclectic Visuals Series      |
+| 270090 | Wildflower Bloom Series      |
+| 270091 | Silent Petals Series         |
+| 270092 | Manga Composition Series     |
+| 270093 | Chibi Cute Series            |
+| 270094 | Abstract Fusion Series       |
+| 270095 | Curated Selection Series     |
+| 270096 | Barbie Glow Series           |
+| 270097 | Dreamy Pastel Series         |
+| 270098 | Diverse Composition Series   |
+| 270099 | Eras Tour Series             |
+| 270100 | Tropical Leaves Series       |
+| 270101 | Visual Balance Series        |
+| 270102 | Visual Harmony Series        |
+| 270103 | Modern Gallery Series        |
+| 270104 | Verdant Oasis Series         |
+| 270105 | Cyberpunk Anime Series       |
+| 270106 | Shonen Spirit Series         |
+| 270107 | Classic Anime Series         |
+| 270108 | Manga Composition Series     |
+| 270109 | Eclectic Visuals Series      |
+| 270110 | Abstract Fusion Series       |
+| 270111 | Chibi Cute Series            |
+| 270112 | Cyberpunk Anime Series       |
+| 270113 | Culinary Delight Series      |
+| 270114 | Chef's Kitchen Series        |
+| 270115 | Sweet Cravings Series        |
+| 270116 | Gourmet Table Series         |
+| 270117 | Shur O Taal Series           |
+| 270118 | Bengali Rock Series          |
+| 270119 | Melodic Echoes Series        |
+| 270120 | Musical Legacy Series        |
+| 270121 | Curated Selection Series     |
+| 270122 | Amour Eternal Series         |
+| 270123 | Diverse Composition Series   |
+| 270124 | Blush Pink Series            |
+| 270125 | Visual Balance Series        |
+| 270126 | Girlish Aesthetic Series     |
+| 270127 | Kawaii Essence Series        |
+| 270128 | Pink Chic Series             |
+| 270129 | Pastel Paradise Series       |
+| 270130 | Rose Petal Series            |
+| 270131 | Sweet Blossom Series         |
+| 270132 | Cute Dreams Series           |
+| 270133 | Girlish Vibe Series          |
+| 270134 | Soft Pink Series             |
+| 270135 | Cosmic Pastel Series         |
+| 270136 | Starlight Girlish Series     |
+
+
+Main instructions:
+
+Do not touch, rename, remove, or edit any existing layouts/folders/designs from 270001 to 270136.
+The existing names for 270001–270136 are already finalized. Keep them exactly the same.
+Only work on the new layouts/folders that come after 270136.
+New folder/design serial numbers must start from 270137.
+Continue the serial number one by one:
+270137
+270138
+270139
+and so on.
+For each new layout, create a proper design name based on the actual layout image/theme/style.
+Use the folder name as the category name.
+If the folder/category already exists in the HTML, add the new layouts under that existing category.
+If the folder/category is new and does not exist in the HTML yet, create a new category for it.
+Add the new category button in the category navigation if needed.
+Make sure the new category filtering works properly.
+Do not break or change the current gallery design, layout structure, image loading system, lightbox, cart/selection system, package selector, checkout, or any existing JavaScript functionality.
+Do not change old image paths or old category names.
+Only add/update the new layout data, new serial numbers, new names, and new categories where necessary.
+
+Naming rules for new layouts:
+
+Names should match the design/theme/category properly.
+Names should sound premium and clean.
+Follow the same naming style as the old layouts.
+Use naming styles like:
+“Series”
+“Gallery Series”
+“Composition Series”
+“Aesthetic Series”
+“Visual Series”
+“Theme Series”
+Avoid random names.
+Avoid duplicate names unless absolutely necessary.
+Keep names short, professional, and suitable for Boardify wallboard collections.
+
+Protected old range:
+
+270001–270136 must remain unchanged.
+
+New layout naming starts from:
+
+270137
+
+I already renamed the folders for the new layouts inside the boardify-gallery folder.
+Each folder name represents the category name. Use that folder/category name to place the layouts under the correct category.
+
+In the **Select Package** box, there are two thin grey lines currently visible.
+
+These lines are unnecessary and should either:
+
+* Be completely removed, or
+* Have their color changed to exactly match the background color so they become invisible.
+
+This is a minor visual issue, but removing or hiding these lines will make the section look cleaner and more professional. also without shrinking the font size of select package. make the section slimer 
+
+in mobile 
+under boardify logo
+Custom Wallboard & Photo Wall decor (in a single lien)

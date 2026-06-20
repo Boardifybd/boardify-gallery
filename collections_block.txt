@@ -1,0 +1,3653 @@
+const newCollections = [
+  {
+    "id": "270124",
+    "cat": "pink-girlish",
+    "name": "Blush Pink Series",
+    "folder": "Ai layout/270124",
+    "files": [
+      "270124%231.jpg",
+      "270124%232.jpg",
+      "270124%233.jpg",
+      "270124%234.jpg",
+      "270124%235.jpg",
+      "270124%236.jpg",
+      "270124%237.jpg",
+      "270124%238.jpg",
+      "270124%239.jpg",
+      "270124%2310.jpg",
+      "270124%2311.jpg",
+      "270124%2312.jpg"
+    ]
+  },
+  {
+    "id": "270023",
+    "cat": "english-quotes",
+    "name": "Inspire Daily Series",
+    "folder": "Ai layout/270023",
+    "files": [
+      "15%20Motivational%20Quotes%20To%20Inspire%20You%20To%20Live%20Your%20Best%20Life_071404.jpeg",
+      "1b406225fb_085331.jpg",
+      "26982840_v209-batch3-bb-24-01-job100%20-%20Copy.jpg",
+      "2de97d15ad_104746.jpg",
+      "32d4eff75e402ccd0a87e4ec5adfcc27_102116.jpg",
+      "3360457.jpg",
+      "4926915_2581388.jpg",
+      "54440128dd44a48e929af47b966c6df1_102014%20-%20Copy.jpg",
+      "54f785782000e1454bf4289e8f8ceb54_102041.jpg",
+      "8694205013bb6c206a73ce73a5e18515_032731.jpg",
+      "8c041808e8a590fea9add7c47c1f7f6c_012123.jpg",
+      "IMG-20230621-WA0014_104805-transformed.jpg"
+    ]
+  },
+  {
+    "id": "270024",
+    "cat": "english-quotes",
+    "name": "Motivational Word Series",
+    "folder": "Ai layout/270024",
+    "files": [
+      "IMG-20230623-WA0017_111300.jpg",
+      "IMG_4508_100112.jpg",
+      "a95dacab010f1a3025314a7044ff4264_023709.jpg",
+      "bce455ab15811fcbd2ff3773b9dbdf09_082719_105826.jpg",
+      "dcd34f486514251392a7d27719e85ad5_115232%20-%20Copy.jpg",
+      "ff.jpg",
+      "image4_041340%20-%20Copy.jpg",
+      "images%20%285%29%20%281%29_084257%20-%20Copy.jpeg",
+      "images_091542_092637%20-%20Copy.jpg",
+      "peakpx%20%287%29.jpg",
+      "peakpx%206%29.jpg",
+      "white-background-just-do-it-wallpaper-digital-drawing-of-lots-of-colorful-sneakers-around_094210.jpg"
+    ]
+  },
+  {
+    "id": "270010",
+    "cat": "bohemian",
+    "name": "Lined Boho Series",
+    "folder": "Ai layout/270010",
+    "files": [
+      "Beige%20Abstract%20Minimalist%20Lined%20Shapes%20Bohemian%20%20Canvas%20Print.jpg",
+      "Beige%20Minimalist%20Illustration%20Moon%20Canvas%20Print%20%281%29.jpg",
+      "Beige%20Minimalist%20Illustration%20Moon%20Canvas%20Print%20%285%29.jpg",
+      "Beige%20Minimalist%20Illustration%20Moon%20Canvas%20Print.jpg",
+      "Beige%20and%20Brown%20Abstract%20Botanical%20Canvas%20Print%20%283%29.jpg",
+      "Polish_20230617_215635522.jpg",
+      "Polish_20230617_215815540.jpg",
+      "Polish_20230617_220009279.jpg",
+      "Polish_20230617_220559609.jpg",
+      "Tropical%20Leaves%20Abstract%20Canvas%20Print.jpg",
+      "Watercolor%20Canvas%20Art.jpg",
+      "sddd.jpg"
+    ]
+  },
+  {
+    "id": "270046",
+    "cat": "flower",
+    "name": "Monstera Leaf Series",
+    "folder": "Ai layout/270046",
+    "files": [
+      "white%20blue%20minimalist%20bicycle%20canvas%20prnt.jpg",
+      "z%20%281%29.jpg",
+      "z%20%2810%29.jpg",
+      "z%20%2812%29.jpg",
+      "z%20%282%29.jpg",
+      "z%20%283%29.jpg",
+      "z%20%284%29.jpg",
+      "z%20%285%29.jpg",
+      "z%20%286%29.jpg",
+      "z%20%287%29.jpg",
+      "z%20%288%29.jpg",
+      "z%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270017",
+    "cat": "islamic",
+    "name": "Mandalas of Faith Series",
+    "folder": "Ai layout/270017",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2811%29.jpg",
+      "1%20%2812%29.JPG",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg",
+      "1%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270016",
+    "cat": "islamic",
+    "name": "Devotional Art Series",
+    "folder": "Ai layout/270016",
+    "files": [
+      "4bdf7117e6b63dcf0ba69a44e3b7cb4d_123622.jpg",
+      "62777d31662a1d251a5394be8e02e9d1_123524.jpg",
+      "96e963f5fae8dc45139c1f3cf26abb51_123551.jpg",
+      "IMG-7290_103909.JPG",
+      "IMG-7292_103809.JPG",
+      "c1fae04f05aeee24a70cbc8b3700f17e_123458.jpg",
+      "l%20%281%29.jpg",
+      "l%20%282%29.jpg",
+      "l%20%283%29.jpg",
+      "l%20%284%29.jpg",
+      "l%20%285%29.jpg",
+      "l%20%286%29.jpg"
+    ]
+  },
+  {
+    "id": "270073",
+    "cat": "english-quotes",
+    "name": "Vanguard Hero Series",
+    "folder": "Ai layout/270073",
+    "files": [
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%281%29_090517.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%2810%29_090353.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%2811%29_090349.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%282%29_090507.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%283%29_090454.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%284%29_090449.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%285%29_090440.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%286%29_090431.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%287%29_090423%20-%20Copy.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%288%29_090413.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM%20%289%29_090404.jpg",
+      "WhatsApp%20Image%202023-08-14%20at%209.00.49%20AM_090335.jpg"
+    ]
+  },
+  {
+    "id": "270026",
+    "cat": "english-quotes",
+    "name": "Success Mindset Series",
+    "folder": "Ai layout/270026",
+    "files": [
+      "bedf0016d27594512c068689520f0e80_101954%20-%20Copy.jpg",
+      "dbf5d39c75aac53b136f3616a3578cc9_103619%20%281%29.jpg",
+      "dcd34f486514251392a7d27719e85ad5_115232.jpg",
+      "images%20%285%29%20%281%29_084257.jpg",
+      "images_091542_092637.jpg",
+      "peakpx%20%2810%29.jpg",
+      "peakpx%20%2811%29.jpg",
+      "peakpx%20%2812%29.jpg",
+      "peakpx%20%282%29.jpg",
+      "peakpx%20%283%29.jpg",
+      "peakpx%20%289%29.jpg",
+      "replicate-prediction-5eov6sbboztrpcxdsu24bl7i24.jpg"
+    ]
+  },
+  {
+    "id": "270001",
+    "cat": "car",
+    "name": "Monolithic Automotive Series",
+    "folder": "Ai layout/270001",
+    "files": [
+      "0ab6fce6aaeb170017dba851c36e2c29_065122-01.jpg",
+      "216a0fcf0153338044d74f3ba37eed2c_065010-01.jpg",
+      "266a03ab30fc24ac478782299048e7ca%20%281%29.jpg",
+      "26ea6a8fff35a3016af2e116b4cc05f2_092501.jpg",
+      "373ce5d28e57ded9df45185c5a44ee1f_092338.jpg",
+      "57d3458f5388d0120d681baed00e4fab_065034-01.jpg",
+      "5c14ef8d7a2d074048a6156c3795d09d.jpg",
+      "60ies_truck_vector_by_depot_hdm_d2rpq7g.jpg",
+      "6a4188e762e1cd0def40225b9cbcb515_065051-01.jpg",
+      "70535179070854d5ca78677035c40486_064954-01.jpg",
+      "7c7971b2d1b2c22e0d6694683699cfc3_092316.jpg",
+      "9096dbf9466584102c2aca0f9166526_092329.jpg"
+    ]
+  },
+  {
+    "id": "270002",
+    "cat": "car",
+    "name": "Retro Racing Series",
+    "folder": "Ai layout/270002",
+    "files": [
+      "9096dbf94665841032c2aca0f9166526_092329.jpg",
+      "Colorful%20Pixel%20Art%20Racing%20Cars%20Illustration%20Phone%20Wallpaper.jpg",
+      "Ford%20GT%20Poster_092432.jpg",
+      "GTA%20wallpapers_092406.jpg",
+      "IMG_3777_092958-01.jpg",
+      "IMG_3778_092946-01.jpg",
+      "car%20aesthetic%20-%20car%20organization%20-%20sports%20accessories%20-%20car%20decor%20-%20car%20wallpapers_092644.jpg",
+      "cd02b2819ab399ef7e3d2bc89d2472b8_064915-01.jpg",
+      "e07837972a9029b22432e61173ed93b6_092704.jpg",
+      "images%20%2828%29.jpg",
+      "photo_2023-04-21_21-16-26_064854-01.jpg",
+      "porshe.jpg"
+    ]
+  },
+  {
+    "id": "270003",
+    "cat": "car",
+    "name": "Minimalist Speed Series",
+    "folder": "Ai layout/270003",
+    "files": [
+      "0e74aa1808f3dd4978468b625d70bead_065115.jpg",
+      "12b86a23255945984b9c4aff8ef1b17f_092448.jpg",
+      "383cb7e4a546551d047db575eecadf66-01.jpg",
+      "4a703d8be1485ef986686f3c53728950_114343.jpg",
+      "4f309e74965c4f58938ed3de39ffb9b3.jpg",
+      "4fe6528eab050c2f8a14b1115ee9cd3c_065103-01.jpg",
+      "5655ba834a48ed1df04f31b64c72891d_065004-01.jpg",
+      "5c14ef8d7a2d074048a6156c3795d09d.jpg",
+      "71fa01b5997ed32ae84ff0fa5913f293_092519.jpg",
+      "815dd225248ca3001b503e5e8a202425-01.jpg",
+      "Black%20Yellow%20Simple%20Minimalist%20The%20Adventure%20T-Shirt.jpg",
+      "Blue%20Illustration%20Landscape%20Phone%20Wallpaper.jpg"
+    ]
+  },
+  {
+    "id": "270004",
+    "cat": "car",
+    "name": "Neon Nights Series",
+    "folder": "Ai layout/270004",
+    "files": [
+      "IMG_3774_093050-01.jpg",
+      "IMG_3799_092705-01.jpg",
+      "Notes_230605_003829-01-01.jpg",
+      "Yellow%20Black%20Photographic%20Automotive%20Phone%20Wallpaper.jpg",
+      "d1bb22a04533c204e873e638d172a399%20%281%29.jpg",
+      "da3930883094095c1f489b48b47c4252.jpg",
+      "dae03a29f93e465dbec3f5e3ddb5a5c3_064908-01000.jpg",
+      "e285fbb5e5c270762ccd34e8db35f5ca%20-%20Copy.jpg",
+      "e8253bb462c0f6cb33c77ce589f65b4f.jpg",
+      "fca8a564ea2567b5b3576f1fb86a2ebf.jpg",
+      "images%20%2828%29.jpeg",
+      "photo_2023-04-21_21-16-51_064837-01.jpg"
+    ]
+  },
+  {
+    "id": "270005",
+    "cat": "car",
+    "name": "Aesthetic Capture Series",
+    "folder": "Ai layout/270005",
+    "files": [
+      "JPEG%20image.jpeg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.08%20AM_055334.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.11%20AM_055321.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.13%20AM%20%281%29_055309.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.13%20AM_055247.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.14%20AM%20%281%29_055233.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.14%20AM%20%282%29_055204.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.14%20AM_055151.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.15%20AM%20%281%29.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.15%20AM%20%282%29_060003.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.15%20AM.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.16%20AM%20%281%29_055901.jpg"
+    ]
+  },
+  {
+    "id": "270006",
+    "cat": "car",
+    "name": "Neon Highway",
+    "folder": "Ai layout/270006",
+    "files": [
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.16%20AM%20%282%29.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.16%20AM%20%283%29_055814.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.16%20AM.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.17%20AM%20%281%29_055726.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.17%20AM%20%282%29_055654.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.17%20AM_055623.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.18%20AM%20%281%29.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.18%20AM%20%282%29_055537.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.18%20AM_055506.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.19%20AM%20%281%29_055436.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.19%20AM_055350.jpg",
+      "received_303999195861759.jpeg"
+    ]
+  },
+  {
+    "id": "270007",
+    "cat": "car",
+    "name": "Structured Path Series",
+    "folder": "Ai layout/270007",
+    "files": [
+      "0b15ca2758817d612df3ea8d05fa0351.jpg",
+      "4bb137d6ff4144576e3ea31a31312574.jpg",
+      "8a159a5e075031f5a6ab01d169bac8a9.jpg",
+      "IMG_2386.JPG",
+      "IMG_2494.JPG",
+      "IMG_2495.JPG",
+      "IMG_2498.JPG",
+      "JPEG%20image_1.jpeg",
+      "JPEG%20image_2.jpeg",
+      "JPEG%20image_3.jpeg",
+      "JPEG%20image_4.jpeg",
+      "JPEG%20image_5.jpeg"
+    ]
+  },
+  {
+    "id": "270008",
+    "cat": "car",
+    "name": "Boho Automotive Series",
+    "folder": "Ai layout/270008",
+    "files": [
+      "Snapchat-2107054062~2.jpg",
+      "WhatsApp%20Image%202023-12-25%20at%209.34.23%20AM_093622.jpeg",
+      "WhatsApp%20Image%202023-12-25%20at%209.34.24%20AM_093631.jpeg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.19%20AM%20%282%29_055422.jpg",
+      "WhatsApp%20Image%202024-03-16%20at%2011.50.20%20AM_055343.jpg",
+      "b31c305666dbb9137a6bc2c1233e65c3.jpg",
+      "da4d9cd017a5a72ca23da185fa4d5da5.jpg",
+      "eee07d3a8c8f7e359d7d2c4900cb723b.jpg",
+      "fccf21e20eb03a3f1e12b9e29063dc23.jpg",
+      "received_592526819656392.jpeg",
+      "received_751155420144799.jpeg",
+      "replicate-prediction-yfrvcvjbdr4gxdsm6xsvn2uowi.JPG"
+    ]
+  },
+  {
+    "id": "270009",
+    "cat": "bohemian",
+    "name": "Bohemian Abstract Series",
+    "folder": "Ai layout/270009",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2811%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg",
+      "1%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270011",
+    "cat": "bohemian",
+    "name": "Set Composition Series",
+    "folder": "Ai layout/270011",
+    "files": [
+      "1set%20%281%29.jpeg",
+      "1set%20%281%29.png",
+      "1set%20%282%29.JPG",
+      "1set%20%284%29.JPG",
+      "1set%20%285%29.jpeg",
+      "1set%20%286%29.jpg",
+      "2_041245.jpg",
+      "2_041247.jpg",
+      "2set%20%281%29%20%281%29.jpg",
+      "2set%20%281%29.jpg",
+      "2set%20%282%29%20%281%29.jpg",
+      "2set%20%282%29.jpg"
+    ]
+  },
+  {
+    "id": "270012",
+    "cat": "bohemian",
+    "name": "Boho Geometry Series",
+    "folder": "Ai layout/270012",
+    "files": [
+      "2set%20%283%29%20%281%29.jpg",
+      "2set%20%283%29.jpg",
+      "2set%20%284%29.jpg",
+      "2set%20%285%29.jpg",
+      "2set%20%286%29.jpg",
+      "2set%20%287%29.jpg",
+      "2set%20%288%29.jpg",
+      "2set%20%289%29.jpg",
+      "4%20-%20Copy%20%282%29_041243.jpg",
+      "4_041237.jpg",
+      "6e66ca777a5c083f3c130ab00a493741.jpg",
+      "EE.jpg"
+    ]
+  },
+  {
+    "id": "270013",
+    "cat": "islamic",
+    "name": "Sacred Geometry Series",
+    "folder": "Ai layout/270013",
+    "files": [
+      "0483190_ayatul-kursi-islamic-calligraphy-3d-border-wall-art_093352%20%281%29_094936.jpg",
+      "6c82db519352550488dc0a25ba6beb8d_091942.jpg",
+      "82131f8e3a077d4fd93cfe55904e38_091951_092641_094552.jpg",
+      "892480fad33bd29636c9e4563b16ade2_111306.jpg",
+      "e.jpg",
+      "ezgif.com-webp-to-jpg.jpg",
+      "replicate-prediction-2bzwvnjbyrjswrfsdeszoys5lu.jpg",
+      "replicate-prediction-jie7uazbqtszgzq3ddmkxsysiq.jpg",
+      "replicate-prediction-khcltqzbyoe37btcmo55p6dc44.jpg",
+      "replicate-prediction-txzwlyjbnmuyzoddmkomxdluk4_100616.jpg",
+      "replicate-prediction-vrk4rgbbqfhanpldy6uuz6s2fi.jpg",
+      "replicate-prediction-zyxaazrbe3u7vn4i5ktxafqq6m%20%281%29_101931.jpg"
+    ]
+  },
+  {
+    "id": "270014",
+    "cat": "islamic",
+    "name": "Islamic Calligraphy Series",
+    "folder": "Ai layout/270014",
+    "files": [
+      "v%20%281%29.jpg",
+      "v%20%2810%29.jpg",
+      "v%20%2811%29.jpg",
+      "v%20%2812%29.jpg",
+      "v%20%282%29.jpg",
+      "v%20%283%29.jpg",
+      "v%20%284%29.jpg",
+      "v%20%285%29.jpg",
+      "v%20%286%29.jpg",
+      "v%20%287%29.jpg",
+      "v%20%288%29.jpg",
+      "v%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270015",
+    "cat": "islamic",
+    "name": "Arabesque Pattern Series",
+    "folder": "Ai layout/270015",
+    "files": [
+      "1%20%281%29.jpeg",
+      "1%20%281%29.jpg",
+      "1%20%282%29.jpeg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpeg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpeg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg"
+    ]
+  },
+  {
+    "id": "270018",
+    "cat": "islamic",
+    "name": "Sacred Ornaments Series",
+    "folder": "Ai layout/270018",
+    "files": [
+      "2-al-qabid-catf.jpg",
+      "2badcbd5471be10e0b67557e2adbbcea_091957.jpg",
+      "41G%2BLQDW02L._AC_UF1000%2C1000_QL80__101530.jpg",
+      "4b6daf0348b1230894d76c733c48251b_111118.jpg",
+      "Al%20-%20Quran.jpg",
+      "IMG_20230610_215507_101523.jpg",
+      "WhatsApp%20Image%202023-06-19%20at%2021.13.48.jpg",
+      "c81b0d8afb674f53719561453e4cd4d0_092007.jpg",
+      "e6b114096494360f84efb707972ec7ec_112349.jpg",
+      "ezgif.com-webp-to-jpg_101755.jpg",
+      "unnamed_115521.jpg",
+      "z.jpg"
+    ]
+  },
+  {
+    "id": "270019",
+    "cat": "islamic",
+    "name": "Divine Light Series",
+    "folder": "Ai layout/270019",
+    "files": [
+      "4.22%20%281%29.jpg",
+      "4.22%20%2810%29.jpg",
+      "4.22%20%2811%29.jpg",
+      "4.22%20%2812%29.jpg",
+      "4.22%20%283%29.jpg",
+      "4.22%20%284%29.jpg",
+      "4.22%20%285%29%20-%20Copy.jpg",
+      "4.22%20%285%29.jpg",
+      "4.22%20%286%29.jpg",
+      "4.22%20%287%29.jpg",
+      "4.22%20%288%29.jpg",
+      "4.22%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270020",
+    "cat": "islamic",
+    "name": "Symmetric Grace Series",
+    "folder": "Ai layout/270020",
+    "files": [
+      "IMG_0904.JPG",
+      "z.1%20%281%29.jpeg",
+      "z.1%20%281%29.jpg",
+      "z.1%20%282%29.jpeg",
+      "z.1%20%282%29.jpg",
+      "z.1%20%283%29.jpeg",
+      "z.1%20%283%29.jpg",
+      "z.1%20%284%29.jpeg",
+      "z.1%20%284%29.jpg",
+      "z.1%20%285%29.jpg",
+      "z.1%20%286%29.jpg",
+      "z.1%20%287%29.jpg"
+    ]
+  },
+  {
+    "id": "270021",
+    "cat": "islamic",
+    "name": "Spiritual Geometry Series",
+    "folder": "Ai layout/270021",
+    "files": [
+      "3fd6da54fcfa023fb03a9093eb88db1b.jpg",
+      "FsjViyBWYAAFswc.jpeg",
+      "WhatsApp%20Image%202023-10-03%20at%205.12.20%20PM%20%281%29_052439.jpeg",
+      "WhatsApp%20Image%202023-10-08%20at%201.27.21%20AM.jpeg",
+      "WhatsApp%20Image%202023-10-14%20at%206.16.05%20PM.jpeg",
+      "WhatsApp%20Image%202023-10-14%20at%206.16.06%20PM%20%281%29.jpeg",
+      "WhatsApp%20Image%202023-10-14%20at%206.16.06%20PM%20%282%29%20-%20Copy.jpeg",
+      "WhatsApp%20Image%202023-10-14%20at%206.16.06%20PM.jpeg",
+      "WhatsApp%20Image%202023-10-14%20at%206.16.07%20PM.jpeg",
+      "WhatsApp%20Image%202023-10-at%201.27.21%20AM_012820.jpeg",
+      "a20f0b43a0e79086b5633fe086419ae7.jpg",
+      "c0504dbeecdf53ad95ddc854a0f988d1.jpg"
+    ]
+  },
+  {
+    "id": "270022",
+    "cat": "islamic",
+    "name": "Classic Arabesque Series",
+    "folder": "Ai layout/270022",
+    "files": [
+      "cf8f492d244217e5cea869fc5cca5cbd.jpg",
+      "dddd%281%29.jpg",
+      "dddd.jpg",
+      "photo_2_2023-11-18_09-38-59.jpg",
+      "photo_3_2023-11-18_09-38-59.jpg",
+      "photo_6_2023-11-18_09-38-59.jpg",
+      "sss%20%281%29%20-%20Copy.jpg",
+      "sss%20%282%29.jpg",
+      "z.99%20%281%29.jpeg",
+      "z.99%20%281%29.jpg",
+      "z.99%20%282%29.jpeg",
+      "z.99%20%282%29.jpg"
+    ]
+  },
+  {
+    "id": "270025",
+    "cat": "english-quotes",
+    "name": "Vanguard Hero Series",
+    "folder": "Ai layout/270025",
+    "files": [
+      "20230613_223941_102846.jpg",
+      "2627d416878833.562b28576163c_093610.jpg",
+      "47901090aca44f32b589942a7dca06f6_111321.jpg",
+      "86a7c803ec.jpg",
+      "877217cb35c8a50b2c73ef7c592fc413_095954.jpg",
+      "AddText_06-10-01.27.23_125020.jpg",
+      "HD-wallpaper-start-doing-good-motivation-quotes-you_075303.jpg",
+      "IMG-20230623-WA0015_111234.jpg",
+      "IMG-20230623-WA0016_111208.jpg",
+      "IMG_20230531_184018_074949_112522.jpg",
+      "IMG_20230531_184056_074930_112857.jpg",
+      "bdc8faa808.jpg"
+    ]
+  },
+  {
+    "id": "270027",
+    "cat": "english-quotes",
+    "name": "Dreamer Spirit Series",
+    "folder": "Ai layout/270027",
+    "files": [
+      "111111%20%281%29.jpg",
+      "111111%20%2810%29.jpg",
+      "111111%20%2811%29.jpg",
+      "111111%20%2812%29.jpg",
+      "111111%20%282%29.jpg",
+      "111111%20%283%29.jpg",
+      "111111%20%284%29.jpg",
+      "111111%20%285%29.jpg",
+      "111111%20%286%29.jpg",
+      "111111%20%287%29.jpg",
+      "111111%20%288%29.jpg",
+      "111111%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270028",
+    "cat": "english-quotes",
+    "name": "Infinite Path Series",
+    "folder": "Ai layout/270028",
+    "files": [
+      "28ff67e793d50062d8acc30d335e8de5_111341.jpg",
+      "29196cdf8257580033f6f0cb40708f00_071048.jpg",
+      "89fb86e2e8e5aa26ed36fd81cd0a4923_071030.jpg",
+      "Blue%20Simple%20Live%20in%20the%20moment%20Phone%20Wallpaper.jpg",
+      "Blue%20Watercolor%20Under%20The%20Sea%20Phone%20Wallpaper.jpg",
+      "IMG-20230621-WA0010_104825.jpg",
+      "People%20Enjoying%20Life%20Vector%20PNG%20Images%2C%20Life%20Is%20A%20Journey%20Enjoy%20The%20Ride%2C%20Background%2C%20Banner%2C%20Poster%20PNG%20Image%20For%20Free%20Download_103746.jpg",
+      "Pink%20and%20Yellow%20Mountain%20Quotes%20Phone%20Wallpaper.jpg",
+      "caef5a6fe28d8a8f8faad04f871e7e99_072542.jpg",
+      "d6c3a38499b5c09d858b04e559da0117_072548.jpg",
+      "download_103336.jpg",
+      "sun%20phone%20wallpaper.jpg"
+    ]
+  },
+  {
+    "id": "270029",
+    "cat": "english-quotes",
+    "name": "Daily Wisdom Series",
+    "folder": "Ai layout/270029",
+    "files": [
+      "09.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "Beige%20Minimalist%20Illustration%20Moon%20Canvas%20Print%20%283%29.jpg",
+      "Black%20%26%20White%20Minimalist%20Quote%20Phone%20Wallpaper.jpg",
+      "Blue%20Illustration%20Landscape%20Phone%20Wallpaper.jpg",
+      "Blue%20Illustration%20Watercolor%20Sea%20Whale%20Phone%20Wallpaper.jpg",
+      "Blue%20Watercolor%20Under%20The%20Sea%20Phone%20Wallpaper.jpg",
+      "Blue%20White%20Peaceful%20Parachute%20and%20Sky%20Illustration%20Phone%20Wallpaper%20%286%20%C3%97%208in%29.jpg",
+      "Blue%20and%20White%20Minimalist%20Watercolor%20Beach%20Theme%20Phone%20Wallpaper.jpg",
+      "Blue%20and%20White%20Modern%20Watercolor%20Beach%20Theme%20Phone%20Wallpaper.jpg"
+    ]
+  },
+  {
+    "id": "270030",
+    "cat": "english-quotes",
+    "name": "Echoes of Truth Series",
+    "folder": "Ai layout/270030",
+    "files": [
+      "Brown%20Blue%20White%20Colorful%20Bedouin%20Walking%20in%20the%20Desert%20Phone%20Wallpaper.jpg",
+      "Brown%20Illustrated%20Teddy%20Bear%20Phone%20Wallpaper.jpg",
+      "Colorful%20Simple%20Bird%20Illustrated%20Phone%20Wallpaper.jpg",
+      "Green%20Minimalist%20Forest%20and%20Mountain%20Landscape%20Motivational%20Quote%20Phone%20Wallpaper.jpg",
+      "Ice%20Blue%20Vintage%20Car%20Travel%20Phone%20Wallpaper.jpg",
+      "Light%20Blue%20Cute%20Bunny%20Phone%20Wallpaper.jpg",
+      "Orange%20Vibrant%20Mountain%20Landscape%20Illustration%20Phone%20Wallpaper.jpg",
+      "Yellow%20and%20Brown%20Simple%20Owl%20Phone%20Wallpaper.jpg",
+      "_Pink%20Forest%20Phone%20Wallpaper.jpg",
+      "g%20%282%29.jpg",
+      "pexels-gantas-vai%C4%8Diul%C4%97nas-4133413.jpg",
+      "qhd_b2b67bcba9b79cf8cb174a4e9829c127.jpg"
+    ]
+  },
+  {
+    "id": "270031",
+    "cat": "english-quotes",
+    "name": "Mindset Shift Series",
+    "folder": "Ai layout/270031",
+    "files": [
+      "20.st%2Csmall%2C845x845-pad%2C1000x1000%2Cf8f8f8.jpg",
+      "54440128dd44a48e929af47b966c6df1_102014.jpg",
+      "6968800_3476055.jpg",
+      "Black%20And%20White%20Modern%20Good%20Music%20Typography%20T-Shirt.jpg",
+      "Black%20Typewriter%20Quote%20Instagram%20Post.jpg",
+      "Black%20and%20Orange%20Modern%20Play%20To%20Win%20T-shirt.jpg",
+      "Black%20and%20Red%20Minimalist%20T-shirt.jpg",
+      "Colorful%20Brush%20Style%20Motivational%20Quote%20T%20Shirt.jpg",
+      "Design%209.jpg",
+      "IMG-20230621-WA0001_095354.jpg",
+      "IMG-20230621-WA0002_095349.jpg",
+      "Motivational%20Typography%20Phone%20Wallpaper.jpg"
+    ]
+  },
+  {
+    "id": "270032",
+    "cat": "english-quotes",
+    "name": "Rise & Grind Series",
+    "folder": "Ai layout/270032",
+    "files": [
+      "Motivational%20Typography%20Poster.jpg",
+      "Red%20And%20Blue%20Simple%20Reading%20Book%20It%27s%20My%20Job%20T%20Shirt.jpg",
+      "Red%20Green%20Graffiti%20Typography%20T-Shirt.jpg",
+      "Typography%20T-Shirt%20%281%29.jpg",
+      "Typography%20T-Shirt.jpg",
+      "WhatsApp%20Image%202023-06-20%20at%2020.45.06.jpg",
+      "WhatsApp%20Image%202023-06-20%20at%2020.45.08_084815.jpg",
+      "c469455c702dcf177d05d22ce78db57c_122227%20-%20Copy.jpg",
+      "f549ef4f458cca31b0e634102e614cc0_103551.jpg",
+      "f7b347de44b2b990b0d75256f6b8c156_114212.jpg",
+      "f811789b00e5b1fe36cca938a6cdd741_103435.jpg",
+      "fcfd039105f84129a71c059b14574948_120506.jpg"
+    ]
+  },
+  {
+    "id": "270033",
+    "cat": "english-quotes",
+    "name": "Legacy Builders Series",
+    "folder": "Ai layout/270033",
+    "files": [
+      "2.jpg",
+      "3%20%281%29.jpg",
+      "7%20%281%29.jpg",
+      "Black%20Motivational%20Quotes%20T%20Shirt%20%282%29.jpg",
+      "Black%20Motivational%20Quotes%20T%20Shirt.jpg",
+      "Black%20Motivational%20Quotes%20T%20Shirtf.jpg",
+      "Black%20Orange%20Simple%20Typography%20T-Shirt.jpg",
+      "Black%20White%20Simple%20Forever%20Alone%20Text%20T-shirt.jpg",
+      "Black%20White%20Typography%20Graffiti%20T-Shirt.jpg",
+      "Black%20Yellow%20Illustration%20Lettering%20Phrase%20T-shirt.jpg",
+      "Black%20Yellow%20Simple%20Typography%20T-Shirt.jpg",
+      "Book%20Quote%20Lettering%20T-Shirt.jpg"
+    ]
+  },
+  {
+    "id": "270034",
+    "cat": "english-quotes",
+    "name": "Creative Spark Series",
+    "folder": "Ai layout/270034",
+    "files": [
+      "Design%2010.jpg",
+      "Design%2011.jpg",
+      "Design%2012.jpg",
+      "Design%207.jpg",
+      "Design%208.jpg",
+      "Inspiring%20Quote%20Typography%20T-Shirt%20%281%29.jpg",
+      "Inspiring%20Quote%20Typography%20T-Shirt%20%282%29.jpg",
+      "Inspiring%20Quote%20Typography%20T-Shirt.jpg",
+      "Minimalist%20White%20Background%20Graffiti%20Motivation%20T-Shirt.jpg",
+      "Quotes%20Brush%20Style%20T%20Shit.jpg",
+      "Typography%20Be%20yourself%20T-shirt%20.jpg",
+      "Typography%20T-Shirt%20%282%29.jpg"
+    ]
+  },
+  {
+    "id": "270035",
+    "cat": "bengali-quotes",
+    "name": "Bengali Typography Series",
+    "folder": "Ai layout/270035",
+    "files": [
+      "1683800849772_120329.jpg",
+      "1a127f678b2c20bb48f178f3bb1176b9_090817.jpg",
+      "1a127f678b2c20bb48f178f3bb1176boo_090730.jpg",
+      "1a1a626112934da59f0041d66181fc79_091734%20%281%29_093218.jpg",
+      "20230614_101230_102445.jpg",
+      "28b6fe27560f7ef762a67a56fbba222e_091451.jpg",
+      "376a855020b20c161955a5ffafcc3c76_091209.jpg",
+      "3844444a671533f5505e0d5a268b13e4_043843.jpg",
+      "394de786fef152c532f3098fdb8bae18_091159.jpg",
+      "3d4e51c4217f9356b8add89cb4bdc805_090708.jpg",
+      "5345bf8f30fa04aa734a9973fce73c89_043818.jpg",
+      "7070154e49b1a1f3280c57ecfe3b5f94_091009.jpg"
+    ]
+  },
+  {
+    "id": "270036",
+    "cat": "bengali-quotes",
+    "name": "Bangla Lettering Series",
+    "folder": "Ai layout/270036",
+    "files": [
+      "79e1a444d60c69fab7bb8e6c51d3fdb7_043926.jpg",
+      "7ba5f9a8f93f24f0ee7fd410dfbb1dfe_032749.jpg",
+      "8b04348258892c588d370524486c6dab_090545.jpg",
+      "9adb15e9baf1c7f03a2bd002aed62ccd_091511.jpg",
+      "IMG-20230621-WA0004_095327.jpg",
+      "IMG_3782_092831.jpg",
+      "IMG_3785_092749-01.JPG",
+      "ae696cad17d846a87be8ce8de810a0c4_085038.jpg",
+      "c466c0271cecb52de5651a4833d1e332_085022.jpg",
+      "c5112ab5ba6266bb9193b92bca570b94_023732.jpg",
+      "de56da1a36744cb4365ed889b8f39e35_084902.jpg",
+      "e0d0fb9b1252de7292b8c177088ecef6_043939.jpg"
+    ]
+  },
+  {
+    "id": "270037",
+    "cat": "bengali-quotes",
+    "name": "Kotha O Kobita Series",
+    "folder": "Ai layout/270037",
+    "files": [
+      "78cb968f748666cd000e0ecacd61cf12_023802.jpg",
+      "9a20ca3f0eb90fa360babfe845d9f_043912.jpg",
+      "AddText_06-10-01.06.16_125047.jpg",
+      "Capture_095432.JPG",
+      "IMG-20230615-WA0018%20%281%29_103054.jpg",
+      "IMG-20230621-WA0013_104843.jpg",
+      "IMG_20230610_145547_125116.jpg",
+      "IMG_3784_092803.jpg",
+      "IMG_3786_092740.jpg",
+      "a985f9a8270fd8214b228f5b20805d83_064930.jpg",
+      "b2c52d0cc788e300720115deb762bf59_085030.jpg",
+      "l%20%281%29.jpg"
+    ]
+  },
+  {
+    "id": "270038",
+    "cat": "bengali-quotes",
+    "name": "Bhashar Tan Series",
+    "folder": "Ai layout/270038",
+    "files": [
+      "l%20%2810%29.jpg",
+      "l%20%2811%29.jpg",
+      "l%20%2812%29.jpg",
+      "l%20%282%29.jpg",
+      "l%20%283%29.jpg",
+      "l%20%284%29.jpg",
+      "l%20%285%29.jpg",
+      "l%20%286%29.jpg",
+      "l%20%287%29.jpg",
+      "l%20%288%29.jpg",
+      "l%20%289%29.jpg",
+      "received_760202415854435_101242.jpg"
+    ]
+  },
+  {
+    "id": "270039",
+    "cat": "english-quotes",
+    "name": "Inspire Daily Series",
+    "folder": "Ai layout/270039",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2811%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg",
+      "1%20%289%29.jpg",
+      "14.jpg"
+    ]
+  },
+  {
+    "id": "270040",
+    "cat": "english-quotes",
+    "name": "Motivational Word Series",
+    "folder": "Ai layout/270040",
+    "files": [
+      "20230608_232956_031531.jpg",
+      "20230608_233024_031526.jpg",
+      "20230608_233052_031521.jpg",
+      "20230608_233139_031511.jpg",
+      "20230608_233233_031501.jpg",
+      "20230608_233301_031456.jpg",
+      "22.jpg",
+      "IMG-20230621-WA0012_104807_111601.jpg",
+      "IMG_20230610_223749_101350.jpg",
+      "d871ea627d7a7f740a4576faba1f4c66_122224.jpg",
+      "ff15c00ecf3aefdcb04c1bc06070e9c6_122208.jpg",
+      "never-give-up-fight-inspiring-typography-motivation-quote-illustration-creative-strong-vector-rough-typography-grunge-167773702-transformed%20-%20Copy.jpg"
+    ]
+  },
+  {
+    "id": "270041",
+    "cat": "islamic",
+    "name": "Sacred Ornaments",
+    "folder": "Ai layout/270041",
+    "files": [
+      "0c071a80269205798813a01d828a7812-01.jpg",
+      "19a36be1c2d5f5eb4315adb6b55b75b5_111157.jpg",
+      "3da652b8a6ad2d57bbee8c4987f89ee2_104816.jpg",
+      "410944e2359110bf0b5321b3f9ca1fed_091032.jpg",
+      "57-4_111441.jpg",
+      "Design%2017-01.jpg",
+      "Done%20%281%29-01.jpg",
+      "Done%20%2811%29-01.jpg",
+      "Done%20%2812%29-01.jpg",
+      "Done%20%289%29.jpg",
+      "IMG-20230615-WA0013%20%281%29_102718.jpg",
+      "IMG-20230615-WA0014%20%281%29_102708.jpg"
+    ]
+  },
+  {
+    "id": "270042",
+    "cat": "islamic",
+    "name": "Mandalas of Faith",
+    "folder": "Ai layout/270042",
+    "files": [
+      "IMG-20230615-WA0016%20%281%29_103327.jpg",
+      "IMG-20230615-WA0026%20%281%29_102638.jpg",
+      "IMG-20230615-WA0027%20%281%29_102801.jpg",
+      "IMG_20230409_200456_104516.jpg",
+      "IMG_20230409_200529_104601.jpg",
+      "IMG_3888_063751-01.jpg",
+      "IMG_3889_063905-01.jpg",
+      "IMG_3890_063653-01.jpg",
+      "IMG_3895_063734-01.jpg",
+      "board5_111235.jpg",
+      "board6_111119.jpg",
+      "fotor_2023-4-4_16_28_25_111356.jpg"
+    ]
+  },
+  {
+    "id": "270043",
+    "cat": "bengali-band",
+    "name": "Band Rhythm Series",
+    "folder": "Ai layout/270043",
+    "files": [
+      "R%20%281%29.jpg",
+      "R%20%2810%29.jpg",
+      "R%20%2811%29.jpg",
+      "R%20%2812%29.jpg",
+      "R%20%2813%29.jpg",
+      "R%20%2814%29.jpg",
+      "R%20%2815%29.jpg",
+      "R%20%2816%29.jpg",
+      "R%20%2817%29.jpg",
+      "R%20%2818%29.jpg",
+      "R%20%2819%29.jpg",
+      "R%20%282%29.jpg"
+    ]
+  },
+  {
+    "id": "270044",
+    "cat": "bengali-band",
+    "name": "Ganer Srot Series",
+    "folder": "Ai layout/270044",
+    "files": [
+      "R%20%2820%29.jpg",
+      "R%20%2821%29.jpg",
+      "R%20%2822%29.jpg",
+      "R%20%2823%29.JPG",
+      "R%20%2824%29.jpg",
+      "R%20%2825%29.jpg",
+      "R%20%283%29.jpg",
+      "R%20%284%29.jpg",
+      "R%20%285%29.jpg",
+      "R%20%286%29.jpg",
+      "R%20%287%29.jpg",
+      "R%20%288%29.jpg"
+    ]
+  },
+  {
+    "id": "270045",
+    "cat": "flower",
+    "name": "Botanical Grace Series",
+    "folder": "Ai layout/270045",
+    "files": [
+      "2.jpg",
+      "2053.jpg",
+      "Colorful%20Cute%20Flowers%20Elegant%20Valentine%27s%20Day%20T-Shirt.jpg",
+      "Flower%20of%20Love.jpg",
+      "Gray%20Aesthetic%20Flowers%20Canvas%20Print.jpg",
+      "Green%20and%20Orange%20Illustrated%20Daisy%20Flower%20Canvas%20Print.jpg",
+      "Pink%20and%20Blue%20Simple%20Watercolor%20Flower%20Canvas%20Print.jpg",
+      "Print%20Canvases%20Flower%20Decoration%20.jpg",
+      "TTT.jpg",
+      "Watercolor%20Green%20Plant%20in%20Vase%20Illustration%20Phone%20Wallpaper.jpg",
+      "Watercolor%20Poppy%20Flower%20Phone%20Wallpaper.jpg",
+      "Yellow%20Minimalist%20Flower%20Background%20Phone%20Wallpaper.jpg"
+    ]
+  },
+  {
+    "id": "270047",
+    "cat": "starry-nights",
+    "name": "Cosmic Night Series",
+    "folder": "Ai layout/270047",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg",
+      "1%20%289%29.jpg",
+      "1%20_%2811%29.jpg",
+      "1%20_%286%29.jpg"
+    ]
+  },
+  {
+    "id": "270048",
+    "cat": "starry-nights",
+    "name": "Celestial Harmony Series",
+    "folder": "Ai layout/270048",
+    "files": [
+      "78acfe515c8b244b87978b63035f85ff_114954.jpg",
+      "Cartoonist%20Imagines%20Colorful%20World%20of%20Van%20Gogh%20in%20Illustrations%20Inspired%20by%20His%20Life%20%281%29_111503.jpg",
+      "Cartoonist%20Imagines%20Colorful%20World%20of%20Van%20Gogh%20in%20Illustrations%20Inspired%20by%20His%20Life%20%281%29_114751.jpg",
+      "Cartoonist%20Imagines%20Colorful%20World%20of%20Van%20Gogh%20in%20Illustrations%20Inspired%20by%20His%20Life_114719.jpg",
+      "Sunflowers%20Tutorial%20_%20Vincent%20Van%20Gogh%20Starry%20Night%20_%20Beginner%20Acrylic%20Painting_111842.jpg",
+      "Vincent%20van%20Gogh%20Fan%20Illustrates%20the%20Dutch%20Artist%27s%20Life%20in%20a%20Colorful%20Comic%20Series%20%281%29_114926.jpg",
+      "download%20%281%29_114601.jpg",
+      "download%20%282%29_111719.jpg",
+      "download%20%282%29_114707.jpg",
+      "ftft.jpg",
+      "the-starry-night-vintage-illustration-remix-from-original-painting-by-vincent-van-gogh-word-fandom_114836%20-%20Copy.jpg",
+      "z.jpg"
+    ]
+  },
+  {
+    "id": "270049",
+    "cat": "others",
+    "name": "Diverse Composition Series",
+    "folder": "Ai layout/270049",
+    "files": [
+      "1%20%281%29.JPG",
+      "1%20%2810%29.JPG",
+      "1%20%2811%29.JPG",
+      "1%20%2812%29.JPG",
+      "1%20%282%29.JPG",
+      "1%20%283%29.JPG",
+      "1%20%284%29.jpg",
+      "1%20%285%29.JPG",
+      "1%20%286%29.JPG",
+      "1%20%287%29.JPG",
+      "1%20%288%29.JPG",
+      "1%20%289%29.JPG"
+    ]
+  },
+  {
+    "id": "270050",
+    "cat": "others",
+    "name": "Visual Balance Series",
+    "folder": "Ai layout/270050",
+    "files": [
+      "IMG-5227_023138.JPG",
+      "IMG-5228_023130.JPG",
+      "IMG-5232_023052.JPG",
+      "IMG-5234_023024.JPG",
+      "IMG-5235_023012.JPG",
+      "IMG-5237_022940.JPG",
+      "IMG-5238_022926.JPG",
+      "IMG-5239_022908.JPG",
+      "IMG-5240_022855.JPG",
+      "IMG-5241_022837.JPG",
+      "IMG-5242_022821.JPG",
+      "IMG-5244_022746.JPG"
+    ]
+  },
+  {
+    "id": "270051",
+    "cat": "others",
+    "name": "Visual Harmony Series",
+    "folder": "Ai layout/270051",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2811%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg",
+      "1%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270052",
+    "cat": "others",
+    "name": "Modern Gallery Series",
+    "folder": "Ai layout/270052",
+    "files": [
+      "20.jpg",
+      "27fb2faac27740fc0301b35a45014bd3.jpg",
+      "6d5f8d5dc14f2f66c85b503d2f423_111358%20-%20Copy.jpg",
+      "865f0515fea79efd304e51aeeadb6d8f_094700%20%281%29.jpg",
+      "IMG-20230619-WA0008_065927.jpg",
+      "IMG-20230622-WA0001_123938.jpg",
+      "IMG-20230622-WA0006_124002.jpg",
+      "IMG-4254_114328.JPG",
+      "IMG_20230327_220351_103057.JPG",
+      "pic1.jpg",
+      "replicate-prediction-gnorxcbbgdumqwfmsws6jdp7te.jpg",
+      "van_travel_summer_189350_240x320_122314.jpg"
+    ]
+  },
+  {
+    "id": "270053",
+    "cat": "greenery",
+    "name": "Verdant Sanctuary Series",
+    "folder": "Ai layout/270053",
+    "files": [
+      "%23background_081508.jpg",
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2811%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg"
+    ]
+  },
+  {
+    "id": "270054",
+    "cat": "greenery",
+    "name": "Ethereal Greens Series",
+    "folder": "Ai layout/270054",
+    "files": [
+      "1%20%289%29.jpg",
+      "6f36ef3bc8106d0775227e9d63a64799_074241%20-%20Copy.jpg",
+      "Flower%20Vase%20Simple%20Print%20Canvases.jpg",
+      "Green%20and%20Blue%20Leaf%20Pattern%20Botanical%20Bookmark%20.jpg",
+      "IMG-20230716-WA0002_044847.jpg",
+      "IMG-20230716-WA0005_044819.jpg",
+      "IMG-20230716-WA0006_044812.jpg",
+      "IMG-20230716-WA0010_044729.jpg",
+      "IMG-20230716-WA0011_044718.jpg",
+      "Watercolor%20Green%20Plant%20in%20Vase%20Illustration%20Phone%20Wallpaper%20-%20Copy.jpg",
+      "download%20%281%29_074219.jpg",
+      "download%20%282%29_074209%20-%20Copy.jpg"
+    ]
+  },
+  {
+    "id": "270055",
+    "cat": "sceneries",
+    "name": "Majestic Vistas Series",
+    "folder": "Ai layout/270055",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2810%29.jpg",
+      "1%20%2811%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%282%29.jpg",
+      "1%20%283%29.jpg",
+      "1%20%284%29.jpg",
+      "1%20%285%29.jpg",
+      "1%20%286%29.jpg",
+      "1%20%287%29.jpg",
+      "1%20%288%29.jpg",
+      "1%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270056",
+    "cat": "sceneries",
+    "name": "Serene Horizons Series",
+    "folder": "Ai layout/270056",
+    "files": [
+      "13g888C4Cv_103054.jpg",
+      "13g888pi4Cv_103049.jpg",
+      "13g888piC4Cv_103044.jpg",
+      "476f8574451555ef325829cd581bbd59_103110.jpg",
+      "64g888piUtX%20%281%29_103035.jpg",
+      "7f27fa9c69787aa99f09fac49194313c_103134.jpg",
+      "9dadf9d881ecb1b243230014a0395617_103059.jpg",
+      "IMG-20230716-WA0004_070017.jpg",
+      "IMG-20230716-WA0006_065956.jpg",
+      "IMG-20230716-WA0009_065921.jpg",
+      "IMG-20230716-WA0013_070043.jpg",
+      "a1ae0049f6430f8267dc3cb83d17d345_103155.jpg"
+    ]
+  },
+  {
+    "id": "270057",
+    "cat": "bike",
+    "name": "Cafe Racer Series",
+    "folder": "Ai layout/270057",
+    "files": [
+      "051803ccdd5a93c9415e0b50b18ef8df_100155.jpg",
+      "1e792c7e34b4bdad6d485e82f623221e_084146-01.jpg",
+      "2892e0e384df34d2b89adafe7ffd34ab_084426-01.jpg",
+      "2cd945402cb169e26fb41cccb78a866d_084414-01.jpg",
+      "2d0ddd0c2fa37679fdc8799db42a4931_100210.jpg",
+      "38792a8c66a0471de35816bd9140e10c_084212-01.jpg",
+      "5507c15b27830b6eb13d8cc9233edea6_084153-01.jpg",
+      "74091317fbfa2b66a70e109c74f59100_084407-01.jpg",
+      "7a45a1b5a17e96fab85ae57d7f3ecc4d_084242-01.jpg",
+      "857c7e425be985f524b24f6efab21989_084247-01.jpg",
+      "9400d733845e86679746e1129cbc37a3_084232-01.jpg",
+      "9a2ce04da3cb65394c6b9cbc71eafcc1_084158.jpg"
+    ]
+  },
+  {
+    "id": "270058",
+    "cat": "bike",
+    "name": "Superbike Speed Series",
+    "folder": "Ai layout/270058",
+    "files": [
+      "Macho%20biker.jpg",
+      "Pin%20by%20Adminstrati%20Qu%C3%BD%20Tr%E1%BA%A7n%20on%20ng%E1%BA%A7u%20_%20Bike%20sketch%2C%20Bike%20drawing%2C%20Motorbike%20art_105440-01.jpg",
+      "Premium%20Vector%20_%20Illustration%20of%20skull%20riding%20motor%20scooter__105459-01.jpg",
+      "ad04738097c1807a169bbf2a5b7365dc_100148.jpg",
+      "b2199e7517d2b8ae1942d5de03cda4a9_084257-01.jpg",
+      "bd8826ae5494313e7e5d726ed4da45ae_084224-01.jpg",
+      "d3f20ffb1d72f967cc9dd113af64a100050.jpg",
+      "d3f20ffb1d72f967cc9dd113af64af4b_100050.jpg",
+      "d5622e4c54bc067f2c1a7c2a1e4cf625_084353-01-01.jpg",
+      "download%20%287%29_100036.jpg",
+      "fe8b7ceb6aa85c6e4750216c36bec3d7_084346.jpg",
+      "kkkkoio.jpg"
+    ]
+  },
+  {
+    "id": "270059",
+    "cat": "pink-girlish",
+    "name": "Dreamy Pastel Series",
+    "folder": "Ai layout/270059",
+    "files": [
+      "2af266bfd4dfffc32e80ecca2eac2afd_093155.jpg",
+      "3393b29009cd43014957d7f446a5007b_054240.jpg",
+      "IMG-20230619-WA0006_065942.jpg",
+      "IMG-20230619-WA0010_065917.jpg",
+      "IMG-20230619-WA0011_065903.jpg",
+      "IMG-20230619-WA0021_065804.jpg",
+      "IMG-20230619-WA0022_070009.jpg",
+      "Polish_20230617_222400529_054748%20-%20Copy.jpg",
+      "Polish_20230617_222602828_054712.jpg",
+      "Polish_20230617_223641008_054533.jpg",
+      "Screenshot_20230528-033404~3_095911.jpg",
+      "Screenshot_20230528-113732~2_095937%20%281%29.jpg"
+    ]
+  },
+  {
+    "id": "270060",
+    "cat": "pink-girlish",
+    "name": "Blush Pink Series",
+    "folder": "Ai layout/270060",
+    "files": [
+      "Screenshot_20230528-114801~2_095900%20%281%29.jpg",
+      "Screenshot_20230528-115435~2_095922.jpg",
+      "ad8e51631df117300e8636f361a78f32_114233.jpg",
+      "b51c104861ca2e891a73ccc41236b00e_012134.jpg",
+      "chocolate-bar-with-hearts-cartoon-vector_095756.jpg",
+      "desktop-wallpaper-princess-crown-pink-crown_095820.jpg",
+      "e269b4d36b7ad0aaae0796f4b31af55e_093229.jpg",
+      "f5d0025879cf581618f9ebc1a8df6b55_093204.jpg",
+      "images%20%289%29_095808.jpg",
+      "pic1%20%282%29.jpg",
+      "received_248684034477565_095801.jpg",
+      "what-order-do-i-apply-makeup.png"
+    ]
+  },
+  {
+    "id": "270061",
+    "cat": "others",
+    "name": "Eclectic Visuals Series",
+    "folder": "Ai layout/270061",
+    "files": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "Beige%20Minimalist%20Illustration%20Moon%20Canvas%20Print%20%286%29.jpg",
+      "Black%20Line%20Illustration%20Outer%20Space%20Phone%20Wallpaper.jpg",
+      "Black%20Orange%20Gothic%20Skull%20with%20Flame%20Illustration%20T-Shirt.jpg",
+      "Black%20Silhouette%20Night%20Phone%20Wallpaper.jpg",
+      "Black%20White%20Skull%20King%20Minimalist%20T-Shirt.jpg",
+      "Black%20and%20White%20Astrology%20Minimalist%20Illustrated%20Phone%20Wallpaper.jpg",
+      "Blue%20Illustration%20Night%20Phone%20Wallpaper.jpg",
+      "Blue%20White%20Aesthetic%20Quotes%20Phone%20Wallpaper.jpg",
+      "Brown%20grey%20and%20Cream%20Modern%20Relax%20Phone%20Wallpaper%20-%20Copy.jpg"
+    ]
+  },
+  {
+    "id": "270062",
+    "cat": "others",
+    "name": "Abstract Fusion Series",
+    "folder": "Ai layout/270062",
+    "files": [
+      "IMG-20230619-WA0002_065955.jpg",
+      "Pastel%20Brown%20Aesthetic%20Desk%20Illustration%20Phone%20Wallpaper.jpg",
+      "Polish_20230617_222912644_054623.jpg",
+      "Polish_20230617_224634067_054448.jpg",
+      "Simple%20Brown%20Hand%20Illustration%20Phone%20Wallpaper.jpg",
+      "Yellow%20Bold%20Wolf%20Illustration%20Halloween%20Phone%20Wallpaper.jpg",
+      "Yellow%20Brown%20Red%20Colorful%20Graffiti%20Illustration%20T-shirt.jpg",
+      "Yellow%20Illustrated%20Eggs%20Phone%20Wallpaper.jpg",
+      "g%20%284%29.jpg",
+      "g%20%286%29.jpg",
+      "g%20%287%29.jpg",
+      "qhd_1b7ec96cbe6d06998c180f477a02fd02.jpg"
+    ]
+  },
+  {
+    "id": "270063",
+    "cat": "superhero-game",
+    "name": "Caped Crusaders Series",
+    "folder": "Ai layout/270063",
+    "files": [
+      "14523324104_0055607fae_c_125417.jpg",
+      "2103dc62496899.5a9272e617d16_104144.jpg",
+      "344760818_1224816688210329_2894591404604914742_n%20%281%29_111918.jpg",
+      "344846395_1552902421867258_7951063945741535316_n_111952.jpg",
+      "4766cc72a6a95e1da43188876aa5e8a0_063651.jpg",
+      "6544885fa92f69d5033c3af0914bc22c_063811.jpg",
+      "84c99c38214cdf26fdc45d994c9cd1a6_062901.jpg",
+      "84c99c38214cdf26fdc45d994c9cd1a6_062901mon.jpg",
+      "Deadpool_112022.jpg",
+      "IMG_3807_092524.jpg",
+      "IMG_3808_092508.jpg",
+      "IMG_3810_092444.jpg"
+    ]
+  },
+  {
+    "id": "270064",
+    "cat": "superhero-game",
+    "name": "Console Legends Series",
+    "folder": "Ai layout/270064",
+    "files": [
+      "IMG_3812_092428.jpg",
+      "IMG_3814_092401.jpg",
+      "Rico%20Jr%20on%20Twitter_125100.jpg",
+      "The%20Batman%202021%2C%20Mayank%20Kumarr_125432.jpg",
+      "c01e6e3ea88b18cdcd8df8788bde21d5_064148.jpg",
+      "c80dd058997035.5a119250be2e9.jpg",
+      "cbd1d778763331.5cae347d06d38_124914.jpg",
+      "ed028963d8354b3254471e5ece1b3118_125332.jpg",
+      "ezgif.com-webp-to-jpg_102417.jpg",
+      "f53eda84897429.5d6bc3ed1f0f5.jpg",
+      "man_of_steel_by_andy_grail_by_abonny_d9u8brl-fullview_100727.jpg",
+      "three-jokers-card-02_111947.jpg"
+    ]
+  },
+  {
+    "id": "270065",
+    "cat": "superhero-game",
+    "name": "Epic Quest Series",
+    "folder": "Ai layout/270065",
+    "files": [
+      "Genshin%20Impact%20The%207%20Elements%20Wallpaper%20_-01.jpg",
+      "IMG_3818_092306-01.jpg",
+      "IMG_3819_092246-01.jpg",
+      "IMG_3820_092227-01.jpg",
+      "IMG_3821_092207-01-01.jpg",
+      "IMG_3822_092150-01.jpg",
+      "IMG_3824_092129-01.jpg",
+      "IMG_3825_092121-01.jpg",
+      "IMG_3826_092102-01.jpg",
+      "IMG_3827_092045-01.jpg",
+      "IMG_3828_092028.jpg",
+      "IMG_3829_092012-01.jpg"
+    ]
+  },
+  {
+    "id": "270066",
+    "cat": "superhero-game",
+    "name": "Retro Pixel Series",
+    "folder": "Ai layout/270066",
+    "files": [
+      "IMG_3831_091953-01.jpg",
+      "IMG_3832_091935-01.jpg",
+      "IMG_3835_091846-01-01.jpg",
+      "IMG_3836_091840-01.jpg",
+      "IMG_3837_091821-01.jpg",
+      "IMG_3838_091808-01.jpg",
+      "IMG_3839_091754-01.jpg",
+      "IMG_3841_091735-01.jpg",
+      "IMG_3900_060451-01.jpg",
+      "IMG_3901_060430-01.jpg",
+      "IMG_3902_060506-01.jpg",
+      "Red%20Dead%20Redemption%20II%20-%20PosterSpy_031548-01.jpg"
+    ]
+  },
+  {
+    "id": "270067",
+    "cat": "football",
+    "name": "Pitch Masters Series",
+    "folder": "Ai layout/270067",
+    "files": [
+      "0244eef7241852b2b6028fd2d3d1286d_112630.jpg",
+      "093b9f9e7d364cb7cc84d109176ccc0d_112643.jpg",
+      "10772702_081652.jpg",
+      "1686308173779_082535.jpg",
+      "4346_081708.jpg",
+      "446824933b3dfbf239bcf4dd4819662b_081637.jpg",
+      "5799068b214af5f755cf60655b5f00c9_112611.jpg",
+      "90a9f5a7-6371-405d-86d4-a41f149cce28.jpeg_081734.jpg",
+      "990a388e9bdd0b7dc6d73b47448d6c29_112622.jpg",
+      "Barcelonas-Argentinian-forward-Lionel-M_081614.jpg",
+      "FB_IMG_1671831510571.jpg",
+      "HD-wallpaper-leo-messi-2021-barcelona-fc-football-futbol-iphone-lionel-samsung_081548.jpg"
+    ]
+  },
+  {
+    "id": "270068",
+    "cat": "football",
+    "name": "Golden Boot Series",
+    "folder": "Ai layout/270068",
+    "files": [
+      "IMG-20230716-WA0003.jpg",
+      "IMG-20230716-WA0004.jpg",
+      "IMG-20230716-WA0005.jpg",
+      "IMG-20230716-WA0006.jpg",
+      "IMG-20230716-WA0007.jpg",
+      "IMG_3866_120155.jpg",
+      "IMG_3881_120040.jpg",
+      "IMG_3883_120138.jpg",
+      "WhatsApp%20Image%202023-06-19%20at%2008.13.11_081807.jpg",
+      "WhatsApp%20Image%202023-06-19%20at%2008.13.13_081746.jpg",
+      "f0ccf72dc913f041a3ae2d034bf8a538_112555.jpg",
+      "f2d7b0706857167905f09611e89b706a_112537.jpg"
+    ]
+  },
+  {
+    "id": "270069",
+    "cat": "anime",
+    "name": "Shonen Spirit Series",
+    "folder": "Ai layout/270069",
+    "files": [
+      "rrr%20%281%29.JPG",
+      "rrr%20%282%29.jpg",
+      "tt%20%281%29.JPG",
+      "tt%20%2810%29.JPG",
+      "tt%20%2811%29.JPG",
+      "tt%20%2812%29.JPG",
+      "tt%20%2813%29.JPG",
+      "tt%20%2814%29.JPG",
+      "tt%20%2815%29.JPG",
+      "tt%20%2816%29.JPG",
+      "tt%20%2817%29.JPG",
+      "tt%20%2818%29.JPG"
+    ]
+  },
+  {
+    "id": "270070",
+    "cat": "anime",
+    "name": "Classic Anime Series",
+    "folder": "Ai layout/270070",
+    "files": [
+      "tt%20%2819%29.JPG",
+      "tt%20%282%29.JPG",
+      "tt%20%2820%29.JPG",
+      "tt%20%2821%29.JPG",
+      "tt%20%2822%29.JPG",
+      "tt%20%283%29.JPG",
+      "tt%20%284%29.JPG",
+      "tt%20%285%29.JPG",
+      "tt%20%286%29.JPG",
+      "tt%20%287%29.JPG",
+      "tt%20%288%29.JPG",
+      "tt%20%289%29.JPG"
+    ]
+  },
+  {
+    "id": "270071",
+    "cat": "sceneries",
+    "name": "Panoramic Vistas Series",
+    "folder": "Ai layout/270071",
+    "files": [
+      "1_1%20%281%29.jpg",
+      "1_1%20%2810%29.jpg",
+      "1_1%20%2811%29.jpg",
+      "1_1%20%2812%29.jpg",
+      "1_1%20%282%29.jpg",
+      "1_1%20%283%29.jpg",
+      "1_1%20%284%29.jpg",
+      "1_1%20%285%29.jpg",
+      "1_1%20%286%29.jpg",
+      "1_1%20%287%29.jpg",
+      "1_1%20%288%29.jpg",
+      "1_1%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270072",
+    "cat": "sceneries",
+    "name": "Nature Echoes Series",
+    "folder": "Ai layout/270072",
+    "files": [
+      "8abda78cef8006e6f73a20d6bb2cd78c.jpg",
+      "Book%20Shop%20.png",
+      "Dark%20Academia%20Desk.png",
+      "IMG_1219.JPG",
+      "IMG_1220.JPG",
+      "IMG_1222.JPG",
+      "WhatsApp%20Image%202023-10-03%20at%205.26.58%20PM_055807.jpg",
+      "WhatsApp%20Image%202023-11-28%20at%209.16.45%20PM.jpeg",
+      "m_gen_art-print-square-p1_fa2ca5ff-6446-476b-b880-6c3e5dfb405c_083035.jpg",
+      "replicate-prediction-66bgprjbjhpce6piotm2ousxem.jpg",
+      "z.jpeg",
+      "z.jpg"
+    ]
+  },
+  {
+    "id": "270074",
+    "cat": "english-quotes",
+    "name": "Success Mindset Series",
+    "folder": "Ai layout/270074",
+    "files": [
+      "x%20%281%29.JPG",
+      "x%20%281%29.jpeg",
+      "x%20%2810%29.jpg",
+      "x%20%282%29.jpg",
+      "x%20%283%29.jpg",
+      "x%20%284%29.jpg",
+      "x%20%285%29.jpg",
+      "x%20%286%29.jpg",
+      "x%20%287%29.jpg",
+      "x%20%288%29.jpg",
+      "x%20%289%29.jpg",
+      "y.jpg"
+    ]
+  },
+  {
+    "id": "270075",
+    "cat": "starry-nights",
+    "name": "Starry Pathway Series",
+    "folder": "Ai layout/270075",
+    "files": [
+      "1%20%281%29.jpg",
+      "1%20%2812%29.jpg",
+      "1%20%2813%29.jpg",
+      "1%20%2814%29.jpg",
+      "1%20%2815%29.jpg",
+      "1%20%2816%29.jpg",
+      "1%20%2817%29.jpg",
+      "1%20%2818%29.jpg",
+      "1%20%2819%29.jpg",
+      "1%20%2820%29.jpg",
+      "1%20%2821%29.jpg",
+      "1%20%2822%29.jpg"
+    ]
+  },
+  {
+    "id": "270076",
+    "cat": "starry-nights",
+    "name": "Glow in Dark Series",
+    "folder": "Ai layout/270076",
+    "files": [
+      "2%20%2810%29.jpg",
+      "2%20%2811%29.jpg",
+      "2%20%2812%29.jpg",
+      "2%20%2813%29.jpg",
+      "2%20%282%29.jpg",
+      "2%20%283%29.jpg",
+      "2%20%284%29.jpg",
+      "2%20%285%29.jpg",
+      "2%20%286%29.jpg",
+      "2%20%287%29.jpg",
+      "2%20%288%29.jpg",
+      "2%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270077",
+    "cat": "pink-girlish",
+    "name": "Girlish Aesthetic Series",
+    "folder": "Ai layout/270077",
+    "files": [
+      "1.22%20%281%29.jpg",
+      "1.22%20%2810%29.jpg",
+      "1.22%20%2811%29.jpg",
+      "1.22%20%2812%29.jpg",
+      "1.22%20%282%29.jpg",
+      "1.22%20%283%29.jpg",
+      "1.22%20%284%29.jpg",
+      "1.22%20%285%29.jpg",
+      "1.22%20%286%29.jpg",
+      "1.22%20%287%29.jpg",
+      "1.22%20%288%29.jpg",
+      "1.22%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270078",
+    "cat": "pink-girlish",
+    "name": "Kawaii Essence Series",
+    "folder": "Ai layout/270078",
+    "files": [
+      "w%20%281%29.jpg",
+      "w%20%2810%29.jpg",
+      "w%20%2811%29.jpg",
+      "w%20%2812%29.JPG",
+      "w%20%282%29.jpg",
+      "w%20%283%29.jpg",
+      "w%20%284%29.jpg",
+      "w%20%285%29.jpg",
+      "w%20%286%29.jpg",
+      "w%20%287%29.jpg",
+      "w%20%288%29.jpg",
+      "w%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270079",
+    "cat": "got",
+    "name": "Seven Kingdoms Series",
+    "folder": "Ai layout/270079",
+    "files": [
+      "08f5e7ec32d6d9094b1bbb9fad8e2ba0_113237.JPG",
+      "11c9bfc4b4026071368765addad6de6f_113231.JPG",
+      "23881b4397bd34479f5e9e6af2a0f675_113156.JPG",
+      "45d3895aa726f453fc34b5b3d6b69ccb_113216.JPG",
+      "7295fe563ccf53b429596c6380fddefa_113207.JPG",
+      "75a66b7677746d3ce77e77ce0aeefe33_113212.JPG",
+      "7fc745128fd5e64eb4d92fbec551e183_113244.JPG",
+      "ab91e0b9a2c82fb8a1f7dfcdc58e4348_113152.JPG",
+      "ab95ee0e6e211692b8af708a2a94a362_113145.JPG",
+      "d4dd10cdc75daf22ed7eae356e0aaa5a_113131.JPG",
+      "d609c7c3ff036580dd15bc16dc9ed7e4.JPG",
+      "e236a1fa90e56421518d55c8c9cb2aba_113114.JPG"
+    ]
+  },
+  {
+    "id": "270080",
+    "cat": "got",
+    "name": "Winter Is Coming Series",
+    "folder": "Ai layout/270080",
+    "files": [
+      "z%20%281%29.jpeg",
+      "z%20%281%29.jpg",
+      "z%20%2810%29.jpeg",
+      "z%20%2811%29.jpeg",
+      "z%20%2812%29.jpeg",
+      "z%20%282%29.jpeg",
+      "z%20%283%29.jpeg",
+      "z%20%285%29.jpeg",
+      "z%20%286%29.jpeg",
+      "z%20%287%29.jpeg",
+      "z%20%288%29.jpeg",
+      "z%20%289%29.jpeg"
+    ]
+  },
+  {
+    "id": "270081",
+    "cat": "others",
+    "name": "Curated Selection Series",
+    "folder": "Ai layout/270081",
+    "files": [
+      "5.5%20%281%29.jpeg",
+      "5.5%20%281%29.jpg",
+      "5.5%20%281%29.png",
+      "5.5%20%282%29.jpeg",
+      "5.5%20%282%29.jpg",
+      "5.5%20%283%29.jpeg",
+      "5.5%20%283%29.jpg",
+      "5.5%20%284%29.jpg",
+      "5.5%20%285%29.jpg",
+      "5.5%20%286%29.jpg",
+      "5.5%20%287%29.jpg",
+      "5.5%20%288%29.JPG"
+    ]
+  },
+  {
+    "id": "270082",
+    "cat": "others",
+    "name": "Diverse Composition Series",
+    "folder": "Ai layout/270082",
+    "files": [
+      "a12%20%281%29.jpg",
+      "a12%20%2810%29.jpg",
+      "a12%20%2811%29.jpg",
+      "a12%20%2812%29.jpg",
+      "a12%20%282%29.jpg",
+      "a12%20%283%29.jpg",
+      "a12%20%284%29.jpg",
+      "a12%20%285%29.jpg",
+      "a12%20%286%29.jpg",
+      "a12%20%287%29.jpg",
+      "a12%20%288%29.jpg",
+      "a12%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270083",
+    "cat": "others",
+    "name": "Visual Balance Series",
+    "folder": "Ai layout/270083",
+    "files": [
+      "May%20the%204th%20Be%20With%20You_%2020%2B%20Magnificent%20Artworks%20That%20Celebrate%20Star%20Wars_125344.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.34.49%20AM_104544.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.34.59%20AM_104528.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.30%20AM_104524.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.31%20AM_104517.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.32%20AM%20%281%29_104505.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.32%20AM_104709.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.33%20AM%20%281%29_104656.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.33%20AM_104643.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.34%20AM%20%281%29_104636.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.34%20AM_104621.JPG",
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.35%20AM%20%281%29_104606.JPG"
+    ]
+  },
+  {
+    "id": "270084",
+    "cat": "movie-poster",
+    "name": "Silver Screen Series",
+    "folder": "Ai layout/270084",
+    "files": [
+      "WhatsApp%20Image%202023-09-29%20at%2010.35.35%20AM_104559.JPG",
+      "r%20%281%29.jpg",
+      "r%20%2810%29.jpg",
+      "r%20%2811%29.jpg",
+      "r%20%282%29.jpg",
+      "r%20%283%29.jpg",
+      "r%20%284%29.jpg",
+      "r%20%285%29.jpg",
+      "r%20%286%29.jpg",
+      "r%20%287%29.jpg",
+      "r%20%288%29.jpg",
+      "r%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270085",
+    "cat": "others",
+    "name": "Visual Harmony Series",
+    "folder": "Ai layout/270085",
+    "files": [
+      "12by8-1.jpg",
+      "House_024216.jpg",
+      "Photos%20from%20Francesco%20Mangialardi%20%28oilpaints%29%20on%20Myspace.jpeg",
+      "Polish_20230617_222912644_054623.jpg",
+      "WhatsApp%20Image%202023-09-05%20at%201.40.08%20PM%20%281%29_101735.JPG",
+      "WhatsApp%20Image%202023-09-05%20at%201.40.08%20PM%20%282%29_101726.JPG",
+      "WhatsApp%20Image%202023-09-05%20at%201.40.09%20PM_101745.JPG",
+      "WhatsApp%20Image%202023-09-15%20at%208.25.43%20PM_083105%20-%20Copy.jpg",
+      "downad_024155.JPG",
+      "download_024134.jpg",
+      "ee%20%284%29_121915.JPG",
+      "m%20%281%29.jpeg"
+    ]
+  },
+  {
+    "id": "270086",
+    "cat": "others",
+    "name": "Modern Gallery Series",
+    "folder": "Ai layout/270086",
+    "files": [
+      "m%20%281%29.jpg",
+      "m%20%281%29.png",
+      "m%20%2810%29.jpg",
+      "m%20%282%29.jpg",
+      "m%20%283%29.jpg",
+      "m%20%284%29.jpg",
+      "m%20%285%29.jpg",
+      "m%20%286%29.jpg",
+      "m%20%288%29.jpg",
+      "m%20%289%29.jpg",
+      "m_gen_art-print-square-p1_fa2ca5ff-6446-476b-b880-6c3e5dfb405c_083035.jpg",
+      "sunshine-sharon-marcella-marston_083021.jpg"
+    ]
+  },
+  {
+    "id": "270087",
+    "cat": "greenery",
+    "name": "Botanical Herbarium Series",
+    "folder": "Ai layout/270087",
+    "files": [
+      "Green%20Monstera%20Line%20art%20karsne%20_%20Redbubble_120013.JPG",
+      "Green%20design_115735.JPG",
+      "Green%20wallpaper_115959.JPG",
+      "Picsart_23-10-27_02-12-29-181.jpg",
+      "Pin%20bngs_115932.JPG",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.21%20PM%20%281%29_101252.jpg",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.21%20PM%20%282%29_101248.jpeg",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.21%20PM_101236.jpg",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.22%20PM%20%281%29_101223.jpg",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.22%20PM_101209.jpg",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.23%20PM%20%281%29_101203.jpg",
+      "WhatsApp%20Image%202023-09-05%20at%201.36.23%20PM_101152.jpg"
+    ]
+  },
+  {
+    "id": "270088",
+    "cat": "greenery",
+    "name": "Jungle Vibes Series",
+    "folder": "Ai layout/270088",
+    "files": [
+      "WhatsApp%20Image%202023-09-05%20at%201.36.24%20PM_101109.jpg",
+      "c92fd2693d928e2443dfcc8dee0a6aeb_111419.jpg",
+      "dow%281%29_115917.JPG",
+      "dow_115902.JPG",
+      "downlad.jpeg",
+      "downlad_115844.JPG",
+      "download%20%281%29_115828.JPG",
+      "download_115808.JPG",
+      "downlod_115756.JPG",
+      "nload%20%281%29_115945.JPG",
+      "pic1%20%284%29.jpg",
+      "sharpen_s__1_.jpg"
+    ]
+  },
+  {
+    "id": "270089",
+    "cat": "others",
+    "name": "Eclectic Visuals Series",
+    "folder": "Ai layout/270089",
+    "files": [
+      "16da1fe30624c5d49cd2f980e12e91c3_042256.jpg",
+      "20de838f0634f534623645015af52b9e_042253.jpg",
+      "39acc3d755c3f360c1d907dd4e796363_042245.jpg",
+      "5%20%281%29.JPG",
+      "5%20%2810%29.jpg",
+      "5%20%282%29.JPG",
+      "5%20%282%29.jpeg",
+      "5%20%283%29.JPG",
+      "5%20%284%29.JPG",
+      "5%20%285%29.jpg",
+      "5%20%286%29.jpg",
+      "5%20%287%29.jpg"
+    ]
+  },
+  {
+    "id": "270090",
+    "cat": "flower",
+    "name": "Wildflower Bloom Series",
+    "folder": "Ai layout/270090",
+    "files": [
+      "WhatsApp%20Image%202023-06-09%20at%2022.09.06_101826.jpg",
+      "b%20%281%29.JPG",
+      "b%20%281%29.jpeg",
+      "b%20%2810%29.jpg",
+      "b%20%282%29.JPG",
+      "b%20%283%29.jpg",
+      "b%20%284%29.jpg",
+      "b%20%285%29.jpg",
+      "b%20%286%29.jpg",
+      "b%20%287%29.jpg",
+      "b%20%288%29.jpg",
+      "exotic-flower-dreams-painting-by-numbers-609130851-en_00_101759.jpg"
+    ]
+  },
+  {
+    "id": "270091",
+    "cat": "flower",
+    "name": "Silent Petals Series",
+    "folder": "Ai layout/270091",
+    "files": [
+      "n%20%281%29.jpeg",
+      "n%20%281%29.jpg",
+      "n%20%282%29.jpeg",
+      "n%20%282%29.jpg",
+      "n%20%283%29.jpeg",
+      "n%20%283%29.jpg",
+      "n%20%284%29.jpeg",
+      "n%20%284%29.jpg",
+      "n%20%285%29.jpeg",
+      "n%20%285%29.jpg",
+      "n%20%286%29.jpg",
+      "n%20%287%29.jpg"
+    ]
+  },
+  {
+    "id": "270092",
+    "cat": "anime",
+    "name": "Manga Composition Series",
+    "folder": "Ai layout/270092",
+    "files": [
+      "1699730663902_082017%20%28New%20size%201%29.jpg",
+      "1699730663916_081949%20%28New%20size%201%29.jpg",
+      "pp%20%2811%29%20%28New%20size%201%29.jpg",
+      "pp%20%2813%29%20%28New%20size%201%29.jpg",
+      "pp%20%2814%29%20%28New%20size%201%29.jpg",
+      "pp%20%2816%29%20%28New%20size%201%29.jpg",
+      "pp%20%2818%29%20%28New%20size%201%29.jpg",
+      "pp%20%2821%29%20%28New%20size%201%29.jpg",
+      "pp%20%2822%29%20%28New%20size%201%29.jpg",
+      "pp%20%2826%29%20%28New%20size%201%29.jpg",
+      "pp%20%2827%29%20%28New%20size%201%29.jpg",
+      "pp%20%2828%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270093",
+    "cat": "anime",
+    "name": "Chibi Cute Series",
+    "folder": "Ai layout/270093",
+    "files": [
+      "pp%20%2829%29%20%28New%20size%201%29.jpg",
+      "pp%20%2830%29%20%28New%20size%201%29.jpg",
+      "z%20%281%29%20%28New%20size%201%29.jpg",
+      "z%20%281%29%20%28New%20size%201%29.png",
+      "z%20%282%29%20%28New%20size%201%29.jpg",
+      "z%20%282%29%20%28New%20size%201%29.png",
+      "z%20%283%29%20%28New%20size%201%29.JPG",
+      "z%20%283%29%20%28New%20size%201%29.png",
+      "z%20%284%29%20%28New%20size%201%29.png",
+      "z%20%285%29%20%28New%20size%201%29.JPG",
+      "z%20%286%29%20%28New%20size%201%29.JPG",
+      "z%20%287%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270094",
+    "cat": "others",
+    "name": "Abstract Fusion Series",
+    "folder": "Ai layout/270094",
+    "files": [
+      "c%20%281%29.jpeg",
+      "c%20%281%29.jpg",
+      "c%20%2810%29.jpg",
+      "c%20%282%29.jpeg",
+      "c%20%282%29.jpg",
+      "c%20%283%29.jpg",
+      "c%20%284%29.jpg",
+      "c%20%285%29.jpg",
+      "c%20%286%29.jpg",
+      "c%20%287%29.jpg",
+      "c%20%288%29.jpg",
+      "c%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270095",
+    "cat": "others",
+    "name": "Curated Selection Series",
+    "folder": "Ai layout/270095",
+    "files": [
+      "hh%20%281%29.JPG",
+      "hh%20%2810%29.JPG",
+      "hh%20%2811%29.JPG",
+      "hh%20%2812%29.JPG",
+      "hh%20%282%29.JPG",
+      "hh%20%283%29.JPG",
+      "hh%20%284%29.JPG",
+      "hh%20%285%29.JPG",
+      "hh%20%286%29.JPG",
+      "hh%20%287%29.JPG",
+      "hh%20%288%29.JPG",
+      "hh%20%289%29.JPG"
+    ]
+  },
+  {
+    "id": "270096",
+    "cat": "pink-girlish",
+    "name": "Barbie Glow Series",
+    "folder": "Ai layout/270096",
+    "files": [
+      "IMG_20231106_014020.jpg",
+      "IMG_20231106_014128.jpg",
+      "IMG_20231106_014217.jpg",
+      "IMG_20231106_014455.jpg",
+      "IMG_20231106_014522.jpg",
+      "IMG_20231106_014817.jpg",
+      "IMG_20231106_015612.jpg",
+      "Pink%20Aesthetic%20Collage%20%20DBC.jpeg",
+      "WhatsApp%20Image%20023-10-28%20at%2011.36.33%20AM_012737.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.26%20AM_012652.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.28%20AM_012636.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.29%20AM%20%281%29_012619.JPG"
+    ]
+  },
+  {
+    "id": "270097",
+    "cat": "pink-girlish",
+    "name": "Dreamy Pastel Series",
+    "folder": "Ai layout/270097",
+    "files": [
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.29%20AM_012559.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.30%20AM%20%281%29_012540.jpeg",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.30%20AM_012522.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.31%20AM_012503.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.32%20AM_012448.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%2011.36.33%20AM_012432.JPG",
+      "WhatsApp%20Image%202023-10-28%20at%20117.47%20AM_012412.JPG",
+      "WhatsApp%20Image%2023-10-28%20at%2011.47.58%20AM_012711.JPG",
+      "z%20%281%29_034718.jpg",
+      "z%20%281%29_034741.JPG",
+      "z%20%282%29_034701.JPG",
+      "z%20%283%29_034749.JPG"
+    ]
+  },
+  {
+    "id": "270098",
+    "cat": "others",
+    "name": "Diverse Composition Series",
+    "folder": "Ai layout/270098",
+    "files": [
+      "WhatsApp%20Image%202023-10-26%20at%204.37.41%20PM_031203%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.42%20PM%20%281%29_031153%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.42%20PM%20%282%29_031144%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.43%20PM%20%281%29_031124%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.43%20PM_031109%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.44%20PM%20%281%29_031100%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.44%20PM_031045%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.45%20PM%20%281%29_031250%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.45%20PM%20%282%29_031237%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.45%20PM_031224%20%28New%20size%201%29.JPG",
+      "WhatsApp%20Image%202023-10-26%20at%204.37.46%20PM_031216%20%28New%20size%201%29.jpeg",
+      "replicate-prediction-h75daizbsubbmovl2hvddsrefa%20%28New%20size%201%29.JPG"
+    ]
+  },
+  {
+    "id": "270099",
+    "cat": "taylor-swift",
+    "name": "Eras Tour Series",
+    "folder": "Ai layout/270099",
+    "files": [
+      "t%20%281%29%20%28New%20size%201%29.JPG",
+      "t%20%281%29%20%28New%20size%201%29.jpeg",
+      "t%20%2810%29%20%28New%20size%201%29.JPG",
+      "t%20%2811%29%20%28New%20size%201%29.JPG",
+      "t%20%282%29%20%28New%20size%201%29.JPG",
+      "t%20%283%29%20%28New%20size%201%29.JPG",
+      "t%20%284%29%20%28New%20size%201%29.JPG",
+      "t%20%285%29%20%28New%20size%201%29.JPG",
+      "t%20%286%29%20%28New%20size%201%29.JPG",
+      "t%20%287%29%20%28New%20size%201%29.JPG",
+      "t%20%288%29%20%28New%20size%201%29.JPG",
+      "t%20%289%29%20%28New%20size%201%29.JPG"
+    ]
+  },
+  {
+    "id": "270100",
+    "cat": "greenery",
+    "name": "Tropical Leaves Series",
+    "folder": "Ai layout/270100",
+    "files": [
+      "WhatsApp%20Image%202023-10-29%20at%206.41.54%20PM.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.55%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.55%20PM.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.56%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.56%20PM%20%282%29.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.56%20PM.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.58%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.58%20PM.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.59%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.59%20PM%20%282%29.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.41.59%20PM.JPG",
+      "WhatsApp%20Image%202023-10-29%20at%206.42.00%20PM.JPG"
+    ]
+  },
+  {
+    "id": "270101",
+    "cat": "others",
+    "name": "Visual Balance Series",
+    "folder": "Ai layout/270101",
+    "files": [
+      "073898d3e08d181a6caa78e80d424168%20%28New%20size%201%29.jpg",
+      "1000075882-02%20%28New%20size%201%29.JPG",
+      "1000075884-01%20%28New%20size%201%29.JPG",
+      "23a9ca9dfa3f7c6ddcf684429f537a91%20%28New%20size%201%29.jpg",
+      "30095d9db49060e8a63bdf8f79ab0985%20%28New%20size%201%29.jpg",
+      "5c78c90cd06ea3139146cf013f7f9666%20%28New%20size%201%29.jpg",
+      "62284b28f3003d5a7b57d569a65eea68%20%28New%20size%201%29.jpg",
+      "IMG-20231028-WA0005_115126%20%28New%20size%201%29.jpg",
+      "IMG-20231028-WA0006_115113%20%28New%20size%201%29.jpg",
+      "IMG-20231028-WA0006_115113%20-%20Copy%20%28New%20size%201%29.jpg",
+      "IMG_20230610_221703_101415%20%28New%20size%201%29.jpg",
+      "Learn%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270102",
+    "cat": "others",
+    "name": "Visual Harmony Series",
+    "folder": "Ai layout/270102",
+    "files": [
+      "WhatsApp%20Image%202023-10-02%20at%2012.29.30%20AM_125023%20%28New%20size%201%29.JPG",
+      "b202d72aaf53123d0f2625afb8ed9236%20%28New%20size%201%29.jpg",
+      "bb74ed0635c96b5618b063c0d007adac%20%28New%20size%201%29.jpg",
+      "d042c2be627060bfe3c59acd24dfe9a4%20%28New%20size%201%29.jpg",
+      "ed97dba3076c7cc4dc7d5731e574bc10%20%28New%20size%201%29.jpg",
+      "ee67f28d718b4514e69a0fe3a1469674%20%28New%20size%201%29.jpg",
+      "r%20%281%29_112538%20%28New%20size%201%29.jpg",
+      "r%20%282%29_112527%20%28New%20size%201%29.jpg",
+      "r%20%283%29%20%28New%20size%201%29.jpg",
+      "r%20%284%29_112456%20%28New%20size%201%29.jpg",
+      "r%20%285%29_112436%20%28New%20size%201%29.jpg",
+      "r%20%286%29_112553%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270103",
+    "cat": "others",
+    "name": "Modern Gallery Series",
+    "folder": "Ai layout/270103",
+    "files": [
+      "3.1%20%281%29%20%28New%20size%201%29.jpg",
+      "3.1%20%2810%29%20%28New%20size%201%29.jpg",
+      "3.1%20%2811%29%20%28New%20size%201%29.jpg",
+      "3.1%20%2812%29%20%28New%20size%201%29.jpg",
+      "3.1%20%282%29%20%28New%20size%201%29.jpg",
+      "3.1%20%283%29%20%28New%20size%201%29.jpg",
+      "3.1%20%284%29%20%28New%20size%201%29.jpg",
+      "3.1%20%285%29%20%28New%20size%201%29.jpg",
+      "3.1%20%286%29%20%28New%20size%201%29.jpg",
+      "3.1%20%287%29%20%28New%20size%201%29.jpg",
+      "3.1%20%288%29%20%28New%20size%201%29.jpg",
+      "3.1%20%289%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270104",
+    "cat": "flower",
+    "name": "Verdant Oasis Series",
+    "folder": "Ai layout/270104",
+    "files": [
+      "WhatsApp%20Image%202023-09-29%20at%203.19.52%20PM%20%28New%20size%201%29.jpeg",
+      "WhatsApp%20Image%202023-10-03%20at%2010.24.07%20AM_102756%20%28New%20size%201%29.jpeg",
+      "WhatsApp%20Image%202023-11-11%20at27.38%20PM%20%28New%20size%201%29.jpg",
+      "c%20%281%29%20%28New%20size%201%29.JPG",
+      "c%20%282%29%20%28New%20size%201%29.JPG",
+      "c%20%283%29%20%28New%20size%201%29.JPG",
+      "c%20%284%29%20%28New%20size%201%29.JPG",
+      "c%20%285%29%20%28New%20size%201%29.JPG",
+      "c%20%286%29%20%28New%20size%201%29.JPG",
+      "dropshadow_1693243324654%20%28New%20size%201%29.jpg",
+      "dropshadow_1693285798197%20%28New%20size%201%29.jpg",
+      "dropshadow_1693286564934%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270105",
+    "cat": "anime",
+    "name": "Cyberpunk Anime Series",
+    "folder": "Ai layout/270105",
+    "files": [
+      "04b652cf87c5cc9efb3affcedca979f9%20%28New%20size%201%29.jpg",
+      "0599ce1f1ef73a9398e9b7aa498d9e8f_123626%20%28New%20size%201%29.jpg",
+      "1699730663868_082144%20%28New%20size%201%29.jpg",
+      "1699730663875_082126%20%28New%20size%201%29.jpg",
+      "1699730663882_082111%20%28New%20size%201%29.jpg",
+      "1699730663890_082053%20%28New%20size%201%29.jpg",
+      "1699730663895_082035%20%28New%20size%201%29.jpg",
+      "1699730663909_082000%20%28New%20size%201%29.jpg",
+      "31e1a591d4d9b90145fb35417f17a625%20%28New%20size%201%29.jpg",
+      "3c6a0079044c7fcfd5972ad17981bbae%20%28New%20size%201%29.jpg",
+      "3e17117cb59a94c1f2995c963e474a59%20%28New%20size%201%29.jpg",
+      "5%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270106",
+    "cat": "anime",
+    "name": "Shonen Spirit Series",
+    "folder": "Ai layout/270106",
+    "files": [
+      "5ab59ca8fca09b23054b997eb338384e%20%28New%20size%201%29.jpg",
+      "67e8a7ffabfbed6dbadb8ee1b3edd73e_124000%20%28New%20size%201%29.jpg",
+      "7b9565998377122ee28b9eda529d0c6e%20%28New%20size%201%29.jpg",
+      "9497ab0f5ef94e400f10e5fc5811dfc1%20%28New%20size%201%29.jpg",
+      "MG_20230602_125911%20%28New%20size%201%29.jpg",
+      "b4c1b3df6b535344b92efb2e3c89bf60_105825%20%28New%20size%201%29.jpg",
+      "bcb7b70b3f8fefa4fe374dbb4724a431%20%28New%20size%201%29.jpg",
+      "e3025b57815701a6019fbcd1926b4e65%20%28New%20size%201%29.jpg",
+      "peakpx%20%287%29%20%28New%20size%201%29.jpg",
+      "pp%20%2812%29%20%28New%20size%201%29.jpg",
+      "pp%20%285%29%20%28New%20size%201%29.jpg",
+      "pp%20%289%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270107",
+    "cat": "anime",
+    "name": "Classic Anime Series",
+    "folder": "Ai layout/270107",
+    "files": [
+      "%283%29.jpg",
+      "137305386344ae8c5e0c0189b51e8da9_063915.jpg",
+      "61b4eaf323724be28cba671af73b75c8_062822.jpg",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.45%20PM%20%281%29_095418.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.46%20PM%20%281%29_095402.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.46%20PM_095344.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.47%20PM%20%281%29_095323.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.47%20PM%20%282%29_095302.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.47%20PM_095253.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.48%20PM%20%281%29_095520.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.48%20PM_095502.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%209.47.49%20PM%20%281%29_095444.JPG"
+    ]
+  },
+  {
+    "id": "270108",
+    "cat": "anime",
+    "name": "Manga Composition Series",
+    "folder": "Ai layout/270108",
+    "files": [
+      "WhatsApp%20Image%202023-10-31%20at%209.47.49%20PM_095431.JPG",
+      "a217c2b01c857da438187063f1c91370.jpg",
+      "pp%20%281%29.jpeg",
+      "pp%20%281%29.jpg",
+      "pp%20%2811%29.jpg",
+      "pp%20%2812%29.jpg",
+      "pp%20%2813%29.jpg",
+      "pp%20%283%29.jpeg",
+      "pp%20%284%29.jpeg",
+      "pp%20%285%29.jpg",
+      "pp%20%286%29.jpg",
+      "pp%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270109",
+    "cat": "others",
+    "name": "Eclectic Visuals Series",
+    "folder": "Ai layout/270109",
+    "files": [
+      "26225ee4f1e338ae48b72f01c28968f5_093103.jpg",
+      "368403420_1465154154064850_8703062241779975362_n_093054.jpg",
+      "369893208_1732834567199524_8915756256387648153_n_093045.jpg",
+      "370058041_704825131283192_8008304240912585339_n_093038.jpg",
+      "370234926_356927570057572_2294100288161122189_n_093028.jpg",
+      "371503561_1554125195415887_2088247159915975689_n_093022.jpg",
+      "385540796_1060835398675146_8488855265862500433_n_093009.jpg",
+      "3e4dca9ae2cf2cfe9a0fd45b85ba66f6.jpg",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.29%20PM.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.33%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.33%20PM%20%282%29.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.33%20PM.JPG"
+    ]
+  },
+  {
+    "id": "270110",
+    "cat": "others",
+    "name": "Abstract Fusion Series",
+    "folder": "Ai layout/270110",
+    "files": [
+      "WhatsApp%20Image%202023-10-31%20at%204.28.34%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.34%20PM.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.35%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.35%20PM.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.36%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.36%20PM.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.37%20PM%20%281%29.JPG",
+      "WhatsApp%20Image%202023-10-31%20at%204.28.37%20PM.JPG",
+      "ab4cf813e47bbe8706ea53d79e94d20c_092954.jpg",
+      "e28a205f7468dd81f2658f66d19555d9_092941.jpg",
+      "replicate-prediction-lmkm72bbor2blsi7nz5sd47bjm.jpg",
+      "web.ae_.winnertakesallswift.courtesy_093132.jpg"
+    ]
+  },
+  {
+    "id": "270111",
+    "cat": "anime",
+    "name": "Chibi Cute Series",
+    "folder": "Ai layout/270111",
+    "files": [
+      "a%20%281%29%20%28New%20size%201%29.jpg",
+      "a%20%2810%29%20%28New%20size%201%29.jpg",
+      "a%20%2811%29%20%28New%20size%201%29.jpg",
+      "a%20%2812%29%20%28New%20size%201%29.jpg",
+      "a%20%282%29%20%28New%20size%201%29.jpg",
+      "a%20%283%29%20%28New%20size%201%29.jpg",
+      "a%20%284%29%20%28New%20size%201%29.jpg",
+      "a%20%285%29%20%28New%20size%201%29.jpg",
+      "a%20%286%29%20%28New%20size%201%29.jpg",
+      "a%20%287%29%20%28New%20size%201%29.jpg",
+      "a%20%288%29%20%28New%20size%201%29.jpg",
+      "a%20%289%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270112",
+    "cat": "anime",
+    "name": "Cyberpunk Anime Series",
+    "folder": "Ai layout/270112",
+    "files": [
+      "j%20%281%29%20%28New%20size%201%29.jpg",
+      "j%20%2810%29%20%28New%20size%201%29.jpg",
+      "j%20%2811%29%20%28New%20size%201%29.jpg",
+      "j%20%2812%29%20%28New%20size%201%29.jpg",
+      "j%20%282%29%20%28New%20size%201%29.jpg",
+      "j%20%283%29%20%28New%20size%201%29.jpg",
+      "j%20%284%29%20%28New%20size%201%29.jpg",
+      "j%20%285%29%20%28New%20size%201%29.jpg",
+      "j%20%286%29%20%28New%20size%201%29.jpg",
+      "j%20%287%29%20%28New%20size%201%29.jpg",
+      "j%20%288%29%20%28New%20size%201%29.jpg",
+      "j%20%289%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270113",
+    "cat": "food",
+    "name": "Culinary Delight Series",
+    "folder": "Ai layout/270113",
+    "files": [
+      "20-Min%20Creamy%20Tomato%20Pasta_063815.jpg",
+      "21%20Super%20Marvelous%20Panini%20Sandwich%20Recipes%20You%20Can%20Recreate%20At%20Home%21_064326.jpg",
+      "3%20Small%20Tweaks%20to%20Improve%20Your%20Health_063845.jpg",
+      "8%20Crispy%20%26%20Delicious%20Oven-Fried%20Chicken%20Recipes_063832.jpg",
+      "Air%20Fryer%20Fish%20%26%20Chips_064315.jpg",
+      "An%20excellent%20NO%20YEAST%20Pizza%20Dough%20-%20super%20quick%21_064300.jpg",
+      "Beef%20Bulgogi%20Mandu%20%28Korean%20Beef%20Dumplings%29_064245.jpg",
+      "Classic%20Cheeseburger%20%5B25%20Minutes%5D%20-%20Chasety_064222.jpg",
+      "Dynamic%20Glass%20Shot%20with%20Splashes_%20Workshop%20%2349%20Photigy%20School%20Of%20Photography_064158.jpg",
+      "Easy%20Calamares%20Fritos%20Recipe%20%28Spanish%20Fried%20Calamari%29_064143.jpg",
+      "Easy%20Chicken%20Gyros_122232.jpeg",
+      "Easy%20Dosa%20Recipe%20with%20Rice%20Flour%20-%20Madhu%27s%20Everyday%20Indian_064130.jpg"
+    ]
+  },
+  {
+    "id": "270114",
+    "cat": "food",
+    "name": "Chef's Kitchen Series",
+    "folder": "Ai layout/270114",
+    "files": [
+      "English%20Coffee%20with%20Roasted%20Figs_064119.jpg",
+      "Homemade%20French%20Fries%20_%20The%20Modern%20Proper_064051.jpg",
+      "Light%20%26%20Crisp%20Belgian%20Waffles%20-%20Taming%20of%20the%20Spoon_064036.jpg",
+      "Macro%20photo%20of%20freshly%20made%20lemonade%20with%20pieces%20of%20lime%2C%20lemon%20and%20bubbles%20in%20a%20glass_%20Summer_064027.jpg",
+      "Masala%20Dosa%20with%20Sweet%20Potato_064012.jpg",
+      "Reheat%20Fries%20in%20the%20Air%20Fryer_063941.jpg",
+      "Reheat%20Nachos%20In%20Oven%20_%20Nachos%20Recipe%20Beef%20_%20Nacho%20Dips%20_%20Nachos%20_%20Nacho%20Recipes_063927.jpg",
+      "Soups%20Archives_063912.jpg",
+      "Thai%20Butternut%20Squash%20Soup%20with%20Coconut%20Milk%20%28Creamy%2C%20Spicy%29%20Recipe%20_%20ChefDeHome_com_063858.jpg",
+      "Traditional%20Chinese%20Soups%20To%20Warm%20Your%20Soul_063847.jpg",
+      "download_064211.jpg",
+      "food%20idea_064106.jpg"
+    ]
+  },
+  {
+    "id": "270115",
+    "cat": "food",
+    "name": "Sweet Cravings Series",
+    "folder": "Ai layout/270115",
+    "files": [
+      "WhatsApp%20Image%202023-11-13%20at%2012.13.40%20AM%20%282%29_122620.JPG",
+      "photo%20205%2018-39-18%20%281%29_104738.jpg",
+      "rrr%20%281%29%20%28New%20size%201%29.jpg",
+      "rrr%20%2810%29%20%28New%20size%201%29.jpg",
+      "rrr%20%2811%29%20%28New%20size%201%29.jpg",
+      "rrr%20%2812%29%20%28New%20size%201%29.jpg",
+      "rrr%20%2813%29%20%28New%20size%201%29.jpg",
+      "rrr%20%2814%29%20%28New%20size%201%29.jpg",
+      "rrr%20%2815%29%20%28New%20size%201%29%20-%20Copy.JPG",
+      "rrr%20%2816%29%20%28New%20size%201%29.JPG",
+      "rrr%20%282%29%20%28New%20size%201%29.jpg",
+      "rrr%20%283%29%20%28New%20size%201%29.jpeg"
+    ]
+  },
+  {
+    "id": "270116",
+    "cat": "food",
+    "name": "Gourmet Table Series",
+    "folder": "Ai layout/270116",
+    "files": [
+      "rrr%20%283%29%20%28New%20size%201%29.jpg",
+      "rrr%20%284%29%20%28New%20size%201%29.jpeg",
+      "rrr%20%284%29%20%28New%20size%201%29.jpg",
+      "rrr%20%285%29%20%28New%20size%201%29.jpeg",
+      "rrr%20%285%29%20%28New%20size%201%29.jpg",
+      "rrr%20%286%29%20%28New%20size%201%29.jpeg",
+      "rrr%20%286%29%20%28New%20size%201%29.jpg",
+      "rrr%20%287%29%20%28New%20size%201%29.jpeg",
+      "rrr%20%287%29%20%28New%20size%201%29.jpg",
+      "rrr%20%288%29%20%28New%20size%201%29.jpeg",
+      "rrr%20%288%29%20%28New%20size%201%29.jpg",
+      "rrr%20%289%29%20%28New%20size%201%29.jpg"
+    ]
+  },
+  {
+    "id": "270117",
+    "cat": "bengali-band",
+    "name": "Shur O Taal Series",
+    "folder": "Ai layout/270117",
+    "files": [
+      "%23engineering%20%23life%20%23bangla%20%23design%20%20%23tshirt_074417.jpg",
+      "20210304_205458.jpg",
+      "43c65f088f7f545ba9cee5f4d66c34fe_115504.jpg",
+      "7d5131319ea42e116e46cdad17bb8d9c.jpg",
+      "Bangla%20Lettering%20__%20Bangla%20Typography%20__%20Hand%20Lettering.jpg",
+      "Capture.JPG",
+      "It%E2%80%99s%20all%20about%20typography.jpg",
+      "Shonar-Bangla-Circus.jpg",
+      "WhatsApp%20Image%202023-10-25%20at%2011.03.58%20PM%20-%20Copy.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2010.074%20PM.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2010.49.09%20PM.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2010.51.09%20PM.jpg"
+    ]
+  },
+  {
+    "id": "270118",
+    "cat": "bengali-band",
+    "name": "Bengali Rock Series",
+    "folder": "Ai layout/270118",
+    "files": [
+      "WhatsApp%20Image%202023-11-24%20at%2010.52.19%20PM.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2011.16.28%20PM%20%281%29.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2011.31.20%20PM.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2011.35.37%20PM.jpg",
+      "WhatsApp%20Image%202023-11-24%20at%2011.35.38%20PM.jpg",
+      "b2beab018713c7aa38112ced738155f3_073037.jpg",
+      "c29ccf4f35c4d72c7770888ddc7a01af.jpg",
+      "done%20%2820%29.jpg",
+      "download%20%282%29_075229.jpg",
+      "download.jpg",
+      "photo_9_2023-11-18_23-55-32.jpg",
+      "%E0%A6%A4%E0%A7%8B%E0%A6%AE%E0%A6%BE%E0%A7%9F%20%E0%A6%B9%E0%A7%83%E0%A6%A6%E0%A6%AE%E0%A6%BE%E0%A6%9D%E0%A6%BE%E0%A6%B0%E0%A7%87%20%E0%A6%B0%E0%A6%BE%E0%A6%96%E0%A6%BF%E0%A6%AC%2C%20%E0%A6%9B%E0%A7%87%E0%A7%9C%E0%A7%87%20%E0%A6%A6%E0%A7%87%E0%A6%AC%E0%A7%8B%20%E0%A6%A8%E0%A6%BE.jpg"
+    ]
+  },
+  {
+    "id": "270119",
+    "cat": "bengali-band",
+    "name": "Melodic Echoes Series",
+    "folder": "Ai layout/270119",
+    "files": [
+      "226eefe23c5bcd345b7fc6603de3181b.jpg",
+      "Bangla%20Typography%20Quotes_074940.jpg",
+      "Bangla%20typography.JPG",
+      "bc22ef83063645.5d3089de07957.jpg",
+      "bc5af69937c3932fd6bd9e0880bed663_115558.jpg",
+      "c623dde8a692a5f7243089dce32217dd_072809.jpg",
+      "d8aa60104664835.5f686c6d71065_074910.jpg",
+      "done%20%2822%29.jpg",
+      "download%20%281%29_074613.jpg",
+      "download%20%282%29_075229.jpg",
+      "download%20%283%29.JPG",
+      "download%20%286%29.JPG"
+    ]
+  },
+  {
+    "id": "270120",
+    "cat": "bengali-band",
+    "name": "Musical Legacy Series",
+    "folder": "Ai layout/270120",
+    "files": [
+      "download_074441.jpg",
+      "p%20%281%29.jpg",
+      "p%20%2811%29.jpg",
+      "p%20%2812%29.jpg",
+      "p%20%282%29.jpg",
+      "p%20%283%29.jpg",
+      "p%20%284%29.jpg",
+      "p%20%285%29.jpg",
+      "p%20%286%29.jpg",
+      "p%20%287%29.jpg",
+      "p%20%288%29.jpg",
+      "p%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270121",
+    "cat": "others",
+    "name": "Curated Selection Series",
+    "folder": "Ai layout/270121",
+    "files": [
+      ".jpg",
+      "03c4a3f5a9b7d024bb3ad96641112b23_111112.jpg",
+      "1ac5829eb0b648af446967d33739e056_123137_111200.jpg",
+      "1f2b97429205ff0b59bee477a86f3718_111139.jpg",
+      "2e44e3ecd20fcdcc54ccd346c629ffc7_111129.jpg",
+      "3269773f8d8d82234396a30f3c493ead_123001_110751.jpg",
+      "3ae8deebeaa55047cd0b105000fc4358_111104.jpg",
+      "3b6af6d985d840d4531f3cd6a250e39c_111050.jpg",
+      "40f1c80708c5fb693fc4ad62ec5ea638_123045_110922.jpg",
+      "49af3d972d18e90f7929f45429c6e3fc_110901.jpg",
+      "4f0e02802620a75c35c2c3f35ead8769_111039.jpg",
+      "8af83355c35b13345d7fe5dc247eb9a8_111027.jpg"
+    ]
+  },
+  {
+    "id": "270122",
+    "cat": "love",
+    "name": "Amour Eternal Series",
+    "folder": "Ai layout/270122",
+    "files": [
+      "WhatsApp%20Image%202023-08-29%20at%202.38.17%20PM%20%281%29_025229_111246.jpg",
+      "ae5084c8ddf4bd168ec38694a6e8afd0_110740.jpg",
+      "b080d0473727f9c074fbeb14c88c3d49_110717.jpg",
+      "b9f25c1d214acb4bc2bf16fa9c9c063b_110729.jpg",
+      "d005931a8ce8340ad4f2fe172d957f8e_110701.jpg",
+      "download_110646.JPG",
+      "download_110646.jpeg",
+      "e6939f30acd49d43b33aef334fa060ae_110619.jpg",
+      "e857645b6a56b34f24867319da710e49_110603.jpg",
+      "ebf4315564b2fe6d7fb523540c1d4e03_110547.jpg",
+      "ec8b1a41b1e2edba56eb740c69632de8_110536.jpg",
+      "f787fa1a3f51d2673e2d9cdefd8f617b_110526.jpg"
+    ]
+  },
+  {
+    "id": "270123",
+    "cat": "others",
+    "name": "Diverse Composition Series",
+    "folder": "Ai layout/270123",
+    "files": [
+      "IMG-20231031-WA0001.jpg",
+      "IMG-20231031-WA0002.jpg",
+      "IMG-20231031-WA0003.jpg",
+      "IMG-20231031-WA0004.jpg",
+      "IMG-20231031-WA0005_035013.jpg",
+      "IMG-20231031-WA0006_034906.jpg",
+      "IMG-20231031-WA0007_034756.jpg",
+      "IMG-20231031-WA0008.jpg",
+      "IMG-20231031-WA0009.jpg",
+      "IMG-20231031-WA0010.jpg",
+      "IMG-20231031-WA0011.jpg",
+      "IMG-20231031-WA0012.jpg"
+    ]
+  },
+  {
+    "id": "270125",
+    "cat": "others",
+    "name": "Visual Balance Series",
+    "folder": "Ai layout/270125",
+    "files": [
+      "IMG_0112.JPG",
+      "IMG_0113.JPG",
+      "IMG_0114.JPG",
+      "IMG_0115.JPG",
+      "IMG_0117.JPG",
+      "IMG_0118.JPG",
+      "IMG_0119.JPG",
+      "IMG_0122.JPG",
+      "IMG_0125.JPG",
+      "IMG_0127.jpg",
+      "IMG_0130.JPG",
+      "images%20%2814%29_095017.jpeg"
+    ]
+  },
+  {
+    "id": "270126",
+    "cat": "pink-girlish",
+    "name": "Girlish Aesthetic Series",
+    "folder": "Ai layout/270126",
+    "files": [
+      "1%20%282%29.JPG",
+      "1%20%289%29.JPG",
+      "2163394276145a06abec4f3736177e23.jpg",
+      "6883fe7ca49b0b4f9972d980ab135286_113543.jpg",
+      "6cf4f116acf899f68e32483db63d66ad_113644.jpg",
+      "75c3e62afc0d3a0d470baa1ad0cf2716_113557.jpg",
+      "7b4cba64dd26af32ca3b88f12d818fad_113632.jpg",
+      "7ed9f5268e6f13fe457bcea9f8e1ab38_113616.jpg",
+      "8e0b6cb76927fbce0a8a366d8883005d_113606.jpg",
+      "IMG-5814_055801.JPG",
+      "IMG_20230930_191534_113411.jpg",
+      "WhatsApp%20Image%202023-08-29%20at%202.38.18%20PM%20%281%29%20-%20Copy.jpeg"
+    ]
+  },
+  {
+    "id": "270127",
+    "cat": "pink-girlish",
+    "name": "Kawaii Essence Series",
+    "folder": "Ai layout/270127",
+    "files": [
+      "WhatsApp%20Image%202023-08-29%20at%202.38.18%20PM.jpg",
+      "WhatsApp%20Image%202023-11-01%20at%209.19.43%20PM%20%282%29.jpeg",
+      "b5f6e2274341a0c724f03ef2b888f0a2_113512.jpg",
+      "bcb83d9bafcc258b8343f075ce5a7600_113458.jpg",
+      "d564fd38449d27647b678ab7bb8ac351_113445.jpg",
+      "e8891453c460d4101515c3fea0a2be75_113429.jpg",
+      "z%20%2810%29.jpg",
+      "z%20%2811%29.jpg",
+      "z%20%2812%29.jpg",
+      "z%20%2813%29.jpg",
+      "z%20%2815%29.jpg",
+      "z%20%289%29.jpg"
+    ]
+  },
+  {
+    "id": "270128",
+    "cat": "pink-girlish",
+    "name": "Sweet Rose Series",
+    "folder": "Ai layout/270128",
+    "files": [
+      "270128%231.jpg",
+      "270128%232.jpg",
+      "270128%233.jpg",
+      "270128%234.jpg",
+      "270128%235.jpg",
+      "270128%236.jpg",
+      "270128%237.jpg",
+      "270128%238.jpg",
+      "270128%239.jpg",
+      "270128%2310.jpg",
+      "270128%2311.jpg",
+      "270128%2312.jpg"
+    ]
+  },
+  {
+    "id": "270129",
+    "cat": "pink-girlish",
+    "name": "Pastel Paradise Series",
+    "folder": "Ai layout/270129",
+    "files": [
+      "270129%231.jpg",
+      "270129%232.jpg",
+      "270129%233.jpg",
+      "270129%234.jpg",
+      "270129%235.jpg",
+      "270129%236.jpg",
+      "270129%237.jpg",
+      "270129%238.jpg",
+      "270129%239.jpg",
+      "270129%2310.jpg",
+      "270129%2311.jpg",
+      "270129%2312.jpg"
+    ]
+  },
+  {
+    "id": "270130",
+    "cat": "pink-girlish",
+    "name": "Bubblegum Dream Series",
+    "folder": "Ai layout/270130",
+    "files": [
+      "270130%231.jpg",
+      "270130%232.jpg",
+      "270130%233.jpg",
+      "270130%234.jpg",
+      "270130%235.jpg",
+      "270130%236.jpg",
+      "270130%237.jpg",
+      "270130%238.jpg",
+      "270130%239.jpg",
+      "270130%2310.jpg",
+      "270130%2311.jpg",
+      "270130%2312.jpg"
+    ]
+  },
+  {
+    "id": "270131",
+    "cat": "pink-girlish",
+    "name": "Strawberry Sweet Series",
+    "folder": "Ai layout/270131",
+    "files": [
+      "270131%231.jpg",
+      "270131%232.jpg",
+      "270131%233.jpg",
+      "270131%234.jpg",
+      "270131%235.jpg",
+      "270131%236.jpg",
+      "270131%237.jpg",
+      "270131%238.jpg",
+      "270131%239.jpg",
+      "270131%2310.jpg",
+      "270131%2311.jpg",
+      "270131%2312.jpg"
+    ]
+  },
+  {
+    "id": "270135",
+    "cat": "pink-girlish",
+    "name": "Cosmic Pastel Series",
+    "folder": "Ai layout/270135",
+    "files": [
+      "270135%231.jpeg",
+      "270135%232.jpg",
+      "270135%233.jpeg",
+      "270135%234.jpg",
+      "270135%235.jpeg",
+      "270135%236.jpg",
+      "270135%237.jpg",
+      "270135%238.jpg",
+      "270135%239.jpg",
+      "270135%2310.jpg",
+      "270135%2311.jpg",
+      "270135%2312.jpg"
+    ]
+  },
+  {
+    "id": "270136",
+    "cat": "pink-girlish",
+    "name": "Starlight Girlish Series",
+    "folder": "Ai layout/270136",
+    "files": [
+      "270136%231.jpg",
+      "270136%232.jpg",
+      "270136%233.jpg",
+      "270136%234.jpg",
+      "270136%235.jpg",
+      "270136%236.jpg",
+      "270136%237.jpg",
+      "270136%238.jpg",
+      "270136%239.jpg",
+      "270136%2310.jpg",
+      "270136%2311.jpg",
+      "270136%2312.jpg"
+    ]
+  },
+  {
+    "id": "270137",
+    "cat": "others",
+    "name": "Aesthetic 2",
+    "folder": "Ai layout/270137",
+    "files": [
+      "270137%231.jpg",
+      "270137%232.jpg",
+      "270137%233.jpg",
+      "270137%234.jpg",
+      "270137%235.jpg",
+      "270137%236.jpg",
+      "270137%237.jpg",
+      "270137%238.jpg",
+      "270137%239.jpg",
+      "270137%2310.jpg",
+      "270137%2311.jpg",
+      "270137%2312.jpg"
+    ]
+  },
+  {
+    "id": "270138",
+    "cat": "car",
+    "name": "Car Series",
+    "folder": "Ai layout/270138",
+    "files": [
+      "270138%231.jpg",
+      "270138%232.jpg",
+      "270138%233.jpg",
+      "270138%234.jpg",
+      "270138%235.jpg",
+      "270138%236.jpg",
+      "270138%237.jpg",
+      "270138%238.jpg",
+      "270138%239.jpg",
+      "270138%2310.jpg",
+      "270138%2311.jpg",
+      "270138%2312.jpg"
+    ]
+  },
+  {
+    "id": "270139",
+    "cat": "pink-girlish",
+    "name": "Girl 6 Series",
+    "folder": "Ai layout/270139",
+    "files": [
+      "270139%231.jpg",
+      "270139%232.jpg",
+      "270139%233.jpg",
+      "270139%234.jpg",
+      "270139%235.jpg",
+      "270139%236.jpg",
+      "270139%237.jpg",
+      "270139%238.jpg",
+      "270139%239.jpg",
+      "270139%2310.jpg",
+      "270139%2311.jpg",
+      "270139%2312.jpg"
+    ]
+  },
+  {
+    "id": "270140",
+    "cat": "pink-girlish",
+    "name": "Girl 7 Series",
+    "folder": "Ai layout/270140",
+    "files": [
+      "270140%231.jpg",
+      "270140%232.jpg",
+      "270140%233.jpg",
+      "270140%234.jpg",
+      "270140%235.jpg",
+      "270140%236.jpg",
+      "270140%237.jpg",
+      "270140%238.jpg",
+      "270140%239.jpg",
+      "270140%2310.jpg",
+      "270140%2311.jpg",
+      "270140%2312.jpg"
+    ]
+  },
+  {
+    "id": "270141",
+    "cat": "pink-girlish",
+    "name": "Girl 10 Series",
+    "folder": "Ai layout/270141",
+    "files": [
+      "270141%231.jpg",
+      "270141%232.jpg",
+      "270141%233.jpg",
+      "270141%234.jpg",
+      "270141%235.jpg",
+      "270141%236.jpg",
+      "270141%237.jpg",
+      "270141%238.jpg",
+      "270141%239.jpg",
+      "270141%2310.jpg",
+      "270141%2311.jpg",
+      "270141%2312.jpg"
+    ]
+  },
+  {
+    "id": "270142",
+    "cat": "pink-girlish",
+    "name": "Girl 8 Series",
+    "folder": "Ai layout/270142",
+    "files": [
+      "270142%231.jpg",
+      "270142%232.jpg",
+      "270142%233.jpg",
+      "270142%234.jpg",
+      "270142%235.jpg",
+      "270142%236.jpg",
+      "270142%237.jpg",
+      "270142%238.jpg",
+      "270142%239.jpg",
+      "270142%2310.jpg",
+      "270142%2311.jpg",
+      "270142%2312.jpg"
+    ]
+  },
+  {
+    "id": "270143",
+    "cat": "pink-girlish",
+    "name": "Girl 9 Series",
+    "folder": "Ai layout/270143",
+    "files": [
+      "270143%231.jpg",
+      "270143%232.jpg",
+      "270143%233.jpg",
+      "270143%234.jpg",
+      "270143%235.jpg",
+      "270143%236.jpg",
+      "270143%237.jpg",
+      "270143%238.jpg",
+      "270143%239.jpg",
+      "270143%2310.jpg",
+      "270143%2311.jpg",
+      "270143%2312.jpg"
+    ]
+  },
+  {
+    "id": "270144",
+    "cat": "food",
+    "name": "Kitchen 2 Series",
+    "folder": "Ai layout/270144",
+    "files": [
+      "270144%231.jpg",
+      "270144%232.jpg",
+      "270144%233.jpg",
+      "270144%234.jpg",
+      "270144%235.jpg",
+      "270144%236.jpg",
+      "270144%237.jpg",
+      "270144%238.jpg",
+      "270144%239.jpg",
+      "270144%2310.jpg",
+      "270144%2311.jpg",
+      "270144%2312.jpg"
+    ]
+  },
+  {
+    "id": "270145",
+    "cat": "others",
+    "name": "Aesthetic",
+    "folder": "Ai layout/270145",
+    "files": [
+      "270145%231.jpg",
+      "270145%232.jpg",
+      "270145%233.jpg",
+      "270145%234.jpg",
+      "270145%235.jpg",
+      "270145%236.jpg",
+      "270145%237.jpg",
+      "270145%238.jpg",
+      "270145%239.jpg",
+      "270145%2310.jpg",
+      "270145%2311.jpg",
+      "270145%2312.jpg"
+    ]
+  },
+  {
+    "id": "270146",
+    "cat": "others",
+    "name": "Aesthetic 3",
+    "folder": "Ai layout/270146",
+    "files": [
+      "270146%231.jpg",
+      "270146%232.jpg",
+      "270146%233.jpg",
+      "270146%234.jpg",
+      "270146%235.jpg",
+      "270146%236.jpg",
+      "270146%237.jpg",
+      "270146%238.jpg",
+      "270146%239.jpg",
+      "270146%2310.jpg",
+      "270146%2311.jpg",
+      "270146%2312.jpg"
+    ]
+  },
+  {
+    "id": "270147",
+    "cat": "others",
+    "name": "Aesthetic 4",
+    "folder": "Ai layout/270147",
+    "files": [
+      "270147%231.jpg",
+      "270147%232.jpg",
+      "270147%233.jpg",
+      "270147%234.jpg",
+      "270147%235.jpg",
+      "270147%236.jpg",
+      "270147%237.jpg",
+      "270147%238.jpg",
+      "270147%239.jpg",
+      "270147%2310.jpg",
+      "270147%2311.jpg",
+      "270147%2312.jpg"
+    ]
+  },
+  {
+    "id": "270148",
+    "cat": "others",
+    "name": "Aesthetic 3",
+    "folder": "Ai layout/270148",
+    "files": [
+      "270148%231.jpg",
+      "270148%232.jpg",
+      "270148%233.jpg",
+      "270148%234.jpg",
+      "270148%235.jpg",
+      "270148%236.jpg",
+      "270148%237.jpg",
+      "270148%238.jpg",
+      "270148%239.jpeg",
+      "270148%2310.jpeg",
+      "270148%2311.jpg",
+      "270148%2312.jpg"
+    ]
+  },
+  {
+    "id": "270149",
+    "cat": "others",
+    "name": "Black Series",
+    "folder": "Ai layout/270149",
+    "files": [
+      "270149%231.jpg",
+      "270149%232.jpg",
+      "270149%233.jpg",
+      "270149%234.jpg",
+      "270149%235.jpg",
+      "270149%236.jpg",
+      "270149%237.jpg",
+      "270149%238.jpg",
+      "270149%239.jpg",
+      "270149%2310.jpg",
+      "270149%2311.jpg",
+      "270149%2312.jpg"
+    ]
+  },
+  {
+    "id": "270150",
+    "cat": "bohemian",
+    "name": "Bohemein 1 Series",
+    "folder": "Ai layout/270150",
+    "files": [
+      "270150%231.jpg",
+      "270150%232.jpg",
+      "270150%233.jpg",
+      "270150%234.jpg",
+      "270150%235.jpg",
+      "270150%236.jpg",
+      "270150%237.jpg",
+      "270150%238.jpg",
+      "270150%239.jpg",
+      "270150%2310.jpg",
+      "270150%2311.jpg",
+      "270150%2312.jpg"
+    ]
+  },
+  {
+    "id": "270151",
+    "cat": "car",
+    "name": "Car03 Series",
+    "folder": "Ai layout/270151",
+    "files": [
+      "270151%231.jpg",
+      "270151%232.jpg",
+      "270151%233.jpg",
+      "270151%234.jpg",
+      "270151%235.jpg",
+      "270151%236.jpg",
+      "270151%237.jpg",
+      "270151%238.jpg",
+      "270151%239.jpg",
+      "270151%2310.jpg",
+      "270151%2311.jpg",
+      "270151%2312.jpg"
+    ]
+  },
+  {
+    "id": "270152",
+    "cat": "others",
+    "name": "Category Blue Series",
+    "folder": "Ai layout/270152",
+    "files": [
+      "270152%231.jpg",
+      "270152%232.jpg",
+      "270152%233.jpg",
+      "270152%234.jpg",
+      "270152%235.jpg",
+      "270152%236.jpg",
+      "270152%237.jpg",
+      "270152%238.jpg",
+      "270152%239.jpg",
+      "270152%2310.jpg",
+      "270152%2311.jpg",
+      "270152%2312.jpg"
+    ]
+  },
+  {
+    "id": "270153",
+    "cat": "pink-girlish",
+    "name": "Girl 14 Series",
+    "folder": "Ai layout/270153",
+    "files": [
+      "270153%231.jpg",
+      "270153%232.jpg",
+      "270153%233.jpg",
+      "270153%234.jpg",
+      "270153%235.jpg",
+      "270153%236.jpg",
+      "270153%237.jpg",
+      "270153%238.jpg",
+      "270153%239.jpg",
+      "270153%2310.jpg",
+      "270153%2311.jpg",
+      "270153%2312.jpg"
+    ]
+  },
+  {
+    "id": "270154",
+    "cat": "pink-girlish",
+    "name": "Girl 5 Series",
+    "folder": "Ai layout/270154",
+    "files": [
+      "270154%231.jpg",
+      "270154%232.jpg",
+      "270154%233.jpg",
+      "270154%234.jpg",
+      "270154%235.jpg",
+      "270154%236.jpg",
+      "270154%237.jpg",
+      "270154%238.jpg",
+      "270154%239.jpg",
+      "270154%2310.jpg",
+      "270154%2311.jpg",
+      "270154%2312.jpg"
+    ]
+  },
+  {
+    "id": "270155",
+    "cat": "pink-girlish",
+    "name": "Girl 11 Series",
+    "folder": "Ai layout/270155",
+    "files": [
+      "270155%231.jpg",
+      "270155%232.jpg",
+      "270155%233.jpg",
+      "270155%234.jpg",
+      "270155%235.jpg",
+      "270155%236.jpg",
+      "270155%237.jpg",
+      "270155%238.jpg",
+      "270155%239.jpg",
+      "270155%2310.jpg",
+      "270155%2311.jpg",
+      "270155%2312.jpg"
+    ]
+  },
+  {
+    "id": "270156",
+    "cat": "pink-girlish",
+    "name": "Girl 12 Series",
+    "folder": "Ai layout/270156",
+    "files": [
+      "270156%231.jpg",
+      "270156%232.jpg",
+      "270156%233.jpg",
+      "270156%234.jpg",
+      "270156%235.jpg",
+      "270156%236.jpg",
+      "270156%237.jpg",
+      "270156%238.jpg",
+      "270156%239.jpg",
+      "270156%2310.jpg",
+      "270156%2311.jpg",
+      "270156%2312.jpg"
+    ]
+  },
+  {
+    "id": "270157",
+    "cat": "pink-girlish",
+    "name": "Girl 13 Series",
+    "folder": "Ai layout/270157",
+    "files": [
+      "270157%231.jpg",
+      "270157%232.jpg",
+      "270157%233.jpg",
+      "270157%234.jpg",
+      "270157%235.jpg",
+      "270157%236.jpg",
+      "270157%237.jpg",
+      "270157%238.jpg",
+      "270157%239.jpg",
+      "270157%2310.jpg",
+      "270157%2311.jpg",
+      "270157%2312.jpg"
+    ]
+  },
+  {
+    "id": "270158",
+    "cat": "pink-girlish",
+    "name": "Girl 2 Cate Series",
+    "folder": "Ai layout/270158",
+    "files": [
+      "270158%231.jpg",
+      "270158%232.jpg",
+      "270158%233.jpg",
+      "270158%234.jpg",
+      "270158%235.jpg",
+      "270158%236.jpg",
+      "270158%237.jpg",
+      "270158%238.jpg",
+      "270158%239.jpg",
+      "270158%2310.jpg",
+      "270158%2311.jpg",
+      "270158%2312.jpg"
+    ]
+  },
+  {
+    "id": "270159",
+    "cat": "pink-girlish",
+    "name": "Girl 3 Category Series",
+    "folder": "Ai layout/270159",
+    "files": [
+      "270159%231.jpg",
+      "270159%232.jpg",
+      "270159%233.jpg",
+      "270159%234.jpg",
+      "270159%235.jpg",
+      "270159%236.jpg",
+      "270159%237.jpg",
+      "270159%238.jpg",
+      "270159%239.jpg",
+      "270159%2310.jpg",
+      "270159%2311.jpg",
+      "270159%2312.jpg"
+    ]
+  },
+  {
+    "id": "270160",
+    "cat": "pink-girlish",
+    "name": "Girl 4 Series",
+    "folder": "Ai layout/270160",
+    "files": [
+      "270160%231.jpg",
+      "270160%232.jpg",
+      "270160%233.jpg",
+      "270160%234.jpg",
+      "270160%235.jpg",
+      "270160%236.jpg",
+      "270160%237.jpg",
+      "270160%238.jpg",
+      "270160%239.jpg",
+      "270160%2310.jpg",
+      "270160%2311.jpg",
+      "270160%2312.jpg"
+    ]
+  },
+  {
+    "id": "270161",
+    "cat": "pink-girlish",
+    "name": "Girl Category Series",
+    "folder": "Ai layout/270161",
+    "files": [
+      "270161%231.jpg",
+      "270161%232.jpg",
+      "270161%233.jpg",
+      "270161%234.jpg",
+      "270161%235.jpg",
+      "270161%236.jpg",
+      "270161%237.jpg",
+      "270161%238.jpg",
+      "270161%239.jpg",
+      "270161%2310.jpg",
+      "270161%2311.jpg",
+      "270161%2312.jpg"
+    ]
+  },
+  {
+    "id": "270162",
+    "cat": "pink-girlish",
+    "name": "Girl Category Set 2",
+    "folder": "Ai layout/270162",
+    "files": [
+      "270162%231.jpg",
+      "270162%232.jpg",
+      "270162%233.jpg",
+      "270162%234.jpg",
+      "270162%235.jpg",
+      "270162%236.jpg",
+      "270162%237.jpg",
+      "270162%238.jpg",
+      "270162%239.jpg",
+      "270162%2310.jpg",
+      "270162%2311.jpg",
+      "270162%2312.jpg"
+    ]
+  },
+  {
+    "id": "270163",
+    "cat": "pink-girlish",
+    "name": "Girl14 Series",
+    "folder": "Ai layout/270163",
+    "files": [
+      "270163%231.jpg",
+      "270163%232.jpg",
+      "270163%233.jpg",
+      "270163%234.jpg",
+      "270163%235.jpg",
+      "270163%236.jpg",
+      "270163%237.jpg",
+      "270163%238.jpg",
+      "270163%239.jpg",
+      "270163%2310.jpg",
+      "270163%2311.jpg",
+      "270163%2312.jpg"
+    ]
+  },
+  {
+    "id": "270164",
+    "cat": "greenery",
+    "name": "Green Series",
+    "folder": "Ai layout/270164",
+    "files": [
+      "270164%231.jpg",
+      "270164%232.jpg",
+      "270164%233.jpg",
+      "270164%234.jpg",
+      "270164%235.jpeg",
+      "270164%236.jpeg",
+      "270164%237.jpeg",
+      "270164%238.jpeg",
+      "270164%239.jpeg",
+      "270164%2310.jpeg",
+      "270164%2311.jpeg",
+      "270164%2312.jpg"
+    ]
+  },
+  {
+    "id": "270165",
+    "cat": "food",
+    "name": "Kitchen Series",
+    "folder": "Ai layout/270165",
+    "files": [
+      "270165%231.jpg",
+      "270165%232.jpg",
+      "270165%233.jpg",
+      "270165%234.jpg",
+      "270165%235.jpg",
+      "270165%236.jpg",
+      "270165%237.jpg",
+      "270165%238.jpg",
+      "270165%239.jpg",
+      "270165%2310.jpg",
+      "270165%2311.jpg",
+      "270165%2312.jpg"
+    ]
+  },
+  {
+    "id": "270166",
+    "cat": "food",
+    "name": "Kitchen Set 2",
+    "folder": "Ai layout/270166",
+    "files": [
+      "270166%231.jpg",
+      "270166%232.jpg",
+      "270166%233.jpg",
+      "270166%234.jpg",
+      "270166%235.jpg",
+      "270166%236.jpg",
+      "270166%237.jpg",
+      "270166%238.jpg",
+      "270166%239.jpg",
+      "270166%2310.jpg",
+      "270166%2311.jpg",
+      "270166%2312.jpg"
+    ]
+  },
+  {
+    "id": "270167",
+    "cat": "food",
+    "name": "Kitchen 4 Series",
+    "folder": "Ai layout/270167",
+    "files": [
+      "270167%231.jpg",
+      "270167%232.jpg",
+      "270167%233.jpg",
+      "270167%234.jpg"
+    ]
+  },
+  {
+    "id": "270168",
+    "cat": "others",
+    "name": "Kitthen 3 Series",
+    "folder": "Ai layout/270168",
+    "files": [
+      "270168%231.jpg",
+      "270168%232.jpg",
+      "270168%233.jpg",
+      "270168%234.jpg",
+      "270168%235.jpg",
+      "270168%236.jpg",
+      "270168%237.jpg",
+      "270168%238.jpg",
+      "270168%239.jpg",
+      "270168%2310.jpg",
+      "270168%2311.jpg",
+      "270168%2312.jpg"
+    ]
+  },
+  {
+    "id": "270169",
+    "cat": "anime",
+    "name": "K-Pop 2 Series",
+    "folder": "Ai layout/270169",
+    "files": [
+      "270169%231.jpg",
+      "270169%232.jpg",
+      "270169%233.jpg",
+      "270169%234.jpg",
+      "270169%235.jpg",
+      "270169%236.jpg",
+      "270169%237.jpg",
+      "270169%238.jpg",
+      "270169%239.jpg",
+      "270169%2310.jpg",
+      "270169%2311.jpg",
+      "270169%2312.jpg"
+    ]
+  },
+  {
+    "id": "270170",
+    "cat": "anime",
+    "name": "K-Pop 3 Series",
+    "folder": "Ai layout/270170",
+    "files": [
+      "270170%231.jpg",
+      "270170%232.jpg",
+      "270170%233.jpg",
+      "270170%234.jpg",
+      "270170%235.jpg",
+      "270170%236.jpg",
+      "270170%237.jpg",
+      "270170%238.jpg",
+      "270170%239.jpg",
+      "270170%2310.jpg",
+      "270170%2311.jpg"
+    ]
+  },
+  {
+    "id": "270171",
+    "cat": "movie-poster",
+    "name": "Movie Series",
+    "folder": "Ai layout/270171",
+    "files": [
+      "270171%231.jpg",
+      "270171%232.jpg",
+      "270171%233.jpg",
+      "270171%234.jpg",
+      "270171%235.jpg",
+      "270171%236.jpg",
+      "270171%237.jpg",
+      "270171%238.jpg",
+      "270171%239.jpg",
+      "270171%2310.jpg",
+      "270171%2311.jpg",
+      "270171%2312.jpg"
+    ]
+  },
+  {
+    "id": "270172",
+    "cat": "movie-poster",
+    "name": "Movie Poster 2 Series",
+    "folder": "Ai layout/270172",
+    "files": [
+      "270172%231.jpg",
+      "270172%232.jpg",
+      "270172%233.jpg",
+      "270172%234.jpg",
+      "270172%235.jpg",
+      "270172%236.jpg",
+      "270172%237.jpg",
+      "270172%238.jpg",
+      "270172%239.jpg",
+      "270172%2310.jpg",
+      "270172%2311.jpg",
+      "270172%2312.jpg"
+    ]
+  },
+  {
+    "id": "270173",
+    "cat": "movie-poster",
+    "name": "Movie Poster 3 Series",
+    "folder": "Ai layout/270173",
+    "files": [
+      "270173%231.jpg",
+      "270173%232.jpg",
+      "270173%233.jpg",
+      "270173%234.jpg",
+      "270173%235.jpg",
+      "270173%236.jpg",
+      "270173%237.jpg",
+      "270173%238.jpg",
+      "270173%239.jpg",
+      "270173%2310.jpg",
+      "270173%2311.jpg",
+      "270173%2312.jpg"
+    ]
+  },
+  {
+    "id": "270174",
+    "cat": "bengali-band",
+    "name": "Music Series",
+    "folder": "Ai layout/270174",
+    "files": [
+      "270174%231.jpg",
+      "270174%232.jpg",
+      "270174%233.jpg",
+      "270174%234.jpg",
+      "270174%235.jpg",
+      "270174%236.jpg",
+      "270174%237.jpg",
+      "270174%238.jpg",
+      "270174%239.jpg",
+      "270174%2310.jpg",
+      "270174%2311.jpg",
+      "270174%2312.jpg"
+    ]
+  },
+  {
+    "id": "270175",
+    "cat": "bengali-band",
+    "name": "Music 2 Series",
+    "folder": "Ai layout/270175",
+    "files": [
+      "270175%231.jpg",
+      "270175%232.jpg",
+      "270175%233.jpg",
+      "270175%234.jpg",
+      "270175%235.jpg",
+      "270175%236.jpg",
+      "270175%237.jpg",
+      "270175%238.jpg",
+      "270175%239.jpg",
+      "270175%2310.jpg",
+      "270175%2311.jpg",
+      "270175%2312.jpg"
+    ]
+  },
+  {
+    "id": "270176",
+    "cat": "others",
+    "name": "Other Series",
+    "folder": "Ai layout/270176",
+    "files": [
+      "270176%231.jpeg",
+      "270176%232.jpg",
+      "270176%233.jpeg",
+      "270176%234.jpg",
+      "270176%235.jpeg",
+      "270176%236.jpg",
+      "270176%237.jpeg",
+      "270176%238.jpg",
+      "270176%239.jpeg",
+      "270176%2310.jpg",
+      "270176%2311.jpeg",
+      "270176%2312.jpg"
+    ]
+  },
+  {
+    "id": "270177",
+    "cat": "others",
+    "name": "Other 2 Series",
+    "folder": "Ai layout/270177",
+    "files": [
+      "270177%231.jpg",
+      "270177%232.jpg",
+      "270177%233.jpeg",
+      "270177%234.jpeg",
+      "270177%235.jpeg",
+      "270177%236.jpeg",
+      "270177%237.jpeg",
+      "270177%238.jpeg",
+      "270177%239.jpeg",
+      "270177%2310.jpg",
+      "270177%2311.jpg",
+      "270177%2312.jpg"
+    ]
+  },
+  {
+    "id": "270178",
+    "cat": "others",
+    "name": "Planet Series",
+    "folder": "Ai layout/270178",
+    "files": [
+      "270178%231.jpg",
+      "270178%232.jpg",
+      "270178%233.jpg",
+      "270178%234.jpg",
+      "270178%235.jpg",
+      "270178%236.jpg",
+      "270178%237.jpg",
+      "270178%238.jpg",
+      "270178%239.jpg",
+      "270178%2310.jpg",
+      "270178%2311.jpg",
+      "270178%2312.jpg"
+    ]
+  },
+  {
+    "id": "270179",
+    "cat": "others",
+    "name": "Red Series",
+    "folder": "Ai layout/270179",
+    "files": [
+      "270179%231.jpg",
+      "270179%232.jpg",
+      "270179%233.jpg",
+      "270179%234.jpg",
+      "270179%235.jpg",
+      "270179%236.jpg",
+      "270179%237.jpg",
+      "270179%238.jpg",
+      "270179%239.jpg",
+      "270179%2310.jpg",
+      "270179%2311.jpg",
+      "270179%2312.jpg"
+    ]
+  },
+  {
+    "id": "270180",
+    "cat": "others",
+    "name": "Red 2 Series",
+    "folder": "Ai layout/270180",
+    "files": [
+      "270180%231.jpg",
+      "270180%232.jpg",
+      "270180%233.jpg",
+      "270180%234.jpg",
+      "270180%235.jpg",
+      "270180%236.jpg",
+      "270180%237.jpg",
+      "270180%238.jpg",
+      "270180%239.jpg",
+      "270180%2310.jpg",
+      "270180%2311.jpg",
+      "270180%2312.jpg"
+    ]
+  },
+  {
+    "id": "270181",
+    "cat": "superhero-game",
+    "name": "Super Hero Series",
+    "folder": "Ai layout/270181",
+    "files": [
+      "270181%231.jpg",
+      "270181%232.jpeg",
+      "270181%233.jpeg",
+      "270181%234.jpg",
+      "270181%235.jpeg",
+      "270181%236.jpeg",
+      "270181%237.jpeg",
+      "270181%238.jpeg",
+      "270181%239.jpg",
+      "270181%2310.jpeg",
+      "270181%2311.jpeg",
+      "270181%2312.jpg"
+    ]
+  },
+  {
+    "id": "270182",
+    "cat": "superhero-game",
+    "name": "Super Hero 2 Series",
+    "folder": "Ai layout/270182",
+    "files": [
+      "270182%231.jpg",
+      "270182%232.jpg",
+      "270182%233.jpg",
+      "270182%234.jpg",
+      "270182%235.jpg",
+      "270182%236.jpg",
+      "270182%237.jpg",
+      "270182%238.jpg",
+      "270182%239.jpg",
+      "270182%2310.jpg",
+      "270182%2311.jpg",
+      "270182%2312.jpg"
+    ]
+  },
+  {
+    "id": "270183",
+    "cat": "superhero-game",
+    "name": "Super Hero 3 Series",
+    "folder": "Ai layout/270183",
+    "files": [
+      "270183%231.jpg",
+      "270183%232.jpg",
+      "270183%233.jpg",
+      "270183%234.jpg",
+      "270183%235.jpg",
+      "270183%236.jpg",
+      "270183%237.jpg",
+      "270183%238.jpg",
+      "270183%239.jpg",
+      "270183%2310.jpg",
+      "270183%2311.jpg",
+      "270183%2312.jpg"
+    ]
+  },
+  {
+    "id": "270132",
+    "cat": "car",
+    "name": "Supercar Series",
+    "folder": "Ai layout/270132",
+    "files": [
+      "270132%231.jpg",
+      "270132%232.jpg",
+      "270132%233.jpg",
+      "270132%234.jpg",
+      "270132%235.jpg",
+      "270132%236.jpg",
+      "270132%237.jpg",
+      "270132%238.jpg",
+      "270132%239.jpg",
+      "270132%2310.jpg",
+      "270132%2311.jpg",
+      "270132%2312.jpg"
+    ]
+  },
+  {
+    "id": "270134",
+    "cat": "anime",
+    "name": "K-Pop Set 1",
+    "folder": "Ai layout/270134",
+    "files": [
+      "270134%231.jpg",
+      "270134%232.jpg",
+      "270134%233.jpg",
+      "270134%234.jpg",
+      "270134%235.jpg",
+      "270134%236.jpg",
+      "270134%237.jpg",
+      "270134%238.jpg",
+      "270134%239.jpg",
+      "270134%2310.jpg",
+      "270134%2311.jpg",
+      "270134%2312.jpg"
+    ]
+  },
+  {
+    "id": "270133",
+    "cat": "anime",
+    "name": "K-Pop Set 2",
+    "folder": "Ai layout/270133",
+    "files": [
+      "270133%231.jpg",
+      "270133%232.jpg",
+      "270133%233.jpg",
+      "270133%234.jpg",
+      "270133%235.jpg",
+      "270133%236.jpg",
+      "270133%237.jpg",
+      "270133%238.jpg",
+      "270133%239.jpg",
+      "270133%2310.jpg",
+      "270133%2311.jpg",
+      "270133%2312.jpg"
+    ]
+  }
+];
